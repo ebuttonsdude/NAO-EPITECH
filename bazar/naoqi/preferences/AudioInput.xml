@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ModulePreference name="aldebaran-robotics.com@AudioInput" xmlns="http://www.aldebaran-robotics.com/ns/ALPreference" schemaLocation="ModulePreference.xsd">
+    <Preference name="acapelaAsrDataPath" memoryName="AudioIn/acapelaAsrDataPath" description="Path to acapela ASR files" value="/usr/share/acapela/asr/languages/" type="string" />
+    <Preference name="hciLabChineseAsrDataPath" memoryName="AudioIn/hciLabChineseAsrDataPath" description="" value="/usr/share/acapela/asr/languages/CHM" type="string" />
+    <Preference name="defaultSpeechRecognitionLanguage" memoryName="AudioIn/defaultSpeechRecognitionLanguage" description="Default Language used by ASR engine" value="French" type="string" />
+</ModulePreference>

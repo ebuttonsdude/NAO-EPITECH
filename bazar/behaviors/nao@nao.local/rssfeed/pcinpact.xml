@@ -1,0 +1,487 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+	<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+		<channel>		
+			<title>PC INpact</title>
+			<link>http://www.pcinpact.com</link>
+			<description>PC INpact.com - L'environnement informatique !</description>
+			<language>fr</language>
+			<copyright>Copyright 2003-2009 PC INpact. Tous droits réservés.</copyright>
+			<managingEditor>contact@pcinpact.com (contact PC INpact)</managingEditor>
+			<webMaster>contact@pcinpact.com (contact PC INpact)</webMaster>
+			<pubDate>Wed, 02 Feb 2011 10:39:00 +0100</pubDate>
+			<image>
+				<url>http://www.pcinpact.com/images/page/logo88x31.gif</url>
+				<title>PC INpact</title>
+				<link>http://www.pcinpact.com</link>
+				<width>88</width>
+				<height>31</height>
+			</image>
+			<atom:link href="http://www.pcinpact.com/include/news.xml" rel="self" type="application/rss+xml" />
+	<item>
+					<title>Google accuse Bing de voler ses résultats de recherche</title>
+					<description>Dans le domaine des moteurs de recherche, Google règne en maître très peu contesté. Depuis quelques années, Microsoft grimpe doucement avec Bing, et de fortes améliorations sont à attendre de ce côté.</description>
+					<link>http://www.pcinpact.com/actu/news/61680-bing-google-vol-resultat-recherche-accusation.htm</link>
+					<guid>http://www.pcinpact.com/actu/news/61680-bing-google-vol-resultat-recherche-accusation.htm</guid>					
+					<author>Vince@pcinpact.com (Vincent Hermann)</author>
+					<category>Internet</category>
+					<pubDate>Wed, 02 Feb 2011 10:30:00 +0100</pubDate>
+				</item>
+		<item>
+					<title>Mise à Jour, Bug H67 / P67 : les partenaires communiquent</title>
+					<description>Mise à jour :
+
+En attendant une réponse de leur part, voici la liste des revendeurs qui continuent à proposer des produits à base de H67 / P67 sans avertir, à notre connaissance, le consommateur :
+
+    Amazon
+    Boulanger
+    CDiscount
+    ...</description>
+					<link>http://www.pcinpact.com/actu/news/61656-h67-p67-bug-ldlc-intel.htm</link>
+					<guid>http://www.pcinpact.com/actu/news/61656-h67-p67-bug-ldlc-intel.htm</guid>					
+					<author>david_l@pcinpact.com (David Legrand)</author>
+					<category>Carte mère</category>
+					<pubDate>Wed, 02 Feb 2011 09:45:00 +0100</pubDate>
+				</item>
+		<item>
+					<title>L'iPad peut-il remplacer un netbook ou portable ?</title>
+					<description>Nos confrères de LaptopMag se sont posés une question simple : « un iPad peut-il remplacer un portable d'entrée de gamme ou un netbook ? ». Il faut dire que cette dernière revient souvent dès lors que l'on parle de cannibalisation des ventes grâce ...</description>
+					<link>http://www.pcinpact.com/actu/news/61675-ipad-netbook-portable-tache-identique.htm</link>
+					<guid>http://www.pcinpact.com/actu/news/61675-ipad-netbook-portable-tache-identique.htm</guid>					
+					<author>damien_l@pcinpact.com (Damien Labourot)</author>
+					<category>Ordinateur portable</category>
+					<pubDate>Wed, 02 Feb 2011 00:35:51 +0100</pubDate>
+				</item>
+		<item>
+					<title>La GeForce GTX 560 Ti de passage au comptoir</title>
+					<description>Le Comptoir du Hardware a reçu dans son antre la dernière carte graphique de NVIDIA, la GeForce GTX 560 Ti. Cette puce de milieu de gamme se situe entre la GTX 460 et la GTX 570 du caméléon.</description>
+					<link>http://www.pcinpact.com/actu/news/61674-geforce-gtx-560-ti-nvidia-gf114-cuda-3d-visi.htm</link>
+					<guid>http://www.pcinpact.com/actu/news/61674-geforce-gtx-560-ti-nvidia-gf114-cuda-3d-visi.htm</guid>					
+					<author>damien_l@pcinpact.com (Damien Labourot)</author>
+					<category>Carte graphique</category>
+					<pubDate>Wed, 02 Feb 2011 00:20:50 +0100</pubDate>
+				</item>
+		<item>
+					<title>Prise en main de la tablette Streak 7 de Dell</title>
+					<description>Engadget a pu avoir entre les mains la Dell Streak dans sa version 7". Celle-ci est équipée d'un SoC NVIDIA Tegra 2 T20 dont les coeurs sont cadencés à 800 MHz (au lieu de 1 GHz) et d'un modem 4G.</description>
+					<link>http://www.pcinpact.com/actu/news/61673-dell-streak-7-android-22-froyo-nvidia-tegra-.htm</link>
+					<guid>http://www.pcinpact.com/actu/news/61673-dell-streak-7-android-22-froyo-nvidia-tegra-.htm</guid>					
+					<author>damien_l@pcinpact.com (Damien Labourot)</author>
+					<category>Tablette PC</category>
+					<pubDate>Wed, 02 Feb 2011 00:05:00 +0100</pubDate>
+				</item>
+		<item>
+					<title>GeForce GT 440 : des cartes... aux caractéristiques étranges</title>
+					<description>Mise à jour :
+
+NVIDIA vient de référencer officiellement cette carte et confirme les caractéristiques que nous avions évoquées pour les deux versions de ce produit.</description>
+					<link>http://www.pcinpact.com/actu/news/61668-geforce-gt-440-oem-gf108.htm</link>
+					<guid>http://www.pcinpact.com/actu/news/61668-geforce-gt-440-oem-gf108.htm</guid>					
+					<author>david_l@pcinpact.com (David Legrand)</author>
+					<category>Carte graphique</category>
+					<pubDate>Tue, 01 Feb 2011 21:21:00 +0100</pubDate>
+				</item>
+		<item>
+					<title>Ventes de puces graphiques : AMD réalise une belle année 2010</title>
+					<description>Le marché des produits graphiques, qu'il s'agisse des cartes dédiées d'AMD et de NVIDIA ou des chipsets intégrés (dominés par Intel), continue de croître selon Jon Peddie Research (JPR).</description>
+					<link>http://www.pcinpact.com/actu/news/61671-gpu-igp-puces-graphiques-intel-amd-nvidia.htm</link>
+					<guid>http://www.pcinpact.com/actu/news/61671-gpu-igp-puces-graphiques-intel-amd-nvidia.htm</guid>					
+					<author>nil@pcinpact.com (Nil Sanyas)</author>
+					<category>Carte graphique</category>
+					<pubDate>Tue, 01 Feb 2011 17:39:50 +0100</pubDate>
+				</item>
+		<item>
+					<title>Apple refuse l'application Sony Reader et ses ebooks</title>
+					<description>Apple risque de faire beaucoup parler d'elle dans les mois à venir, à cause d'un changement intervenu dans les conditions de publication des applications il y a quelques mois, mais qui n'était pas appliqué de manière systématique.</description>
+					<link>http://www.pcinpact.com/actu/news/61670-apple-in-app-sony-reader-ebooks-refus-store-geste.htm</link>
+					<guid>http://www.pcinpact.com/actu/news/61670-apple-in-app-sony-reader-ebooks-refus-store-geste.htm</guid>					
+					<author>Vince@pcinpact.com (Vincent Hermann)</author>
+					<category>Apple</category>
+					<pubDate>Tue, 01 Feb 2011 17:14:00 +0100</pubDate>
+				</item>
+		<item>
+					<title>Un smartphone fonctionnel équipé de Medfield chez Intel</title>
+					<description>Si nous vous relations hier un problème majeur concernant les chipsets H67 et P67 accompagnant les processeurs Sandy Bridge, il y a quand même de bonnes nouvelles du côté d'Intel.</description>
+					<link>http://www.pcinpact.com/actu/news/61667-medfield-soc-intel-atom-smartphone.htm</link>
+					<guid>http://www.pcinpact.com/actu/news/61667-medfield-soc-intel-atom-smartphone.htm</guid>					
+					<author>damien_l@pcinpact.com (Damien Labourot)</author>
+					<category>Téléphonie</category>
+					<pubDate>Tue, 01 Feb 2011 16:30:00 +0100</pubDate>
+				</item>
+		<item>
+					<title>Apple n°3 mondial des ventes d'ordinateurs (tablettes incluses)</title>
+					<description>Si Apple, malgré ses ventes historiques de Mac, n'est toujours pas dans le top 5 des vendeurs d'ordinateurs dans le monde, devancé par HP, Dell, Acer, Lenovo et Toshiba, le rapport de force est totalement différent si l'on rajoute les tablettes ...</description>
+					<link>http://www.pcinpact.com/actu/news/61666-apple-numero-3-mondial-ventes-ordinateurs-tablettes.htm</link>
+					<guid>http://www.pcinpact.com/actu/news/61666-apple-numero-3-mondial-ventes-ordinateurs-tablettes.htm</guid>					
+					<author>nil@pcinpact.com (Nil Sanyas)</author>
+					<category>Tablette PC</category>
+					<pubDate>Tue, 01 Feb 2011 16:26:00 +0100</pubDate>
+				</item>
+		<item>
+					<title>Windows Phone 7 : les données fantômes viennent de Yahoo! Mail</title>
+					<description>La semaine dernière, nous nous étions fait l'écho d'un problème qui touchait Windows Phone 7. On ne sait ni comment ni pourquoi, mais certains utilisateurs voyaient leurs plafonds de données mensuels terrassés en deux semaines seulement, le système ...</description>
+					<link>http://www.pcinpact.com/actu/news/61665-windows-phone-7-donnees-fantomes-yahoo-imap.htm</link>
+					<guid>http://www.pcinpact.com/actu/news/61665-windows-phone-7-donnees-fantomes-yahoo-imap.htm</guid>					
+					<author>Vince@pcinpact.com (Vincent Hermann)</author>
+					<category>Téléphonie</category>
+					<pubDate>Tue, 01 Feb 2011 15:38:00 +0100</pubDate>
+				</item>
+		<item>
+					<title>Publication en approche du volet pénal de la HADOPI (suspension)</title>
+					<description>Comme l'a repéré le juriste Benoit Tabaka, la CNIL a procédé le 20 janvier à l'examen d'un projet de décret modifiant le décret du 5 mars 2010.</description>
+					<link>http://www.pcinpact.com/actu/news/61664-hadopi-decret-labs-volet-penal.htm</link>
+					<guid>http://www.pcinpact.com/actu/news/61664-hadopi-decret-labs-volet-penal.htm</guid>					
+					<author>actu@pcinpact.com (La Rédaction)</author>
+					<category>Hadopi</category>
+					<pubDate>Tue, 01 Feb 2011 15:14:00 +0100</pubDate>
+				</item>
+		<item>
+					<title>Marc Cerrone : « La musique a vocation à devenir gratuite »</title>
+					<description>Marc Cerrone, bien connu des fans de Disco, ainsi que des téléspectateurs de W9 pour faire partie du jury de l'émission X-Factor, est aussi réputé pour ses propos au sujet d'Hadopi.</description>
+					<link>http://www.pcinpact.com/actu/news/61663-marc-cerrone-disco-musique-gratuite.htm</link>
+					<guid>http://www.pcinpact.com/actu/news/61663-marc-cerrone-disco-musique-gratuite.htm</guid>					
+					<author>nil@pcinpact.com (Nil Sanyas)</author>
+					<category>Hadopi</category>
+					<pubDate>Tue, 01 Feb 2011 15:09:04 +0100</pubDate>
+				</item>
+		<item>
+					<title>Mise à jour, Abonnés Free ADSL : profitez de Canal+ gratuitement</title>
+					<description>Mise à jour :
+
+Plusieurs lecteurs nous confirment que l'offre n'est accessible que via l'univers Freebox TV et n'est donc finalement pas accessible à ceux qui ont désactivé l'option TV.</description>
+					<link>http://www.pcinpact.com/actu/news/61604-free-canal-4-etoiles-gratuit-adsl.htm</link>
+					<guid>http://www.pcinpact.com/actu/news/61604-free-canal-4-etoiles-gratuit-adsl.htm</guid>					
+					<author>sebastien_g@pcinpact.com (Sébastien Gavois)</author>
+					<category>Internet</category>
+					<pubDate>Tue, 01 Feb 2011 12:50:00 +0100</pubDate>
+				</item>
+		<item>
+					<title>PlayStation 3 : une édition limitée Silver Satin en mars au Japon</title>
+					<description>Sony lancera à partir du 10 mars prochain une version « argent » de sa PlayStation 3 au Japon, et uniquement au pays du soleil levant. Aucune autre disponibilité n'a pour le moment été annoncée.</description>
+					<link>http://www.pcinpact.com/actu/news/61660-sony-playstation-3-silver-satin-edition-limitee-japon.htm</link>
+					<guid>http://www.pcinpact.com/actu/news/61660-sony-playstation-3-silver-satin-edition-limitee-japon.htm</guid>					
+					<author>Vince@pcinpact.com (Vincent Hermann)</author>
+					<category>Console de jeux</category>
+					<pubDate>Tue, 01 Feb 2011 12:08:07 +0100</pubDate>
+				</item>
+		<item>
+					<title>Debian : la version 6.0 finale sera disponible ce week-end</title>
+					<description> Le week-end du 5/6 février, la version finale de Debian 6.0 devrait être proposée au téléchargement. Ce type de sortie n'est pas courant, et pour cause : il aura fallu plus de deux ans de travail pour en arriver là.</description>
+					<link>http://www.pcinpact.com/actu/news/61659-debian-linux-6-nouveautes-sortie.htm</link>
+					<guid>http://www.pcinpact.com/actu/news/61659-debian-linux-6-nouveautes-sortie.htm</guid>					
+					<author>Vince@pcinpact.com (Vincent Hermann)</author>
+					<category>Système d'exploitation</category>
+					<pubDate>Tue, 01 Feb 2011 11:54:30 +0100</pubDate>
+				</item>
+		<item>
+					<title>Steam : captures dans le cloud et meilleure qualité audio</title>
+					<description>Le célèbre réseau Steam voit son client évoluer dans ses moutures Windows et Mac OS X. Ceux qui le souhaitent peuvent en effet participer au dernier programme bêta qui permet de tester certaines fonctionnalités avant leur parution publique.</description>
+					<link>http://www.pcinpact.com/actu/news/61655-steam-captures-cloud-qualite-audio.htm</link>
+					<guid>http://www.pcinpact.com/actu/news/61655-steam-captures-cloud-qualite-audio.htm</guid>					
+					<author>Vince@pcinpact.com (Vincent Hermann)</author>
+					<category>Logiciels</category>
+					<pubDate>Tue, 01 Feb 2011 10:55:34 +0100</pubDate>
+				</item>
+		<item>
+					<title>iPod : Apple assouplit sa garantie sur les capteurs d'humidité</title>
+					<description>Comme tout constructeur, Apple dispose d'une politique de prise en charge de ses produits lorsque ceux-ci rencontrent des problèmes. Sur l'ensemble des iPod, cela concerne notamment le témoin d'humidité, situé au fond de la prise jack 3,5 mm et qui ...</description>
+					<link>http://www.pcinpact.com/actu/news/61654-apple-ganratie-ipod-capteur-lci-humidite-politique.htm</link>
+					<guid>http://www.pcinpact.com/actu/news/61654-apple-ganratie-ipod-capteur-lci-humidite-politique.htm</guid>					
+					<author>Vince@pcinpact.com (Vincent Hermann)</author>
+					<category>Apple</category>
+					<pubDate>Tue, 01 Feb 2011 09:34:00 +0100</pubDate>
+				</item>
+		<item>
+					<title>Freebox Révolution : firmware 1.0.2 et surprise pour le Multi TV</title>
+					<description>Comme nous vous l'annoncions hier soir en brève, Free vient de commencer à déployer le firmware 1.0.2 destiné aux deux boîtiers de sa Freebox Révolution (Player et Server).</description>
+					<link>http://www.pcinpact.com/actu/news/61653-freebox-player-server-revolution-multi-tv.htm</link>
+					<guid>http://www.pcinpact.com/actu/news/61653-freebox-player-server-revolution-multi-tv.htm</guid>					
+					<author>david_l@pcinpact.com (David Legrand)</author>
+					<category>Internet</category>
+					<pubDate>Tue, 01 Feb 2011 08:30:00 +0100</pubDate>
+				</item>
+		<item>
+					<title>Liens P2P : après eMule Paradise, l'affaire TorrentNews </title>
+					<description>Après Emule Paradise, une autre affaire de liens torrents va être prochainement jugée en France. Elle concerne « Blackistef », administrateur du site http://torrentnews.</description>
+					<link>http://www.pcinpact.com/actu/news/61652-torrentnews-seelink-p2p-forum-sacem.htm</link>
+					<guid>http://www.pcinpact.com/actu/news/61652-torrentnews-seelink-p2p-forum-sacem.htm</guid>					
+					<author>marc@pcinpact.com (Marc Rees)</author>
+					<category>Hadopi</category>
+					<pubDate>Tue, 01 Feb 2011 07:56:21 +0100</pubDate>
+				</item>
+		<item>
+					<title>Un Core i7 980X OC sous un Noctua NH-C14, c'est possible ? </title>
+					<description>X-bit Labs très en forme sur les ventilateurs ces derniers temps ont mis à mal le petit dernier de la famille Noctua : le NH-C14. Pour rappel, celui-ci pèse la bagatelle d'un kilogramme sur la balance et il est doté de deux ventilateurs de 140 mm.</description>
+					<link>http://www.pcinpact.com/actu/news/61651-noctua-nhc14-ventirad-ventilateur-120-mm.htm</link>
+					<guid>http://www.pcinpact.com/actu/news/61651-noctua-nhc14-ventirad-ventilateur-120-mm.htm</guid>					
+					<author>damien_l@pcinpact.com (Damien Labourot)</author>
+					<category>Refroidissement</category>
+					<pubDate>Tue, 01 Feb 2011 00:35:00 +0100</pubDate>
+				</item>
+		<item>
+					<title>Le Corsair F90 seul ou en RAID 0, ça donne quoi ?</title>
+					<description>Nos confrères d'Hardware Canucks  nous proposent le test du F90 de Corsair, seul et en RAID 0. Pour rappel, ce SSD a une capacité de 90 Go et emploie un contrôleur SandForce SF-1200.</description>
+					<link>http://www.pcinpact.com/actu/news/61650-corsair-f90-sandforce-f1200-90-go-ssd-raid.htm</link>
+					<guid>http://www.pcinpact.com/actu/news/61650-corsair-f90-sandforce-f1200-90-go-ssd-raid.htm</guid>					
+					<author>damien_l@pcinpact.com (Damien Labourot)</author>
+					<category>Stockage</category>
+					<pubDate>Tue, 01 Feb 2011 00:20:36 +0100</pubDate>
+				</item>
+		<item>
+					<title>Core i3 2100 : que vaut la version à 2 coeurs de Sandy Bridge ?</title>
+					<description>Nos amis d'HFR viennent de mettre en ligne leur test du Core i3 2100. Si jusqu'ici nous avions vu des modèles à quatre coeurs, c'est ici le premier double coeur qui est disponible, il sera par la suite rejoint par le Core i3 2120 cadencé un peu plus ...</description>
+					<link>http://www.pcinpact.com/actu/news/61649-core-i3-2100-intel-sandy-bridge-p67-dual-cor.htm</link>
+					<guid>http://www.pcinpact.com/actu/news/61649-core-i3-2100-intel-sandy-bridge-p67-dual-cor.htm</guid>					
+					<author>damien_l@pcinpact.com (Damien Labourot)</author>
+					<category>Processeur</category>
+					<pubDate>Tue, 01 Feb 2011 00:05:37 +0100</pubDate>
+				</item>
+		<item>
+					<title>eMule-Paradise : nullité de la procédure, renvoi à l'instruction</title>
+					<description>« On a gagné ! Il y a nullité de la procédure, qui est renvoyée à l'instruction ! » Me Jean Philippe Hugot, contacté ce soir, nous confirme que le dossier Emule-Paradise repart devant le juge d'instruction.</description>
+					<link>http://www.pcinpact.com/actu/news/61648-emule-paradise-p2p-dadvsi-valade.htm</link>
+					<guid>http://www.pcinpact.com/actu/news/61648-emule-paradise-p2p-dadvsi-valade.htm</guid>					
+					<author>marc@pcinpact.com (Marc Rees)</author>
+					<category>Hadopi</category>
+					<pubDate>Mon, 31 Jan 2011 21:08:13 +0100</pubDate>
+				</item>
+		<item>
+					<title>Hausse de la TVA : l'UFC-Que Choisir dresse un premier bilan</title>
+					<description>L'UFC-Que choisir avait lancé début janvier un observatoire pour surveiller le comportement des différents opérateurs téléphoniques face à la hausse de la TVA.</description>
+					<link>http://www.pcinpact.com/actu/news/61647-ufcque-choisir-observatoire-resiliation-haus.htm</link>
+					<guid>http://www.pcinpact.com/actu/news/61647-ufcque-choisir-observatoire-resiliation-haus.htm</guid>					
+					<author>sebastien_g@pcinpact.com (Sébastien Gavois)</author>
+					<category>Téléphonie</category>
+					<pubDate>Mon, 31 Jan 2011 18:00:32 +0100</pubDate>
+				</item>
+		<item>
+					<title>SourceForge attaqué : les services reviennent, avec des détails</title>
+					<description>Beaucoup connaissent déjà le site SourceForge.net, qui sert de dépôt pour de très nombreux projets open source. La semaine dernière, SourceForge a subi une attaque conséquente via Internet, au point que les accès ont été coupés.</description>
+					<link>http://www.pcinpact.com/actu/news/61646-sourceforge-attaque-internet-reparation-controle-mots-passe.htm</link>
+					<guid>http://www.pcinpact.com/actu/news/61646-sourceforge-attaque-internet-reparation-controle-mots-passe.htm</guid>					
+					<author>Vince@pcinpact.com (Vincent Hermann)</author>
+					<category>Internet</category>
+					<pubDate>Mon, 31 Jan 2011 17:57:00 +0100</pubDate>
+				</item>
+		<item>
+					<title>Disques durs : Western Digital reste devant Seagate</title>
+					<description>Seagate et Western Digital ont tous deux publié leurs résultats du dernier trimestre 2010. L'occasion de comparer le bilan financier des deux leaders incontestés du secteur des disques durs, ainsi que leur niveau de vente.</description>
+					<link>http://www.pcinpact.com/actu/news/61645-disques-durs-western-digital-seagate.htm</link>
+					<guid>http://www.pcinpact.com/actu/news/61645-disques-durs-western-digital-seagate.htm</guid>					
+					<author>nil@pcinpact.com (Nil Sanyas)</author>
+					<category>Disque dur</category>
+					<pubDate>Mon, 31 Jan 2011 17:47:05 +0100</pubDate>
+				</item>
+		<item>
+					<title>Intel détecte un souci sur le S-ATA 3 Gbps de ses puces H67 / P67</title>
+					<description>Intel vient d'annoncer dans un communiqué de presse que tous ses chipsets de la série 60 étaient touchés par un problème au niveau de leur gestion du S-ATA, impliquant une modification matérielle, et donc le remplacement éventuel de certains ...</description>
+					<link>http://www.pcinpact.com/actu/news/61644-intel-h67-p67-bug-fix.htm</link>
+					<guid>http://www.pcinpact.com/actu/news/61644-intel-h67-p67-bug-fix.htm</guid>					
+					<author>david_l@pcinpact.com (David Legrand)</author>
+					<category>Carte mère</category>
+					<pubDate>Mon, 31 Jan 2011 17:27:00 +0100</pubDate>
+				</item>
+		<item>
+					<title>Hadopi : "tractations secrètes" entre Bruxelles, FAI et ayant droits</title>
+					<description>Que prépare la Commission européenne ? Dans un message diffusé sur son site, l'eurodéputée Françoise Castex explique que « selon plusieurs sources » concordantes, Bruxelles « organise depuis mi-2010 des réunions entre représentants des industries ...</description>
+					<link>http://www.pcinpact.com/actu/news/61643-francoise-castex-stavros-lambrinidis-hadopi.htm</link>
+					<guid>http://www.pcinpact.com/actu/news/61643-francoise-castex-stavros-lambrinidis-hadopi.htm</guid>					
+					<author>marc@pcinpact.com (Marc Rees)</author>
+					<category>Hadopi</category>
+					<pubDate>Mon, 31 Jan 2011 16:26:42 +0100</pubDate>
+				</item>
+		<item>
+					<title>MVNO : l'Autorité de la concurrence donne son aval à La Poste</title>
+					<description>L'année 2011 dans le secteur de la téléphonie devrait à nouveau être riche en France. Entre les lancements de nouveaux appareils, les mises à jour des OS, et, d'un point de vue plus national, l'attribution des licences 4G, et probablement plus de ...</description>
+					<link>http://www.pcinpact.com/actu/news/61642-mvno-autorite-concurrence-la-poste-sfr-simplicime.htm</link>
+					<guid>http://www.pcinpact.com/actu/news/61642-mvno-autorite-concurrence-la-poste-sfr-simplicime.htm</guid>					
+					<author>nil@pcinpact.com (Nil Sanyas)</author>
+					<category>Téléphonie</category>
+					<pubDate>Mon, 31 Jan 2011 16:24:00 +0100</pubDate>
+				</item>
+		<item>
+					<title>Kaspersky : le code source de la version 8 volé, un employé arrêté</title>
+					<description>L'éditeur Kaspersky, connu pour ses multiples solutions de sécurité, a été victime d'un sérieux problème de sécurité interne : le vol d'un code source.</description>
+					<link>http://www.pcinpact.com/actu/news/61641-kaspersky-vol-code-source-arrestation-partage.htm</link>
+					<guid>http://www.pcinpact.com/actu/news/61641-kaspersky-vol-code-source-arrestation-partage.htm</guid>					
+					<author>Vince@pcinpact.com (Vincent Hermann)</author>
+					<category>Justice</category>
+					<pubDate>Mon, 31 Jan 2011 16:02:00 +0100</pubDate>
+				</item>
+		<item>
+					<title>Copie privée : la France devrait différencier pro et particuliers</title>
+					<description>Un autre article de doctrine(*), publié cette fois dans la « Gazette du Palais », conclut également à la non-soumission à la rémunération pour copie privée (RCP) des supports achetés par les professionnels.</description>
+					<link>http://www.pcinpact.com/actu/news/61640-copie-privee-padawan-support-professionnels.htm</link>
+					<guid>http://www.pcinpact.com/actu/news/61640-copie-privee-padawan-support-professionnels.htm</guid>					
+					<author>marc@pcinpact.com (Marc Rees)</author>
+					<category>Droit</category>
+					<pubDate>Mon, 31 Jan 2011 15:13:09 +0100</pubDate>
+				</item>
+		<item>
+					<title>Palit personnalise ses GTX 560 Ti : plus de mémoire ou de MHz</title>
+					<description>Pour le lancement des GeForce GTX 560 Ti, Palit tente de se démarquer de ses concurrents et annonce trois cartes graphiques modifiées : la GTX 560 Ti, la GTX 560 Ti 2GB et enfin la GTX 560 Ti Sonic.</description>
+					<link>http://www.pcinpact.com/actu/news/61639-palit-geforce-gtx-560-ti-sonic-2-go.htm</link>
+					<guid>http://www.pcinpact.com/actu/news/61639-palit-geforce-gtx-560-ti-sonic-2-go.htm</guid>					
+					<author>sebastien_g@pcinpact.com (Sébastien Gavois)</author>
+					<category>Carte graphique</category>
+					<pubDate>Mon, 31 Jan 2011 15:00:31 +0100</pubDate>
+				</item>
+		<item>
+					<title>Smartphones : Google Android devant Symbian fin 2010 ?</title>
+					<description>Si Nokia est toujours le n°1 mondial et incontesté des ventes de téléphones mobiles et de smartphones, ses parts de marché s'effritent néanmoins trimestre après trimestre.</description>
+					<link>http://www.pcinpact.com/actu/news/61638-smartphones-google-android-devant-symbian-fin-2010.htm</link>
+					<guid>http://www.pcinpact.com/actu/news/61638-smartphones-google-android-devant-symbian-fin-2010.htm</guid>					
+					<author>nil@pcinpact.com (Nil Sanyas)</author>
+					<category>Téléphonie</category>
+					<pubDate>Mon, 31 Jan 2011 14:39:53 +0100</pubDate>
+				</item>
+		<item>
+					<title>Streaming, gratuité, Deezer : tribune de la SPPF</title>
+					<description>Jérôme Roger, Directeur Général de la SPPF nous a transmis cette tribune que nous publions ci-dessous in extenso. Les indépendants, représentés par la SPPF, veulent ici prendre part au débat opposant les offres gratuites (financées par la publicité) ...</description>
+					<link>http://www.pcinpact.com/actu/news/61637-jerome-roger-sppf-musique-streaming.htm</link>
+					<guid>http://www.pcinpact.com/actu/news/61637-jerome-roger-sppf-musique-streaming.htm</guid>					
+					<author>marc@pcinpact.com ( Jérôme ROGER)</author>
+					<category>Hadopi</category>
+					<pubDate>Mon, 31 Jan 2011 14:28:36 +0100</pubDate>
+				</item>
+		<item>
+					<title>Internet : moins de dix millions d'adresses IPv4 disponibles</title>
+					<description>Deux jours : c'est le temps qui reste selon Hurricane Electric avant qu'il n'y ait plus d'adresses IPv4 disponibles. Un chronomètre dont nous avions parlé il y a environ trois mois, quand il restait 102 jours.</description>
+					<link>http://www.pcinpact.com/actu/news/61636-ipv4-ipv6-icann-iana-migration-pool-disponible.htm</link>
+					<guid>http://www.pcinpact.com/actu/news/61636-ipv4-ipv6-icann-iana-migration-pool-disponible.htm</guid>					
+					<author>Vince@pcinpact.com (Vincent Hermann)</author>
+					<category>Internet</category>
+					<pubDate>Mon, 31 Jan 2011 12:36:00 +0100</pubDate>
+				</item>
+		<item>
+					<title>Facebook : de nouvelles mesures pour renforcer votre sécurité</title>
+					<description>La semaine dernière plusieurs fausses publications de personnalités sont apparues sur Facebook. Il y a d'abord eu Nicolas Sarkozy (ici et là), puis Mark Zuckerberg.</description>
+					<link>http://www.pcinpact.com/actu/news/61635-facebook-securite-https-faille-zuckerberg.htm</link>
+					<guid>http://www.pcinpact.com/actu/news/61635-facebook-securite-https-faille-zuckerberg.htm</guid>					
+					<author>sebastien_g@pcinpact.com (Sébastien Gavois)</author>
+					<category>Internet</category>
+					<pubDate>Mon, 31 Jan 2011 12:00:00 +0100</pubDate>
+				</item>
+		<item>
+					<title>PlayStation 3 : les sauvegardes dans le cloud prochainement ?</title>
+					<description>La PlayStation 3 dispose d'un système de compte permettant de retrouver facilement les contenus téléchargées si l'on change de console. Malheureusement, le système s'arrêtait dans sa gestion des contenus et contient une limitation particulièrement ...</description>
+					<link>http://www.pcinpact.com/actu/news/61634-playstation-3-online-saving-cloud-plus-abonnements.htm</link>
+					<guid>http://www.pcinpact.com/actu/news/61634-playstation-3-online-saving-cloud-plus-abonnements.htm</guid>					
+					<author>Vince@pcinpact.com (Vincent Hermann)</author>
+					<category>Console de jeux</category>
+					<pubDate>Mon, 31 Jan 2011 11:25:00 +0100</pubDate>
+				</item>
+		<item>
+					<title>Microsoft : une faille dans Windows peut révéler des informations</title>
+					<description>Microsoft vient de publier un nouveau bulletin relatif à une faille découverte dans plusieurs versions de Windows. La fiche d'informations fait suite à plusieurs rapports publics, signifiant que les détails de l'exploitation de la faille sont déjà ...</description>
+					<link>http://www.pcinpact.com/actu/news/61633-windows-faille-mhtml-internet-explorer-mesures.htm</link>
+					<guid>http://www.pcinpact.com/actu/news/61633-windows-faille-mhtml-internet-explorer-mesures.htm</guid>					
+					<author>Vince@pcinpact.com (Vincent Hermann)</author>
+					<category>Sécurité</category>
+					<pubDate>Mon, 31 Jan 2011 09:59:00 +0100</pubDate>
+				</item>
+		<item>
+					<title>Asus : 6 cartes adoptent le système de refroidissement DirectCU II</title>
+					<description>Alors que nous vous avions présenté récemment la GeForce GTX 580 DirectCU II d'Asus, c'est finalement pas moins de six cartes haut de gamme utilisant ce système de refroidissement qui sont annoncées par le fabricant.</description>
+					<link>http://www.pcinpact.com/actu/news/61632-asus-directcu-ii-geforce-gtx-560-ti-radeon-h.htm</link>
+					<guid>http://www.pcinpact.com/actu/news/61632-asus-directcu-ii-geforce-gtx-560-ti-radeon-h.htm</guid>					
+					<author>sebastien_g@pcinpact.com (Sébastien Gavois)</author>
+					<category>Carte graphique</category>
+					<pubDate>Mon, 31 Jan 2011 09:45:00 +0100</pubDate>
+				</item>
+		<item>
+					<title>Le gouvernement défend la curiosité fiscale de la SACEM &amp; co</title>
+					<description>Les députés Favennec et Tardy  avaient fait passer en Commission des lois un amendement visant à réduire la voilure des pouvoirs des sociétés de gestion collectives comme la SACEM.</description>
+					<link>http://www.pcinpact.com/actu/news/61631-sacem-controle-fisc-lpf-amendement.htm</link>
+					<guid>http://www.pcinpact.com/actu/news/61631-sacem-controle-fisc-lpf-amendement.htm</guid>					
+					<author>marc@pcinpact.com (Marc Rees)</author>
+					<category>Droit</category>
+					<pubDate>Mon, 31 Jan 2011 09:30:00 +0100</pubDate>
+				</item>
+		<item>
+					<title>eMule Paradise : ouverture du procès d'eMule et du lien P2P</title>
+					<description>Après plusieurs reports, c'est un rendez-vous judiciaire très attendu qui va s'ouvrir aujourd'hui à Paris : celui du procès d'eMule Paradise et, principalement, celui de Vincent Valade, l'un de ses responsables.</description>
+					<link>http://www.pcinpact.com/actu/news/61630-emuleparadise-lien-p2p-dadvsi-contrefacon.htm</link>
+					<guid>http://www.pcinpact.com/actu/news/61630-emuleparadise-lien-p2p-dadvsi-contrefacon.htm</guid>					
+					<author>marc@pcinpact.com (Marc Rees)</author>
+					<category>Hadopi</category>
+					<pubDate>Mon, 31 Jan 2011 08:45:00 +0100</pubDate>
+				</item>
+		<item>
+					<title>Tracts Hadopi : après les bouchons, Bordeaux</title>
+					<description>La campagne de distribution des tracts Hadopi se poursuit. D'après un commerçant Bordelais, gérant d'une salle de jeux vidéo : « des tracts Hadopi ont été distribués la semaine dernière dans nombre de commerces bordelais, dont le mien.</description>
+					<link>http://www.pcinpact.com/actu/news/61629-hadopi-tract-bordeaux-salle-arcade.htm</link>
+					<guid>http://www.pcinpact.com/actu/news/61629-hadopi-tract-bordeaux-salle-arcade.htm</guid>					
+					<author>marc@pcinpact.com (Marc Rees)</author>
+					<category>Hadopi</category>
+					<pubDate>Mon, 31 Jan 2011 00:09:00 +0100</pubDate>
+				</item>
+		<item>
+					<title>Facebook : "En discution instantané, Le petit frère de Dylan Zéroosiix m'a insulter"</title>
+					<description>Après Nicolas Sarkozy (une fois, deux fois) et Mark Zuckerberg, voilà une nouvelle faille en cours sur Facebook. Pour constater le trou, il suffit de bloquer une personne via le lien "Signaler/bloquer cette personne" présent en bas à gauche de ...</description>
+					<link>http://www.pcinpact.com/actu/news/61628-facebook-faille-trou-signaler-bug.htm</link>
+					<guid>http://www.pcinpact.com/actu/news/61628-facebook-faille-trou-signaler-bug.htm</guid>					
+					<author>marc@pcinpact.com (Marc Rees)</author>
+					<category>Sécurité</category>
+					<pubDate>Sun, 30 Jan 2011 22:43:00 +0100</pubDate>
+				</item>
+		<item>
+					<title>Copie privée : l'industrie de l'électronique va repasser à l'attaque</title>
+					<description>Le Simavalec nous l'a confirmé : le syndicat des industries de matériels audiovisuels électroniques devrait attaquer en tout ou partie la décision nº 13 de la Commission copie privée, publiée ce 28 janvier au journal officiel.</description>
+					<link>http://www.pcinpact.com/actu/news/61627-copie-privee-simavelec-conseil-detat.htm</link>
+					<guid>http://www.pcinpact.com/actu/news/61627-copie-privee-simavelec-conseil-detat.htm</guid>					
+					<author>marc@pcinpact.com (Marc Rees)</author>
+					<category>Droit</category>
+					<pubDate>Sun, 30 Jan 2011 16:32:47 +0100</pubDate>
+				</item>
+		<item>
+					<title>310ème édition des LIDD : Liens Idiots Du Dimanche</title>
+					<description> Le programme des 310ème LIDD de PC INpact
+- 3 jeux
+- 7 vidéos
+- 2 sites à part
+
+Si certaines animations et vidéos ne fonctionnent pas du tout ou sont terriblement lentes, n'hésitez pas à jeter un &amp;oelig;il du côté de YouTube et ...</description>
+					<link>http://www.pcinpact.com/actu/news/61626-lidd-310-liens-idiots-dimanche.htm</link>
+					<guid>http://www.pcinpact.com/actu/news/61626-lidd-310-liens-idiots-dimanche.htm</guid>					
+					<author>nil@pcinpact.com (Nil Sanyas)</author>
+					<category>Internet</category>
+					<pubDate>Sun, 30 Jan 2011 00:00:00 +0100</pubDate>
+				</item>
+		<item>
+					<title>Crysis 2 : une démo sera disponible sur Xbox 360 et sur PC</title>
+					<description>Alors qu'EA annonçait une version de démonstration imminente de Crysis 2 sur Xbox 360, voilà que Crytek, le développeur du jeu, annonce via Twitter qu'une version d'évaluation du mode multijoueurs sera aussi disponible sur PC.</description>
+					<link>http://www.pcinpact.com/actu/news/61625-crytek-electronic-arts-crysis-2-demo-multi-j.htm</link>
+					<guid>http://www.pcinpact.com/actu/news/61625-crytek-electronic-arts-crysis-2-demo-multi-j.htm</guid>					
+					<author>damien_l@pcinpact.com (Damien Labourot)</author>
+					<category>Jeux vidéo</category>
+					<pubDate>Sat, 29 Jan 2011 13:37:00 +0100</pubDate>
+				</item>
+		<item>
+					<title>Intel recrute un de ses directeurs chez... les Black Eyed Peas !</title>
+					<description>C'est un partenariat assez particulier qu'Intel vient d'annoncer : la société a en effet recruté Will.i.am comme directeur de l'innovation créative. Pour ceux qui ne le connaissent pas, il s'agit d'un des fondateurs du groupe Black Eyed Peas.</description>
+					<link>http://www.pcinpact.com/actu/news/61624-intel-black-eyed-peas-directeur-innovation-w.htm</link>
+					<guid>http://www.pcinpact.com/actu/news/61624-intel-black-eyed-peas-directeur-innovation-w.htm</guid>					
+					<author>sebastien_g@pcinpact.com (Sébastien Gavois)</author>
+					<category>Processeur</category>
+					<pubDate>Sat, 29 Jan 2011 10:10:00 +0100</pubDate>
+				</item>
+		<item>
+					<title>Copie privée : vers la taxation des PC et du direct download ?</title>
+					<description>Selon des « bruits » de couloirs, une réunion interministérielle a eu lieu la semaine dernière avec comme sujet, notamment, celui de la rémunération pour copie privée. Autour de la table, le ministère de la Culture et celui de l'industrie notamment.</description>
+					<link>http://www.pcinpact.com/actu/news/61623-olivier-henrard-padawan-copie-privee.htm</link>
+					<guid>http://www.pcinpact.com/actu/news/61623-olivier-henrard-padawan-copie-privee.htm</guid>					
+					<author>marc@pcinpact.com (Marc Rees)</author>
+					<category>Droit</category>
+					<pubDate>Sat, 29 Jan 2011 08:11:00 +0100</pubDate>
+				</item>
+		<item>
+					<title>Benjamin Bayart : Hadopi a une vertu immense (vidéo)</title>
+					<description>Hier, outre Patrick Roy, Benjamin Bayart a reçu l'une des E-toiles d'or 2011, lors des v&amp;oelig;ux de l'Internet présentés à l'École Supérieure d'Informatique, Electronique, Automatique ( ESIEA ). Cette fois en catégorie « économie ».</description>
+					<link>http://www.pcinpact.com/actu/news/61622-benjamin-bayart-hadopi-education-fdn.htm</link>
+					<guid>http://www.pcinpact.com/actu/news/61622-benjamin-bayart-hadopi-education-fdn.htm</guid>					
+					<author>marc@pcinpact.com (Marc Rees)</author>
+					<category>Hadopi</category>
+					<pubDate>Sat, 29 Jan 2011 07:00:00 +0100</pubDate>
+				</item>
+			</channel>
+	</rss>

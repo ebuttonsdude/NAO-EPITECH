@@ -1,0 +1,35 @@
+#! /bin/sh
+## init for alfand
+##
+## Made by Laurent Lec
+## Login   <lec@aldebaran-robotics.com>
+##
+## Started on  Mon Jan 12 08:26:39 2009 Laurent Lec
+## Last update Wed Jul 22 17:25:49 2009 Cedric GESTES
+##
+#! /bin/sh
+
+case "$1" in
+    start)
+	modprobe scx200_acb
+	modprobe lm90
+	test -c /dev/gpio5 || mknod -m og+rw /dev/gpio5 c 253 5
+	test -c /dev/gpio6 || mknod -m og+rw /dev/gpio6 c 253 6
+	alfand -d
+	;;
+    stop)
+	killall -9 alfand
+	;;
+
+    restart)
+	$0 stop
+	$0 start
+	;;
+    *)
+	echo "Usage: /etc/init.d/alfand {start|stop|restart}"
+	exit 1
+	;;
+esac
+
+exit 0
+

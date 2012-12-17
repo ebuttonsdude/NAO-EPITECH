@@ -1,0 +1,27 @@
+#!/bin/sh
+#
+
+PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
+
+case "$1" in
+    start)
+        modprobe i2c-serial
+        i2c_attach_serio /dev/ttyS1 
+        modprobe lxv4l2
+        ;;
+    stop)
+	rmmod i2c_serial
+ 	rmmod lxv4l2 
+	;;
+    force-reload|restart)
+	$0 stop
+	$0 start
+	;;
+    *)
+	echo "Usage: /etc/init.d/i2c {start|stop|restart|force-reload}"
+	exit 1
+	;;
+esac
+
+exit 0
+

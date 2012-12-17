@@ -1,0 +1,10 @@
+  wireless-iit-direction      68%  {managed} {rsn} 
+  Ionis Portal                37%  {managed} {none} 
+  Ionis Portal                68%  {managed} {none} 
+  wireless-iit-direction      73%  {managed} {rsn} 
+                              37%  {managed} {ieee8021x} 
+* NAO wifi                   100%  {managed} {wpa} {passphrase present}
+  ISEFAC-AMPHI                52%  {managed} {wep} 
+                              68%  {managed} {ieee8021x} 
+  wireless-iit-direction      31%  {managed} {rsn} 
+  Ionis Portal                73%  {managed} {none} 

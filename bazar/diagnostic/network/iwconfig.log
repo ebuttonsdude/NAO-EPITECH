@@ -1,0 +1,9 @@
+wlan0     Ralink STA  ESSID:"NAO wifi"  Nickname:"RT2870STA"
+          Mode:Managed  Frequency=2.422 GHz  Access Point: 00:24:A8:C1:05:A0   
+          Bit Rate=54 Mb/s   
+          RTS thr:off   Fragment thr:off
+          Encryption key:A9DA-8DA7-DB35-4627-5543-17D0-AEE1-8B6F
+          Link Quality=100/100  Signal level:-47 dBm  Noise level:-83 dBm
+          Rx invalid nwid:0  Rx invalid crypt:0  Rx invalid frag:0
+          Tx excessive retries:0  Invalid misc:0   Missed beacon:0
+

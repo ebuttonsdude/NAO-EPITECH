@@ -1,0 +1,55 @@
+Report of Diagnostic
+
+2011-05-30 16:00:22.674379
+Body Id : 00000ALDR1008E000042
+Head Id : None
+Body Version : V3.3
+Head Version : None
+
+Test Joint BendFront
+Problem on joint LHipYawPitch __ Cmd(-15.53 deg) __ Sen(0.0 deg)
+Problem on joint LHipPitch __ Cmd(-35.49 deg) __ Sen(0.0 deg)
+Problem on joint LKneePitch __ Cmd(-5.12 deg) __ Sen(0.0 deg)
+Problem on joint LAnklePitch __ Cmd(17.59 deg) __ Sen(0.0 deg)
+Problem on joint LAnkleRoll __ Cmd(-5.54 deg) __ Sen(0.0 deg)
+Problem on joint RHipYawPitch __ Cmd(-15.53 deg) __ Sen(0.0 deg)
+Problem on joint RHipPitch __ Cmd(-36.92 deg) __ Sen(0.0 deg)
+Problem on joint RKneePitch __ Cmd(-5.29 deg) __ Sen(0.0 deg)
+Problem on joint RAnklePitch __ Cmd(17.93 deg) __ Sen(0.0 deg)
+
+Test Fsr BendFront
+Problem on Fsr Left __ Cmd(1.0) __ Sen(0.0) [FL(0.0 Kg) __ FR(0.0 Kg) __ RL(0.0 Kg) __ RR(0.0 Kg)]
+Problem on Fsr Right __ Cmd(1.0) __ Sen(0.0) [FL(0.0 Kg) __ FR(0.0 Kg) __ RL(0.0 Kg) __ RR(0.0 Kg)]
+
+Test Joint RightSupport
+Problem on joint LHipYawPitch __ Cmd(-8.91 deg) __ Sen(0.0 deg)
+Problem on joint LHipRoll __ Cmd(25.7 deg) __ Sen(0.0 deg)
+Problem on joint LHipPitch __ Cmd(-50.52 deg) __ Sen(0.0 deg)
+Problem on joint LKneePitch __ Cmd(94.24 deg) __ Sen(0.0 deg)
+Problem on joint LAnkleRoll __ Cmd(-22.37 deg) __ Sen(0.0 deg)
+Problem on joint RHipYawPitch __ Cmd(-8.91 deg) __ Sen(0.0 deg)
+Problem on joint RHipRoll __ Cmd(21.58 deg) __ Sen(0.0 deg)
+Problem on joint RHipPitch __ Cmd(9.36 deg) __ Sen(0.0 deg)
+Problem on joint RKneePitch __ Cmd(-5.06 deg) __ Sen(0.0 deg)
+Problem on joint RAnkleRoll __ Cmd(-21.42 deg) __ Sen(0.0 deg)
+
+Test Fsr RightSupport
+Problem on Fsr Right __ Cmd(1.0) __ Sen(0.0) [FL(0.0 Kg) __ FR(0.0 Kg) __ RL(0.0 Kg) __ RR(0.0 Kg)]
+
+Test Joint LeftSupport
+Problem on joint LHipYawPitch __ Cmd(-10.46 deg) __ Sen(0.0 deg)
+Problem on joint LHipRoll __ Cmd(-16.5 deg) __ Sen(0.0 deg)
+Problem on joint LHipPitch __ Cmd(13.62 deg) __ Sen(0.0 deg)
+Problem on joint LAnkleRoll __ Cmd(18.7 deg) __ Sen(0.0 deg)
+Problem on joint RHipYawPitch __ Cmd(-10.46 deg) __ Sen(0.0 deg)
+Problem on joint RHipRoll __ Cmd(-20.22 deg) __ Sen(0.0 deg)
+Problem on joint RHipPitch __ Cmd(-41.23 deg) __ Sen(0.0 deg)
+Problem on joint RKneePitch __ Cmd(98.0 deg) __ Sen(0.0 deg)
+Problem on joint RAnklePitch __ Cmd(-7.91 deg) __ Sen(0.0 deg)
+Problem on joint RAnkleRoll __ Cmd(14.06 deg) __ Sen(0.0 deg)
+
+Test Fsr LeftSupport
+Problem on Fsr Left __ Cmd(1.0) __ Sen(0.0) [FL(0.0 Kg) __ FR(0.0 Kg) __ RL(0.0 Kg) __ RR(0.0 Kg)]
+
+
+Diagnostic KO

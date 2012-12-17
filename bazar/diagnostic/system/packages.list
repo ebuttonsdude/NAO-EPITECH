@@ -1,0 +1,428 @@
+Desired=Unknown/Install/Remove/Purge/Hold
+| Status=Not/Inst/Cfg-files/Unpacked/Failed-cfg/Half-inst/trig-aWait/Trig-pend
+|/ Err?=(none)/Hold/Reinst-required/X=both-problems (Status,Err: uppercase=bad)
+||/ Name                                       Version                                                        Description
++++-==========================================-==============================================================-============================================
+ii  alfand                                     1.0-r8                                                         diagnostic
+ii  alsa-conf-base                             1.0.20-r0                                                      Alsa sound library
+ii  alsa-state                                 0.2.0-r11                                                      Alsa Scenario Files
+ii  alsa-states                                0.2.0-r11                                                      Alsa Scenario Files
+ii  alsa-utils-aconnect                        1.0.18-r2                                                      ALSA sequencer connection manager
+ii  alsa-utils-alsaconf                        1.0.18-r2                                                      a bash script that creates ALSA configuratio
+ii  alsa-utils-alsactl                         1.0.18-r2                                                      saves/restores ALSA-settings in /etc/asound.
+ii  alsa-utils-alsamixer                       1.0.18-r2                                                      ncurses based control for ALSA mixer and set
+ii  alsa-utils-amixer                          1.0.18-r2                                                      command-line based control for ALSA mixer an
+ii  alsa-utils-aplay                           1.0.18-r2                                                      play (and record) sound files via ALSA
+ii  alstreamer                                 0.0-23+gitrea04c9e6daebd771f5c00b234f8454f0bbc4ef4a-23         Alstreamer
+ii  apt                                        0.7.21-r7                                                      Advanced front-end for dpkg.
+ii  asr-dictionaries                           1.0-5                                                          Asr dictionaries
+ii  asr-enu                                    1.0-r2                                                         Acapela ASR module
+ii  asr-frf                                    1.0-r2                                                         Acapela ASR module
+ii  avahi                                      0.6.25-r6                                                      Avahi implements the DNS-SD over Multicast D
+ii  avahi-daemon                               0.6.25-r6                                                      Avahi implements the DNS-SD over Multicast D
+ii  avahi-utils                                0.6.25-r6                                                      Avahi implements the DNS-SD over Multicast D
+ii  base-files                                 3.0.14-r94                                                     Miscellaneous files for the base system.
+ii  base-passwd                                3.5.20-r13                                                     Base system password/group files.
+ii  bash                                       3.2-r7                                                         An sh-compatible command language interprete
+ii  bluez4                                     4.42-r1.6                                                      Linux Bluetooth Stack Userland V4
+ii  boost-date-time-mt                         1.38.0-r3                                                      Free peer-reviewed portable C++ source libra
+ii  boost-filesystem-mt                        1.38.0-r3                                                      Free peer-reviewed portable C++ source libra
+ii  boost-iostreams-mt                         1.38.0-r3                                                      Free peer-reviewed portable C++ source libra
+ii  boost-program-options-mt                   1.38.0-r3                                                      Free peer-reviewed portable C++ source libra
+ii  boost-regex-mt                             1.38.0-r3                                                      Free peer-reviewed portable C++ source libra
+ii  boost-serialization-mt                     1.38.0-r3                                                      Free peer-reviewed portable C++ source libra
+ii  boost-signals-mt                           1.38.0-r3                                                      Free peer-reviewed portable C++ source libra
+ii  boost-system-mt                            1.38.0-r3                                                      Free peer-reviewed portable C++ source libra
+ii  boost-thread-mt                            1.38.0-r3                                                      Free peer-reviewed portable C++ source libra
+ii  boot-progress                              1.0-r2                                                         boot-progress
+ii  busybox                                    1.15.2-r21                                                     BusyBox combines tiny versions of many commo
+ii  busybox-mountall                           1.15.2-r21                                                     BusyBox combines tiny versions of many commo
+ii  busybox-syslog                             1.15.2-r21                                                     BusyBox combines tiny versions of many commo
+ii  bzip2                                      1.0.2-r2                                                       Very high-quality data compression program.
+ii  checkfs                                    1.0-r8                                                         Verify the FS md5sum
+ii  checkpart                                  1.0-r24                                                        automatic detecting and partitionning the in
+ii  chest-flash                                0.0-5+gitr54f7de22976e1a314319c79408a8a52bde75e218-5           Flasher for chestboard microcontroller ARM9 
+ii  chestversion                               0.0-r9+gitrd2dc4eeb2358ffcd8a0d3e004c18ee676037228c-r9         chest-version
+ii  connman                                    0.62.5-r25+gitr0cc0497d4a63c47998d87dbb12a339eaf9b689f9-r25    The Moblin Connection Manager
+ii  connman-plugin-ethernet                    0.62.5-r25+gitr0cc0497d4a63c47998d87dbb12a339eaf9b689f9-r25    connman plugin for ethernet
+ii  connman-plugin-loopback                    0.62.5-r25+gitr0cc0497d4a63c47998d87dbb12a339eaf9b689f9-r25    connman plugin for loopback
+ii  connman-plugin-wifi-legacy                 0.62.5-r25+gitr0cc0497d4a63c47998d87dbb12a339eaf9b689f9-r25    connman plugin for wifi-legacy
+ii  db                                         4.7.25-r0                                                      Berkeley DB v4.
+ii  dbus                                       1.2.1-r12                                                      A message bus system for inter-process commu
+ii  dpkg                                       1.14.25-r0                                                     Package maintenance system for Debian.
+ii  e2fsprogs-e2fsck                           1.41.5-r1                                                      EXT2 Filesystem Utilities
+ii  e2fsprogs-fsck                             1.41.5-r1                                                      EXT2 Filesystem Utilities
+ii  e2fsprogs-mke2fs                           1.41.5-r1                                                      EXT2 Filesystem Utilities
+ii  e2fsprogs-tune2fs                          1.41.5-r1                                                      EXT2 Filesystem Utilities
+ii  firmware                                   1.0-64+gitr0da0d1deb232c3f422538dd4e1f41d8f3bb5a69b-64         meta package for all firmware
+ii  firmwareupdate                             0.0-r37+gitr2ab85a2d70570e52abed677291d6ec1fb9682d4c-r37       Check Firmware
+ii  flash-dspic                                0.0-17+gitr7a2f74b15ac0f416df0fca1a00cf10a7588bc104-17         Flasher for all pic
+ii  gdb                                        7.1-r0                                                         gdb - GNU debugger
+ii  gdbserver                                  7.1-r0                                                         gdb - GNU debugger
+ii  glibc-extra-nss                            2.9-r2                                                         glibc: nis, nisplus and hesiod search servic
+ii  glibc-gconv                                2.9-r2                                                         GNU C Library
+ii  glibc-gconv-euc-cn                         2.9-r2                                                         gconv module for character set euc-cn
+ii  glibc-gconv-euc-jp                         2.9-r2                                                         gconv module for character set euc-jp
+ii  glibc-gconv-iso8859-1                      2.9-r2                                                         gconv module for character set iso8859-1
+ii  glibc-gconv-iso8859-2                      2.9-r2                                                         gconv module for character set iso8859-2
+ii  glibc-gconv-libgb                          2.9-r2                                                         gconv module for character set libgb
+ii  glibc-gconv-libjis                         2.9-r2                                                         gconv module for character set libjis
+ii  glibc-gconv-libksc                         2.9-r2                                                         gconv module for character set libksc
+ii  glibc-gconv-uhc                            2.9-r2                                                         gconv module for character set uhc
+ii  glibc-gconv-unicode                        2.9-r2                                                         gconv module for character set unicode
+ii  grub                                       0.97-r7                                                        GRand Unified Bootloader
+ii  gst-aldebaran                              1.0-r10+gitrd064db0a49267d0b6bd290d3bdb28ed06e691427-r10       Aldebaran GStreamer plug-in
+ii  gst-ffmpeg                                 0.10.7-r1                                                      FFmpeg-based GStreamer plug-in
+ii  gst-plugin-alsa                            0.10.23-r7.1                                                   GStreamer plugin for alsa
+ii  gst-plugin-audioconvert                    0.10.23-r7.1                                                   GStreamer plugin for audioconvert
+ii  gst-plugin-audiofx                         0.10.15-r7.1                                                   GStreamer plugin for audiofx
+ii  gst-plugin-audioresample                   0.10.23-r7.1                                                   GStreamer plugin for audioresample
+ii  gst-plugin-autoconvert                     0.10.13-r7.1                                                   GStreamer plugin for autoconvert
+ii  gst-plugin-avi                             0.10.15-r7.1                                                   GStreamer plugin for avi
+ii  gst-plugin-decodebin                       0.10.23-r7.1                                                   GStreamer plugin for decodebin
+ii  gst-plugin-deinterlace                     0.10.15-r7.1                                                   GStreamer plugin for deinterlace
+ii  gst-plugin-ffmpegcolorspace                0.10.23-r7.1                                                   GStreamer plugin for ffmpegcolorspace
+ii  gst-plugin-id3demux                        0.10.15-r7.1                                                   GStreamer plugin for id3demux
+ii  gst-plugin-jpeg                            0.10.15-r7.1                                                   GStreamer plugin for jpeg
+ii  gst-plugin-mad                             0.10.11-r7.1                                                   GStreamer plugin for mad
+ii  gst-plugin-mulaw                           0.10.15-r7.1                                                   GStreamer plugin for mulaw
+ii  gst-plugin-ogg                             0.10.23-r7.1                                                   GStreamer plugin for ogg
+ii  gst-plugin-playbin                         0.10.23-r7.1                                                   GStreamer plugin for playbin
+ii  gst-plugin-rtp                             0.10.15-r7.1                                                   GStreamer plugin for rtp
+ii  gst-plugin-rtpmanager                      0.10.13-r7.1                                                   GStreamer plugin for rtpmanager
+ii  gst-plugin-rtpmux                          0.10.13-r7.1                                                   GStreamer plugin for rtpmux
+ii  gst-plugin-theora                          0.10.23-r7.1                                                   GStreamer plugin for theora
+ii  gst-plugin-typefindfunctions               0.10.23-r7.1                                                   GStreamer plugin for typefindfunctions
+ii  gst-plugin-valve                           0.10.13-r7.1                                                   GStreamer plugin for valve
+ii  gst-plugin-video4linux2                    0.10.15-r7.1                                                   GStreamer plugin for video4linux2
+ii  gst-plugin-volume                          0.10.23-r7.1                                                   GStreamer plugin for volume
+ii  gst-plugin-vorbis                          0.10.23-r7.1                                                   GStreamer plugin for vorbis
+ii  gst-plugin-wavenc                          0.10.15-r7.1                                                   GStreamer plugin for wavenc
+ii  gst-plugin-wavparse                        0.10.15-r7.1                                                   GStreamer plugin for wavparse
+ii  gst-plugins-base                           0.10.23-r7.1                                                   Plugins for GStreamer
+ii  gst-plugins-good                           0.10.15-r7.1                                                   Plugins for GStreamer
+ii  gstreamer                                  0.10.23-r0                                                     GStreamer is a multimedia framework for enco
+ii  harakiri                                   0.0-r9+gitrd8086976d11417dea1d270947b8cf1bb412c463e-r9         harakiri
+ii  htop                                       0.8.3+rev183-r0                                                htop process monitor
+ii  htsengine                                  1.0-6                                                          Hts Engine
+ii  i2cserial                                  1.0.0-r7                                                       serial to i2c
+ii  initscripts                                1.0-r116                                                       SysV init scripts
+ii  jsonrpcxx                                  1.0-r2                                                         A simple library to write fastcgi jsonrpc se
+ii  julius                                     0.1-r3                                                         Julius
+ii  julius-dev                                 0.1-r3                                                         Julius
+ii  kernel                                     2.6.29+git-r38                                                 Linux kernel for the AMD Geode GX5535/LX5536
+ii  kernel-2.6.29.6-rt24-aldebaran-rt          2.6.29+git-r38                                                 Linux kernel for the AMD Geode GX5535/LX5536
+ii  kernel-image-2.6.29.6-rt24-aldebaran-rt    2.6.29+git-r38                                                 Linux kernel for the AMD Geode GX5535/LX5536
+ii  kernel-module-btusb                        2.6.29+git-r38                                                 btusb kernel module; Generic Bluetooth USB d
+ii  kernel-module-cdc-acm                      2.6.29+git-r38                                                 cdc-acm kernel module; USB Abstract Control 
+ii  kernel-module-cfg80211                     2.6.29+git-r38                                                 cfg80211 kernel module; wireless configurati
+ii  kernel-module-cimarron                     2.6.29+git-r38                                                 cimarron kernel module; Geode GX3 Cimarron g
+ii  kernel-module-compat                       2.6.29+git-r38                                                 compat kernel module; Kernel compatibility m
+ii  kernel-module-compat-firmware-class        2.6.29+git-r38                                                 compat-firmware-class kernel module; Multi p
+ii  kernel-module-crc-itu-t                    2.6.29+git-r38                                                 crc-itu-t kernel module; CRC ITU-T V.41 calc
+ii  kernel-module-eeprom-93cx6                 2.6.29+git-r38                                                 eeprom-93cx6 kernel module; EEPROM 93cx6 chi
+ii  kernel-module-ftdi-sio                     2.6.29+git-r38                                                 ftdi-sio kernel module; USB FTDI Serial Conv
+ii  kernel-module-i2c-serial                   2.6.29+git-r38                                                 i2c-serial kernel module; Serial I2C/SMBus d
+ii  kernel-module-l2cap                        2.6.29+git-r38                                                 l2cap kernel module; Bluetooth L2CAP ver 2.1
+ii  kernel-module-lm90                         2.6.29+git-r38                                                 lm90 kernel module; LM90/ADM1032 driver
+ii  kernel-module-lxv4l2                       2.6.29+git-r38                                                 lxv4l2 kernel module; A low-level driver for
+ii  kernel-module-mac80211                     2.6.29+git-r38                                                 mac80211 kernel module; IEEE 802.11 subsyste
+ii  kernel-module-rfcomm                       2.6.29+git-r38                                                 rfcomm kernel module; Bluetooth RFCOMM ver 1
+ii  kernel-module-rfkill-backport              2.6.29+git-r38                                                 rfkill-backport kernel module; RF switch sup
+ii  kernel-module-rt2x00lib                    2.6.29+git-r33                                                 rt2x00lib kernel module; rt2x00 library
+ii  kernel-module-rt2x00usb                    2.6.29+git-r33                                                 rt2x00usb kernel module; rt2x00 usb library
+ii  kernel-module-rt3070-sta-ralink            2.6.29+git-r38                                                 Linux kernel for the AMD Geode GX5535/LX5536
+ii  kernel-module-rt73usb                      2.6.29+git-r33                                                 rt73usb kernel module; Ralink RT73 USB Wirel
+ii  kernel-module-rtl8187                      2.6.29+git-r38                                                 rtl8187 kernel module; RTL8187/RTL8187B USB 
+ii  kernel-module-scx200-acb                   2.6.29+git-r38                                                 scx200-acb kernel module; NatSemi SCx200 ACC
+ii  kernel-module-usbserial                    2.6.29+git-r38                                                 usbserial kernel module; USB Serial Driver c
+ii  kernel-module-zd1211rw                     2.6.29+git-r38                                                 zd1211rw kernel module; USB driver for devic
+ii  laser-speed                                1.0-3+gitrc037b81980924a0ee3158d99dee969633f55ad59-3           Tool to modify laser speed.
+ii  ldd                                        2.9-r2                                                         glibc: print shared library dependencies
+ii  libapr-1-0                                 1.3.3-r5                                                       Apache Portable Runtime (APR) library
+ii  libaprutil-1-0                             1.3.4-r6                                                       Apache Portable Runtime (APR) companion libr
+ii  libarchive                                 2.8.3-r0                                                       C library for reading, creating, and modifyi
+ii  libasound2                                 1.0.20-r0                                                      Alsa sound library
+ii  libavahi-client3                           0.6.25-r6                                                      Avahi implements the DNS-SD over Multicast D
+ii  libavahi-common3                           0.6.25-r6                                                      Avahi implements the DNS-SD over Multicast D
+ii  libavahi-core6                             0.6.25-r6                                                      Avahi implements the DNS-SD over Multicast D
+ii  libavcodec52                               1:0.5-r2                                                       FFmpeg is a complete solution to record, con
+ii  libavformat52                              1:0.5-r2                                                       FFmpeg is a complete solution to record, con
+ii  libavutil49                                1:0.5-r2                                                       FFmpeg is a complete solution to record, con
+ii  libbabear                                  1.0-1                                                          Acapela ASR library
+ii  libbabile                                  1.0-6                                                          Acapela TTS library
+ii  libbn                                      0.0-r31+gitrc41fc6346b29553b72d30c3cbfce88532a82d4b7-r31       Aldebaran low level library
+ii  libc6                                      2.9-r2                                                         GNU C Library
+ii  libc6-dev                                  2.9-r2                                                         GNU C Library
+ii  libcheck0                                  0.9.5-r1                                                       a unit test framework for C
+ii  libcurl4                                   7.19.0-r2                                                      Command line tool and library for client-sid
+ii  libcv2.0                                   2.0.0+svnr2219-r2                                              OpenCV cv library
+ii  libcvaux2.0                                2.0.0+svnr2219-r2                                              OpenCV cvaux library
+ii  libcxcore2.0                               2.0.0+svnr2219-r2                                              OpenCV cxcore library
+ii  libdaemon0                                 0.13-r0                                                        libdaemon is a lightweight C library that ea
+ii  libdbus-1-3                                1.2.1-r12                                                      A message bus system for inter-process commu
+ii  libdbus-glib-1-2                           0.78-r0                                                        message bus system for applications to talk 
+ii  libexpat1                                  2.0.0-r2                                                       Jim Clarkes XML parser library.
+ii  libfaac0                                   1.24-r0                                                        Library for reading some sort of media forma
+ii  libfreetype6                               2.3.6-r0                                                       Freetype font rendering library
+ii  libgcc1                                    4.3.3-r4.1                                                     The GNU cc and gcc C compilers.
+ii  libgcrypt11                                1.4.1-r0                                                       A general purpose cryptographic library base
+ii  libgdbm3                                   1.8.3-r3                                                       GNU dbm is a set of database routines that u
+ii  libgio-2.0-0                               2.20.0-r0                                                      GLib is a general-purpose utility library, w
+ii  libglib-2.0-0                              2.20.0-r0                                                      GLib is a general-purpose utility library, w
+ii  libgmodule-2.0-0                           2.20.0-r0                                                      GLib is a general-purpose utility library, w
+ii  libgnutls26                                2.8.5-r0                                                       GNU Transport Layer Security Library
+ii  libgobject-2.0-0                           2.20.0-r0                                                      GLib is a general-purpose utility library, w
+ii  libgpg-error0                              1.4-r2                                                         GPG-Error library
+ii  libgsm1                                    1.0.12-r0                                                      GSM Audio Library
+ii  libgstaudio-0.10-0                         0.10.23-r7.1                                                   gstreamer gstaudio-0.10 library
+ii  libgstfarsight-0.10-0                      0.0.17-r2                                                      FarSight is an audio/video conferencing fram
+ii  libgstinterfaces-0.10-0                    0.10.23-r7.1                                                   gstreamer gstinterfaces-0.10 library
+ii  libgstnetbuffer-0.10-0                     0.10.23-r7.1                                                   gstreamer gstnetbuffer-0.10 library
+ii  libgstpbutils-0.10-0                       0.10.23-r7.1                                                   gstreamer gstpbutils-0.10 library
+ii  libgstriff-0.10-0                          0.10.23-r7.1                                                   gstreamer gstriff-0.10 library
+ii  libgstrtp-0.10-0                           0.10.23-r7.1                                                   gstreamer gstrtp-0.10 library
+ii  libgsttag-0.10-0                           0.10.23-r7.1                                                   gstreamer gsttag-0.10 library
+ii  libgstvideo-0.10-0                         0.10.23-r7.1                                                   gstreamer gstvideo-0.10 library
+ii  libgthread-2.0-0                           2.20.0-r0                                                      GLib is a general-purpose utility library, w
+ii  libhighgui2.0                              2.0.0+svnr2219-r2                                              OpenCV highgui library
+ii  libiconv                                   1.12-r1                                                        GNU libiconv - libiconv is for you if your a
+ii  libid3tag0                                 0.15.1b-r1                                                     Library for interacting with ID3 tags.
+ii  libjasper1                                 1.900.1-r0                                                     Jpeg 2000 implementation
+ii  libjpeg62                                  6b-r8                                                          libjpeg is a library for handling the JPEG (
+ii  liblog4cxx10                               0.10.0-r1                                                      Apache logging framework for C++ library
+ii  libloudmouth-1-0                           1.4.3-r0                                                       Loudmouth is a lightweight and easy-to-use C
+ii  libmad0                                    0.15.1b-r4                                                     MPEG Audio Decoder Library
+ii  libml2.0                                   2.0.0+svnr2219-r2                                              OpenCV ml library
+ii  libmp3lame0                                3.96.1-r4                                                      Not an MP3 encoder
+ii  libnice                                    0.0.9-r0                                                       Libnice is an implementation of the IETF's d
+ii  libnl1                                     1.1-r2                                                         libnl is a library for applications dealing 
+ii  libnss-mdns                                0.10-r0                                                        NSS module for Multicast DNS name resolution
+ii  libogg0                                    1.1.3-r0                                                       libogg is the bitstream and framing library 
+ii  liboil                                     0.3.15-r4                                                      Liboil is a library of simple functions that
+ii  libpam                                     1.0.2-r7                                                       PAM authentication library for Linux.  Linux
+ii  libpcre0                                   7.6-r4                                                         Perl-compatible regular expression library. 
+ii  libperl5                                   5.8.8-r27                                                      Perl is a popular scripting language.
+ii  libpng12-0                                 1.2.35-r0                                                      PNG Library
+ii  libpopt0                                   1.14-r1                                                        Popt is a C library for parsing command line
+ii  libpostproc51                              1:0.5-r2                                                       FFmpeg is a complete solution to record, con
+ii  libpython2.6-1.0                           2.6.1-ml6                                                      The Python Programming Language
+ii  libreadline5                               5.2-r4                                                         The GNU Readline library provides a set of f
+ii  libsamplerate0                             0.1.7-r0                                                       An audio Sample Rate Conversion library
+ii  libschroedinger-1.0-0                      1.0.5-r1                                                       Version 1.0.5-r1 of package schroedinger
+ii  libsoundtouch0                             1.3.1ald5-0                                                    soundtouch : Audio processing library for ch
+ii  libsoup-2.4-1                              2.26.2-r2                                                      An HTTP library implementation in C
+ii  libsqlite3-0                               3.6.13-r0                                                      An Embeddable SQL Database Engine
+ii  libstdc++6                                 4.3.3-r4.1                                                     The GNU cc and gcc C compilers.
+ii  libswscale0                                1:0.5-r2                                                       FFmpeg is a complete solution to record, con
+ii  libtelepathy-farsight0                     0.0.11-r3                                                      Telepathy fasrsight
+ii  libtelepathy-glib0                         0.8.3-r0                                                       Telepathy framework - GLib library
+ii  libtelepathy2                              0.3.3-r0                                                       Version 0.3.3-r0 of package libtelepathy
+ii  libtheora0                                 1.0-r3                                                         Version 1.0-r3 of package libtheora
+ii  libthread-db1                              2.9-r2                                                         GNU C Library
+ii  libtiff5                                   3.8.2+4.0.0beta2-r0                                            This software provides support for the Tag I
+ii  liburg                                     1.0-3+gitrc037b81980924a0ee3158d99dee969633f55ad59-3           Library to use Urg laser.
+ii  libusb-0.1-4                               1:0.1.0-r0                                                     libusb is a library to provide userspace acc
+ii  libusb-1.0-0                               1.0.1-r0                                                       libusb is a library to provide userspace acc
+ii  libuuid1                                   1.41.2-r1                                                      e2fsprogs-libs uuid library
+ii  libvolume-id0                              124-r26                                                        udev is a daemon which dynamically creates a
+ii  libvorbis                                  1.2.0-1                                                        Ogg Vorbis is a high-quality lossy audio cod
+ii  libxml2                                    2.7.2-r0                                                       GNOME XML Parser library
+ii  libz-dev                                   1.2.3-r5                                                       Zlib Compression Library
+ii  libz1                                      1.2.3-r5                                                       Zlib Compression Library
+ii  lighttpd                                   1.4.18-r12                                                     Web server
+ii  lighttpd-module-access                     1.4.18-r12                                                     Lighttpd module for access
+ii  lighttpd-module-accesslog                  1.4.18-r12                                                     Lighttpd module for accesslog
+ii  lighttpd-module-alias                      1.4.18-r12                                                     Lighttpd module for alias
+ii  lighttpd-module-auth                       1.4.18-r12                                                     Lighttpd module for auth
+ii  lighttpd-module-cgi                        1.4.18-r12                                                     Lighttpd module for cgi
+ii  lighttpd-module-compress                   1.4.18-r12                                                     Lighttpd module for compress
+ii  lighttpd-module-dirlisting                 1.4.18-r12                                                     Lighttpd module for dirlisting
+ii  lighttpd-module-fastcgi                    1.4.18-r12                                                     Lighttpd module for fastcgi
+ii  lighttpd-module-indexfile                  1.4.18-r12                                                     Lighttpd module for indexfile
+ii  lighttpd-module-rewrite                    1.4.18-r12                                                     Lighttpd module for rewrite
+ii  lighttpd-module-staticfile                 1.4.18-r12                                                     Lighttpd module for staticfile
+ii  lighttpd-module-userdir                    1.4.18-r12                                                     Lighttpd module for userdir
+ii  linux-firmware                             0.0-r0+gitr80a203275fc368db0a5f166c42dd35a4a22f2453-r0         Firmware files for use with Linux kernel
+ii  linux-libc-headers-dev                     2.6.29-r0                                                      Sanitized set of 2.6 kernel headers for the 
+ii  lirc                                       0.8.6-r10+gitr14ba61782a8be379216aa5e36546526347cd58bf-r10     LIRC is a package that allows you to decode 
+ii  lirc-exec                                  0.8.6-r10+gitr14ba61782a8be379216aa5e36546526347cd58bf-r10     LIRC is a package that allows you to decode 
+ii  makedevs                                   1.0.0-r7                                                       A tool to make device nodes
+ii  module-init-tools-depmod                   3.4-r1                                                         This package contains a set of programs for 
+ii  modutils-finish                            1.0-r0                                                         modutils configuration files
+ii  modutils-initscripts                       1.0-r8                                                         modutils configuration files
+ii  nano                                       2.0.7-r0                                                       GNU nano (Nano's ANOther editor, or Not ANOt
+ii  nao-diagnostic                             1.0-r4                                                         Collect information about your robot
+ii  naoconfig                                  1.0-r2                                                         Nao Configuration
+ii  naogeode                                   1.0-r8                                                         diagnostic
+ii  naopathe                                   0.0-114+gitr394c82e12f9b55a8cbabb1bd717f672697e923b7-114       naopathe
+ii  naopathe-backend                           1.0-r1                                                         NaoPathe external backend
+ii  naoqi                                      1.10.52-r250+gitrb0c555c7fc2fbfd1ed339452ec381c3a6320f7e4-r250 Nao manager
+ii  naoqi-academics                            1.0-r7                                                         naoqi academics metapackage
+ii  naoqi-base                                 1.0-25                                                         naoqi base metapackage
+ii  naoqi-data                                 1.10.52-r250+gitrb0c555c7fc2fbfd1ed339452ec381c3a6320f7e4-r250 Nao manager
+ii  naoqi-lib                                  1.10.52-r250+gitrb0c555c7fc2fbfd1ed339452ec381c3a6320f7e4-r250 Nao manager
+ii  naoqi-module-libalbase                     1.10.52-r250+gitrb0c555c7fc2fbfd1ed339452ec381c3a6320f7e4-r250 Naoqi library module for libalbase
+ii  naoqi-module-libalbluetooth                1.10.52-r250+gitrb0c555c7fc2fbfd1ed339452ec381c3a6320f7e4-r250 Naoqi library module for libalbluetooth
+ii  naoqi-module-libalbonjour                  1.10.52-r250+gitrb0c555c7fc2fbfd1ed339452ec381c3a6320f7e4-r250 Naoqi library module for libalbonjour
+ii  naoqi-module-libalheadtracker              1.10.38-r232+gitr5fa7a2fec1847fc7990210825a01aba0a203400c-r232 Naoqi library module for libalheadtracker
+ii  naoqi-module-liballaser                    1.10.52-r250+gitrb0c555c7fc2fbfd1ed339452ec381c3a6320f7e4-r250 Naoqi library module for liballaser
+ii  naoqi-module-liballogodetection            1.10.38-r232+gitr5fa7a2fec1847fc7990210825a01aba0a203400c-r232 Naoqi library module for liballogodetection
+ii  naoqi-module-libalresourcemanager          1.10.52-r250+gitrb0c555c7fc2fbfd1ed339452ec381c3a6320f7e4-r250 Naoqi library module for libalresourcemanage
+ii  naoqi-module-libaudiodevice                1.10.52-r250+gitrb0c555c7fc2fbfd1ed339452ec381c3a6320f7e4-r250 Naoqi library module for libaudiodevice
+ii  naoqi-module-libaudioin                    1.10.52-r250+gitrb0c555c7fc2fbfd1ed339452ec381c3a6320f7e4-r250 Naoqi library module for libaudioin
+ii  naoqi-module-libaudioout                   1.10.52-r250+gitrb0c555c7fc2fbfd1ed339452ec381c3a6320f7e4-r250 Naoqi library module for libaudioout
+ii  naoqi-module-libbehaviormanager            1.10.52-r250+gitrb0c555c7fc2fbfd1ed339452ec381c3a6320f7e4-r250 Naoqi library module for libbehaviormanager
+ii  naoqi-module-libdatagatherer               1.10.52-r250+gitrb0c555c7fc2fbfd1ed339452ec381c3a6320f7e4-r250 Naoqi library module for libdatagatherer
+ii  naoqi-module-libdevicecommunicationmanager 1.10.52-r250+gitrb0c555c7fc2fbfd1ed339452ec381c3a6320f7e4-r250 Naoqi library module for libdevicecommunicat
+ii  naoqi-module-libfacedetection              1.10.52-r250+gitrb0c555c7fc2fbfd1ed339452ec381c3a6320f7e4-r250 Naoqi library module for libfacedetection
+ii  naoqi-module-libfacetracker                1.10.52-r250+gitrb0c555c7fc2fbfd1ed339452ec381c3a6320f7e4-r250 Naoqi library module for libfacetracker
+ii  naoqi-module-libframemanager               1.10.52-r250+gitrb0c555c7fc2fbfd1ed339452ec381c3a6320f7e4-r250 Naoqi library module for libframemanager
+ii  naoqi-module-libinfrared                   1.10.52-r250+gitrb0c555c7fc2fbfd1ed339452ec381c3a6320f7e4-r250 Naoqi library module for libinfrared
+ii  naoqi-module-liblandmarkdetection          1.10.52-r250+gitrb0c555c7fc2fbfd1ed339452ec381c3a6320f7e4-r250 Naoqi library module for liblandmarkdetectio
+ii  naoqi-module-liblauncher                   1.10.52-r250+gitrb0c555c7fc2fbfd1ed339452ec381c3a6320f7e4-r250 Naoqi library module for liblauncher
+ii  naoqi-module-libleds                       1.10.52-r250+gitrb0c555c7fc2fbfd1ed339452ec381c3a6320f7e4-r250 Naoqi library module for libleds
+ii  naoqi-module-libmecalogger                 1.10.52-r250+gitrb0c555c7fc2fbfd1ed339452ec381c3a6320f7e4-r250 Naoqi library module for libmecalogger
+ii  naoqi-module-libmotion                     1.10.52-r250+gitrb0c555c7fc2fbfd1ed339452ec381c3a6320f7e4-r250 Naoqi library module for libmotion
+ii  naoqi-module-libmotionrecorder             1.10.52-r250+gitrb0c555c7fc2fbfd1ed339452ec381c3a6320f7e4-r250 Naoqi library module for libmotionrecorder
+ii  naoqi-module-libpythonbridge               1.10.52-r250+gitrb0c555c7fc2fbfd1ed339452ec381c3a6320f7e4-r250 Naoqi library module for libpythonbridge
+ii  naoqi-module-libredballdetection           1.10.52-r250+gitrb0c555c7fc2fbfd1ed339452ec381c3a6320f7e4-r250 Naoqi library module for libredballdetection
+ii  naoqi-module-libredballtracker             1.10.52-r250+gitrb0c555c7fc2fbfd1ed339452ec381c3a6320f7e4-r250 Naoqi library module for libredballtracker
+ii  naoqi-module-librobotmodel                 1.10.52-r250+gitrb0c555c7fc2fbfd1ed339452ec381c3a6320f7e4-r250 Naoqi library module for librobotmodel
+ii  naoqi-module-libsensors                    1.10.52-r250+gitrb0c555c7fc2fbfd1ed339452ec381c3a6320f7e4-r250 Naoqi library module for libsensors
+ii  naoqi-module-libsentinel                   1.10.52-r250+gitrb0c555c7fc2fbfd1ed339452ec381c3a6320f7e4-r250 Naoqi library module for libsentinel
+ii  naoqi-module-libvideoinput                 1.10.52-r250+gitrb0c555c7fc2fbfd1ed339452ec381c3a6320f7e4-r250 Naoqi library module for libvideoinput
+ii  naoqi-module-libvisionrecognition          1.10.52-r250+gitrb0c555c7fc2fbfd1ed339452ec381c3a6320f7e4-r250 Naoqi library module for libvisionrecognitio
+ii  naoqi-module-libvisiontoolbox              1.10.52-r250+gitrb0c555c7fc2fbfd1ed339452ec381c3a6320f7e4-r250 Naoqi library module for libvisiontoolbox
+ii  naoqi-python                               1.10.52-r250+gitrb0c555c7fc2fbfd1ed339452ec381c3a6320f7e4-r250 Nao manager
+ii  ncurses                                    5.4-r19                                                        Ncurses library
+ii  netbase                                    4.21-r38                                                       This package provides the necessary infrastr
+ii  netkit-ftp                                 0.17-r1                                                        netkit-ftp includes a commandline ftp client
+ii  openjtalk                                  1.0-6                                                          OpenJtalk
+ii  opennao                                    1.4-r90                                                        Metapackage for opennao
+ii  openntpd                                   3.9p1-r3                                                       OpenNTPD is a FREE, easy to use implementati
+ii  openssh                                    4.6p1-r8                                                       Secure rlogin/rsh/rcp/telnet replacement (Op
+ii  openssh-scp                                4.6p1-r8                                                       Secure rlogin/rsh/rcp/telnet replacement (Op
+ii  openssh-sftp-server                        4.6p1-r8                                                       Secure rlogin/rsh/rcp/telnet replacement (Op
+ii  openssh-ssh                                4.6p1-r8                                                       Secure rlogin/rsh/rcp/telnet replacement (Op
+ii  openssh-sshd                               4.6p1-r8                                                       Secure rlogin/rsh/rcp/telnet replacement (Op
+ii  openssl                                    0.9.8j-r2                                                      Secure Socket Layer (SSL) binary and related
+ii  pam-plugin-access                          1.0.2-r7                                                       PAM plugin for -access
+ii  pam-plugin-deny                            1.0.2-r7                                                       PAM plugin for -deny
+ii  pam-plugin-limits                          1.0.2-r7                                                       PAM plugin for -limits
+ii  pam-plugin-permit                          1.0.2-r7                                                       PAM plugin for -permit
+ii  pam-plugin-rootok                          1.0.2-r7                                                       PAM plugin for -rootok
+ii  pam-plugin-unix                            1.0.2-r7                                                       PAM plugin for -unix
+ii  parted                                     1.8.8-r2                                                       parted, the GNU partition resizing program
+ii  perl                                       5.8.8-r27                                                      Perl is a popular scripting language.
+ii  perl-module-autoloader                     5.8.8-r27                                                      perl module autoloader
+ii  perl-module-base                           5.8.8-r27                                                      perl module base
+ii  perl-module-carp                           5.8.8-r27                                                      perl module carp
+ii  perl-module-config                         5.8.8-r27                                                      perl module config
+ii  perl-module-constant                       5.8.8-r27                                                      perl module constant
+ii  perl-module-cwd                            5.8.8-r27                                                      perl module cwd
+ii  perl-module-english                        5.8.8-r27                                                      perl module english
+ii  perl-module-errno                          5.8.8-r27                                                      perl module errno
+ii  perl-module-exporter                       5.8.8-r27                                                      perl module exporter
+ii  perl-module-exporter-heavy                 5.8.8-r27                                                      perl module exporter-heavy
+ii  perl-module-fcntl                          5.8.8-r27                                                      perl module fcntl
+ii  perl-module-file-basename                  5.8.8-r27                                                      perl module file-basename
+ii  perl-module-file-path                      5.8.8-r27                                                      perl module file-path
+ii  perl-module-file-spec                      5.8.8-r27                                                      perl module file-spec
+ii  perl-module-file-spec-unix                 5.8.8-r27                                                      perl module file-spec-unix
+ii  perl-module-file-temp                      5.8.8-r27                                                      perl module file-temp
+ii  perl-module-io                             5.8.8-r27                                                      perl module io
+ii  perl-module-io-handle                      5.8.8-r27                                                      perl module io-handle
+ii  perl-module-overload                       5.8.8-r27                                                      perl module overload
+ii  perl-module-posix                          5.8.8-r27                                                      perl module posix
+ii  perl-module-selectsaver                    5.8.8-r27                                                      perl module selectsaver
+ii  perl-module-strict                         5.8.8-r27                                                      perl module strict
+ii  perl-module-symbol                         5.8.8-r27                                                      perl module symbol
+ii  perl-module-vars                           5.8.8-r27                                                      perl module vars
+ii  perl-module-warnings                       5.8.8-r27                                                      perl module warnings
+ii  perl-module-warnings-register              5.8.8-r27                                                      perl module warnings-register
+ii  perl-module-xsloader                       5.8.8-r27                                                      perl module xsloader
+ii  python-audio                               2.6.1-ml6                                                      Python Audio Handling
+ii  python-bzip2                               2.6.1-ml6                                                      Python bzip2 support
+ii  python-codecs                              2.6.1-ml6                                                      Python Codecs, Encodings & i18n Support
+ii  python-compression                         2.6.1-ml6                                                      Python High Level Compression Support
+ii  python-core                                2.6.1-ml6                                                      Python Interpreter and core modules (needed!
+ii  python-crypt                               2.6.1-ml6                                                      Python Basic Cryptographic and Hashing Suppo
+ii  python-ctypes                              2.6.1-ml6                                                      Python C Types Support
+ii  python-datetime                            2.6.1-ml6                                                      Python Calendar and Time support
+ii  python-dbus                                0.83.0-ml1                                                     Python bindings for DBus, a socket-based mes
+ii  python-django                              1.0.2-ml0                                                      Python Web framework
+ii  python-email                               2.6.1-ml6                                                      Python Email Support
+ii  python-fcntl                               2.6.1-ml6                                                      Python's fcntl Interface
+ii  python-flup                                1.0.1-ml0                                                      Random assortment of WSGI servers
+ii  python-gst                                 0.10.10-ml3                                                    Python Gstreamer bindings
+ii  python-html                                2.6.1-ml6                                                      Python HTML Processing
+ii  python-httplib2                            0.5.0-r0                                                       A comprehensive HTTP client library that sup
+ii  python-image                               2.6.1-ml6                                                      Python Graphical Image Handling
+ii  python-imaging                             1.1.6-ml1                                                      Python Imaging Library
+ii  python-io                                  2.6.1-ml6                                                      Python Low-Level I/O
+ii  python-lang                                2.6.1-ml6                                                      Python Low-Level Language Support
+ii  python-logging                             2.6.1-ml6                                                      Python Logging Support
+ii  python-math                                2.6.1-ml6                                                      Python Math Support
+ii  python-mime                                2.6.1-ml6                                                      Python MIME Handling APIs
+ii  python-misc                                2.6.1-ml6                                                      The Python Programming Language
+ii  python-netclient                           2.6.1-ml6                                                      Python Internet Protocol Clients
+ii  python-netserver                           2.6.1-ml6                                                      Python Internet Protocol Servers
+ii  python-opencv                              2.0.0+svnr2219-r2                                              Python bindings to opencv
+ii  python-pickle                              2.6.1-ml6                                                      Python Persistence Support
+ii  python-pprint                              2.6.1-ml6                                                      Python Pretty-Print Support
+ii  python-pygobject                           1:2.14.2-r3                                                    Python GObject bindings
+ii  python-pyopenssl                           0.8-ml0                                                        Simple Python wrapper around the OpenSSL lib
+ii  python-pysqlite2                           2.4.0-ml2                                                      Python interface to SQLite 3
+ii  python-re                                  2.6.1-ml6                                                      Python Regular Expression APIs
+ii  python-readline                            2.6.1-ml6                                                      Python Readline Support
+ii  python-shell                               2.6.1-ml6                                                      Python Shell-Like Functionality
+ii  python-stringold                           2.6.1-ml6                                                      Python String APIs [deprecated]
+ii  python-subprocess                          2.6.1-ml6                                                      Python Subprocess Support
+ii  python-textutils                           2.6.1-ml6                                                      Python Option Parsing, Text Wrapping and Com
+ii  python-threading                           2.6.1-ml6                                                      Python Threading & Synchronization Support
+ii  python-unittest                            2.6.1-ml6                                                      Python Unit Testing Framework
+ii  python-unixadmin                           2.6.1-ml6                                                      Python Unix Administration Support
+ii  python-xml                                 2.6.1-ml6                                                      Python basic XML support.
+ii  python-xmlrpc                              2.6.1-ml6                                                      Python XMLRPC Support
+ii  python-zlib                                2.6.1-ml6                                                      Python zlib Support.
+ii  qpoases                                    0.0-1+gitr71284680e0f27d84af789b1f520c0ee08fe08b25-1           QPoases
+ii  rsync                                      3.0.0-r1                                                       A file-synchronization tool
+ii  setears                                    1.0-r8                                                         diagnostic
+ii  seteyes                                    1.0-r8                                                         diagnostic
+ii  sqlite-pc                                  0.0-4+gitr8f94845a5283e02c54249abfd63682358f91193a-4           sqlite-pc
+ii  ssh-keygen                                 4.6p1-r8                                                       Secure rlogin/rsh/rcp/telnet replacement (Op
+ii  strace                                     4.5.14-r8                                                      strace is a system call tracing tool.
+ii  sysvinit                                   2.86-r58                                                       System-V like init.
+ii  sysvinit-inittab                           2.86-r58                                                       System-V like init.
+ii  sysvinit-pidof                             2.86-r58                                                       System-V like init.
+ii  sysvinit-utils                             2.86-r58                                                       System-V like init.
+ii  t001chain-dev                              0.0-70+gitr33e3567523c9fb288e10553aa34cbcb29ee34b12-70         The t001chain project
+ii  telepathy-farsight-python                  1.0-r0                                                         Version 1.0-r0 of package telepathy-farsight
+ii  telepathy-gabble                           0.8.11-r0                                                      Gabble: a Jabber/XMPP connection manager
+ii  telepathy-python                           0.15.5-r0                                                      Telepathy framework - Python package
+ii  tts-enu-common                             1.0-r4                                                         Acapela voice
+ii  tts-enu-kenny                              1.0-r8                                                         Acapela voice
+ii  tts-frf-common                             1.0-r4                                                         Acapela voice
+ii  tts-frf-julie                              1.0-r7                                                         Acapela voice
+ii  tzdata                                     2007k-r4                                                       Timezone data
+ii  udev                                       124-r26                                                        udev is a daemon which dynamically creates a
+ii  udev-utils                                 124-r26                                                        udev is a daemon which dynamically creates a
+ii  unison                                     1.0-r0                                                         unison
+ii  update-alternatives-cworth                 0.99.154-r1                                                    Version 0.99.154-r1 of package update-altern
+ii  update-modules                             1.0-r8                                                         Script to manage module configuration files
+ii  update-rc.d                                0.7-r1                                                         Manage symlinks in /etc/rcN.d
+ii  uramark                                    1.0-0                                                          Uramark
+ii  uramark-data                               1.0-0                                                          Uramark
+ii  urbi                                       0.0-r10+gitrfdc6ad4afb157587c9418291ec491317f37ba6a7-r10       urbi
+ii  usbutils                                   0.73-r0                                                        Host side USB console utilities.
+ii  valgrind                                   3.4.1-r0                                                       Valgrind memory debugger
+ii  vim                                        7.0-r5.1                                                       Vim is an almost fully-compatible version of
+ii  vim-syntax                                 7.0-r5.1                                                       Vim is an almost fully-compatible version of
+ii  vsftpd                                     2.0.5-r4                                                       Secure ftp daemon
+ii  wireless-tools                             29-r5                                                          Tools for the Linux Standard Wireless Extens
+ii  wpa-supplicant                             0.7.3-r2                                                       A Client for Wi-Fi Protected Access (WPA).
+ii  wpa-supplicant-passphrase                  0.7.3-r2                                                       A Client for Wi-Fi Protected Access (WPA).
+ii  zd1211-firmware                            1.4-r0                                                         zd1211 wifi files for the Linux kernel
+ii  zeroconf                                   0.9-r2                                                         IPv4 link-local address allocator
+ii  zeromq                                     2.0.10-0+gitrb99309341ae0ce230fef191c521e6d1481e52dcc-0        Zeromq

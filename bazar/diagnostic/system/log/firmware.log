@@ -1,0 +1,40 @@
+Find device arm9 v3.3
+Chestboard    (                    ) onboard: 0.2.0.24 infile:0.2.0.24
+====> Checking the chestboard
+  nothing to do
+Find device arm9 v3.3
+[1m[31merror  : [1m[32mChestboardPrefs: [0mmessage too small : 5 bytes.
+            : Value                     Required
+Name        : Nao                       Nao
+HWVersion   : 3.3.0                     3.0
+SoftVersion : 1.10.52                   1.10.25
+
+Status      : Everything is ok
+Find device arm9 v3.3
+Chestboard    (                    ) onboard: 0.2.0.24 infile:0.2.0.24
+Inertialboard (                    ) onboard: 0.15     infile:0.15
+Motorboard    (LeftHipBoard        ) onboard: 39       infile:39
+Motorboard    (LeftThighBoard      ) onboard: 39       infile:39
+Motorboard    (LeftShinBoard       ) onboard: 39       infile:39
+Motorboard    (LeftFootBoard       ) onboard: 39       infile:39
+Motorboard    (RightHipBoard       ) onboard: 39       infile:39
+Motorboard    (RightThighBoard     ) onboard: 39       infile:39
+Motorboard    (RightShinBoard      ) onboard: 39       infile:39
+Motorboard    (RightFootBoard      ) onboard: 39       infile:39
+Motorboard    (HeadBoard           ) onboard: 39       infile:39
+Motorboard    (LeftShoulderBoard   ) onboard: 39       infile:39
+Motorboard    (LeftArmBoard        ) onboard: 39       infile:39
+Motorboard    (RightShoulderBoard  ) onboard: 39       infile:39
+Motorboard    (RightArmBoard       ) onboard: 39       infile:39
+Faceboard     (                    ) onboard: 0.9      infile:0.9
+Touchboard    (                    ) onboard: 0.3      infile:0.3
+====> Checking the chestboard
+  nothing to do
+====> Checking motorboards
+  nothing to do
+====> Checking inertialboard
+  nothing to do
+====> Checking faceboard
+  nothing to do
+====> Checking touchboard
+  nothing to do

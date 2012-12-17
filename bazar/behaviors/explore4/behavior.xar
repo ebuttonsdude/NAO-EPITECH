@@ -1,0 +1,2077 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ChoregrapheProject xmlns="http://www.aldebaran-robotics.com/schema/choregraphe/project.xsd" xar_version="3">
+    <Box name="root" robot="" id="-1" tooltip="Root box of Choregraphe&apos;s project. Highest level possible." bitmap_expanded="1" plugin="" x="0" y="0">
+        <bitmap>media/images/box/root.png</bitmap>
+        <script language="4">
+            <content>
+                <![CDATA[]]>
+</content>
+        </script>
+        <Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when diagram is loaded." id="1" />
+        <Input name="onStart" type="1" type_size="1" nature="2" inner="0" tooltip="Box behavior starts when a signal is received on this input." id="2" />
+        <Input name="onStop" type="1" type_size="1" nature="3" inner="0" tooltip="Box behavior stops when a signal is received on this input." id="3" />
+        <Output name="onStopped" type="1" type_size="1" nature="1" inner="0" tooltip="Signal sent when box behavior is finished." id="4" />
+        <Timeline fps="10" resources_acquisition="0" size="300" enable="0" start_frame="0" end_frame="-1" scale="10">
+            <watches />
+            <BehaviorLayer name="behavior_layer1" mute="0">
+                <BehaviorKeyframe name="keyframe1" index="1" bitmap="">
+                    <Diagram scale="-1">
+                        <Box name="Explore" robot="" id="5" tooltip="A small state machine, the most simple and efficient. Developped by the Applications and Usage Team At Aldebaran.&#x0A;*** ref box in: ./4_localize/Templates/TemplateStateMachine/ExampleTemplateStateMachine.xar ***&#x0A;*** last modification date(git):   Thu Oct 15 16:26:21 2009 +0200 ***" bitmap_expanded="1" plugin="" x="245" y="17">
+                            <bitmap>media/images/box/box-timeLine.png</bitmap>
+                            <script language="4">
+                                <content>
+                                    <![CDATA[class MyClass(GeneratedClass):
+    def __init__(self):
+        GeneratedClass.__init__(self)
+
+    def onLoad(self):
+        pass
+
+    def onUnload(self):
+        pass
+
+    def onInput_onStart(self):
+        self.gotoAndStop(1)
+
+    def onInput_onStop(self):
+        pass]]>
+</content>
+                            </script>
+                            <Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when diagram is loaded." id="1" />
+                            <Input name="onStart" type="1" type_size="1" nature="1" inner="0" tooltip="Box behavior starts when a signal is received on this input." id="2" />
+                            <Input name="onStop" type="1" type_size="1" nature="3" inner="0" tooltip="Box behavior stops when a signal is received on this input." id="3" />
+                            <Output name="onStopped" type="1" type_size="1" nature="1" inner="0" tooltip="Signal sent when box behavior is finished." id="4" />
+                            <Parameter name="rChanceOfLookAt" inherits_from_parent="1" content_type="1" value="0" default_value="5" min="0" max="1000" tooltip="Percentage of chance of a decision to look at an object.&#x0A;&#x0A;because we can&apos;t put something like 0.005, on va le mettre en pour mille" id="5" />
+                            <Parameter name="rChanceToExit" inherits_from_parent="1" content_type="2" value="0" default_value="0.2" min="0" max="1" tooltip="" id="6" />
+                            <Parameter name="rTimeOut" inherits_from_parent="1" content_type="2" value="600" default_value="600" min="0" max="1e+14" tooltip="time out in seconds" id="7" />
+                            <Parameter name="bOuputMapToPng" inherits_from_parent="1" content_type="0" value="0" default_value="0" tooltip="activate the output of a map in png on the robot..." id="8" />
+                            <Parameter name="bEnableSound" inherits_from_parent="1" content_type="0" value="1" default_value="1" tooltip="EnableDebugSound" id="9" />
+                            <Parameter name="nObstaclesThreshold" inherits_from_parent="1" content_type="1" value="32" default_value="32" min="0" max="256" tooltip="Change the Obstacles Threshold (vision)" id="10" />
+                            <Timeline fps="10" resources_acquisition="0" size="300" enable="1" start_frame="0" end_frame="-1" scale="10">
+                                <watches />
+                                <BehaviorLayer name="behavior_layer1" mute="0">
+                                    <BehaviorKeyframe name="Init" index="1" bitmap="">
+                                        <Diagram scale="88">
+                                            <Box name="Stiffness" robot="" id="13" tooltip="When onStart is stimulated, the stiffness of the selected parts (see parameters) is set to the Max stiffness value that may be set in the parameters.&#x0A;When onStop is stimulated, it uses the Min stiffness value.&#x0A;&#x0A;Note: you can also set the duration of the transition." bitmap_expanded="1" plugin="" x="75" y="13">
+                                                <bitmap>media/images/box/movement/move.png</bitmap>
+                                                <script language="4">
+                                                    <content>
+                                                        <![CDATA[class MyClass(GeneratedClass):
+    def __init__(self):
+        GeneratedClass.__init__(self)
+
+    def onLoad(self):
+        #~ puts code for box initialization here
+        pass
+
+    def onUnload(self):
+        #~ puts code for box cleanup here
+        pass
+
+    def setStiffness(self, stiffness):
+        duration = self.getParameter("Duration")
+        if(self.getParameter("Head")):
+            ALMotion.post.stiffnessInterpolation("Head", stiffness, duration)
+        if(self.getParameter("Left arm")):
+            ALMotion.post.stiffnessInterpolation("LArm", stiffness, duration)
+        if(self.getParameter("Right arm")):
+            ALMotion.post.stiffnessInterpolation("RArm", stiffness, duration)
+        if(self.getParameter("Left leg")):
+            ALMotion.post.stiffnessInterpolation("LLeg", stiffness, duration)
+        if(self.getParameter("Right leg")):
+            ALMotion.post.stiffnessInterpolation("RLeg", stiffness, duration)
+        time.sleep(duration)
+
+    def onInput_onStart(self):
+        self.setStiffness(self.getParameter("Max stiffness"))
+        self.onStopped() #~ activate output of the box
+
+    def onInput_onStop(self):
+        self.setStiffness(self.getParameter("Min stiffness"))
+        self.onStopped() #~ activate output of the box]]>
+</content>
+                                                </script>
+                                                <Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when diagram is loaded." id="1" />
+                                                <Input name="onStart" type="1" type_size="1" nature="2" inner="0" tooltip="Box behavior starts when a signal is received on this input." id="2" />
+                                                <Input name="onStop" type="1" type_size="1" nature="3" inner="0" tooltip="Box behavior stops when a signal is received on this input." id="3" />
+                                                <Output name="onStopped" type="1" type_size="1" nature="1" inner="0" tooltip="Signal sent when box behavior is finished." id="4" />
+                                                <Parameter name="Min stiffness" inherits_from_parent="0" content_type="2" value="0" default_value="0" min="0" max="1" tooltip="What stiffness do we want to set when onStop is stimulated." id="5" />
+                                                <Parameter name="Max stiffness" inherits_from_parent="0" content_type="2" value="1" default_value="1" min="0" max="1" tooltip="What stiffness do we want to set when onStart is stimulated." id="6" />
+                                                <Parameter name="Duration" inherits_from_parent="0" content_type="2" value="1" default_value="1" min="0.02" max="10" tooltip="How much time to we leave the robot to go to the correct stiffness. (in seconds)" id="7" />
+                                                <Parameter name="Head" inherits_from_parent="0" content_type="0" value="1" default_value="1" tooltip="Do we want to modify the head stiffness?" id="8" />
+                                                <Parameter name="Left arm" inherits_from_parent="0" content_type="0" value="1" default_value="1" tooltip="Do we want to modify the left arm stiffness?" id="9" />
+                                                <Parameter name="Right arm" inherits_from_parent="0" content_type="0" value="1" default_value="1" tooltip="Do we want to modify the right arm stiffness?" id="10" />
+                                                <Parameter name="Left leg" inherits_from_parent="0" content_type="0" value="1" default_value="1" tooltip="Do we want to modify the left leg stiffness?" id="11" />
+                                                <Parameter name="Right leg" inherits_from_parent="0" content_type="0" value="1" default_value="1" tooltip="Do we want to modify the right leg stiffness?" id="12" />
+                                            </Box>
+                                            <Box name="toWalk_1" robot="" id="6" tooltip="This box is empty (contains a single motion layer with no motors defined in it) and should be used to create any movement you&apos;d like." bitmap_expanded="1" plugin="" x="213" y="13">
+                                                <bitmap>media/images/box/movement/move.png</bitmap>
+                                                <script language="4">
+                                                    <content>
+                                                        <![CDATA[class MyClass(GeneratedClass):
+	def __init__(self):
+		GeneratedClass.__init__(self)
+
+	def onUnload(self):
+		#puts code for box cleanup here
+		""
+
+	def onInput_onStart(self):
+		#self.onStopped() # activate output of the box
+		""
+
+	def onInput_onStop(self):
+		""]]>
+</content>
+                                                </script>
+                                                <Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when Diagram is loaded." id="1" />
+                                                <Input name="onStart" type="1" type_size="1" nature="2" inner="0" tooltip="Box behavior starts when a signal is received on this Input." id="2" />
+                                                <Input name="onStop" type="1" type_size="1" nature="3" inner="0" tooltip="Box behavior stops when a signal is received on this Input." id="3" />
+                                                <Output name="onStopped" type="1" type_size="1" nature="1" inner="0" tooltip="Signal sent when Box behavior is finished." id="4" />
+                                                <Timeline fps="25" resources_acquisition="0" size="300" enable="1" start_frame="0" end_frame="-1" scale="10">
+                                                    <watches />
+                                                    <ActuatorList>
+                                                        <ActuatorCurve name="value" actuator="HeadYaw" recordable="1" mute="0" alwaysVisible="0">
+                                                            <Key frame="23" value="-0.617646" />
+                                                            <Key frame="43" value="-0.441863" />
+                                                            <Key frame="48" value="-0.441863" />
+                                                        </ActuatorCurve>
+                                                        <ActuatorCurve name="value" actuator="HeadPitch" recordable="1" mute="0" alwaysVisible="0">
+                                                            <Key frame="23" value="7.46839" />
+                                                            <Key frame="43" value="14.6543" />
+                                                            <Key frame="48" value="15.5345" />
+                                                        </ActuatorCurve>
+                                                        <ActuatorCurve name="value" actuator="LShoulderPitch" recordable="1" mute="0" alwaysVisible="0">
+                                                            <Key frame="21" value="80.858" />
+                                                            <Key frame="41" value="97.909" />
+                                                            <Key frame="46" value="97.4695" />
+                                                        </ActuatorCurve>
+                                                        <ActuatorCurve name="value" actuator="LShoulderRoll" recordable="1" mute="0" alwaysVisible="0">
+                                                            <Key frame="21" value="18.367" />
+                                                            <Key frame="41" value="12.2145" />
+                                                            <Key frame="46" value="11.072" />
+                                                        </ActuatorCurve>
+                                                        <ActuatorCurve name="value" actuator="LElbowYaw" recordable="1" mute="0" alwaysVisible="0">
+                                                            <Key frame="21" value="-49.3976" />
+                                                            <Key frame="41" value="-83.939" />
+                                                            <Key frame="46" value="-83.6753" />
+                                                        </ActuatorCurve>
+                                                        <ActuatorCurve name="value" actuator="LElbowRoll" recordable="1" mute="0" alwaysVisible="0">
+                                                            <Key frame="21" value="-79.6275" />
+                                                            <Key frame="41" value="-38.8457" />
+                                                            <Key frame="46" value="-38.3184" />
+                                                        </ActuatorCurve>
+                                                        <ActuatorCurve name="value" actuator="LWristYaw" recordable="1" mute="0" alwaysVisible="0">
+                                                            <Key frame="21" value="3.68905" />
+                                                            <Key frame="41" value="0.612838" />
+                                                            <Key frame="46" value="1.0523" />
+                                                        </ActuatorCurve>
+                                                        <ActuatorCurve name="value" actuator="LHand" recordable="1" mute="0" alwaysVisible="0">
+                                                            <Key frame="21" value="0.128753" />
+                                                            <Key frame="41" value="0.00984462" />
+                                                            <Key frame="46" value="0.0120264" />
+                                                        </ActuatorCurve>
+                                                        <ActuatorCurve name="value" actuator="RShoulderPitch" recordable="1" mute="0" alwaysVisible="0">
+                                                            <Key frame="19" value="77.6108" />
+                                                            <Key frame="39" value="87.5426" />
+                                                            <Key frame="44" value="87.0152" />
+                                                        </ActuatorCurve>
+                                                        <ActuatorCurve name="value" actuator="RShoulderRoll" recordable="1" mute="0" alwaysVisible="0">
+                                                            <Key frame="19" value="-15.0319" />
+                                                            <Key frame="39" value="-11.8678" />
+                                                            <Key frame="44" value="-12.3951" />
+                                                        </ActuatorCurve>
+                                                        <ActuatorCurve name="value" actuator="RElbowYaw" recordable="1" mute="0" alwaysVisible="0">
+                                                            <Key frame="19" value="44.295" />
+                                                            <Key frame="39" value="77.2544" />
+                                                            <Key frame="44" value="76.9908" />
+                                                        </ActuatorCurve>
+                                                        <ActuatorCurve name="value" actuator="RElbowRoll" recordable="1" mute="0" alwaysVisible="0">
+                                                            <Key frame="19" value="78.9292" />
+                                                            <Key frame="39" value="29.0067" />
+                                                            <Key frame="44" value="29.0067" />
+                                                        </ActuatorCurve>
+                                                        <ActuatorCurve name="value" actuator="RWristYaw" recordable="1" mute="0" alwaysVisible="0">
+                                                            <Key frame="19" value="4.91953" />
+                                                            <Key frame="39" value="0.612838" />
+                                                            <Key frame="44" value="1.0523" />
+                                                        </ActuatorCurve>
+                                                        <ActuatorCurve name="value" actuator="RHand" recordable="1" mute="0" alwaysVisible="0">
+                                                            <Key frame="19" value="0.279298" />
+                                                            <Key frame="39" value="0.137117" />
+                                                            <Key frame="44" value="0.140753" />
+                                                        </ActuatorCurve>
+                                                        <ActuatorCurve name="value" actuator="LHipYawPitch" recordable="1" mute="0" alwaysVisible="0">
+                                                            <Key frame="20" value="-9.57779" />
+                                                            <Key frame="40" value="0.00240423" />
+                                                            <Key frame="45" value="-0.173379" />
+                                                        </ActuatorCurve>
+                                                        <ActuatorCurve name="value" actuator="LHipRoll" recordable="1" mute="0" alwaysVisible="0">
+                                                            <Key frame="20" value="3.51807" />
+                                                            <Key frame="40" value="0.00240423" />
+                                                            <Key frame="45" value="-0.70073" />
+                                                        </ActuatorCurve>
+                                                        <ActuatorCurve name="value" actuator="LHipPitch" recordable="1" mute="0" alwaysVisible="0">
+                                                            <Key frame="20" value="-14.2361" />
+                                                            <Key frame="40" value="-24.9588" />
+                                                            <Key frame="45" value="-24.9588" />
+                                                        </ActuatorCurve>
+                                                        <ActuatorCurve name="value" actuator="LKneePitch" recordable="1" mute="0" alwaysVisible="0">
+                                                            <Key frame="20" value="42.6251" />
+                                                            <Key frame="40" value="40.0762" />
+                                                            <Key frame="45" value="40.6915" />
+                                                        </ActuatorCurve>
+                                                        <ActuatorCurve name="value" actuator="LAnklePitch" recordable="1" mute="0" alwaysVisible="0">
+                                                            <Key frame="20" value="-21.448" />
+                                                            <Key frame="40" value="-19.9538" />
+                                                            <Key frame="45" value="-19.8659" />
+                                                        </ActuatorCurve>
+                                                        <ActuatorCurve name="value" actuator="LAnkleRoll" recordable="1" mute="0" alwaysVisible="0">
+                                                            <Key frame="20" value="-1.75543" />
+                                                            <Key frame="40" value="0.00240423" />
+                                                            <Key frame="45" value="0.266079" />
+                                                        </ActuatorCurve>
+                                                        <ActuatorCurve name="value" actuator="RHipRoll" recordable="1" mute="0" alwaysVisible="0">
+                                                            <Key frame="20" value="-1.93121" />
+                                                            <Key frame="40" value="0.00240423" />
+                                                            <Key frame="45" value="0.353971" />
+                                                        </ActuatorCurve>
+                                                        <ActuatorCurve name="value" actuator="RHipPitch" recordable="1" mute="0" alwaysVisible="0">
+                                                            <Key frame="20" value="-14.4166" />
+                                                            <Key frame="40" value="-25.0515" />
+                                                            <Key frame="45" value="-25.0515" />
+                                                        </ActuatorCurve>
+                                                        <ActuatorCurve name="value" actuator="RKneePitch" recordable="1" mute="0" alwaysVisible="0">
+                                                            <Key frame="20" value="36.7411" />
+                                                            <Key frame="40" value="39.9053" />
+                                                            <Key frame="45" value="39.9053" />
+                                                        </ActuatorCurve>
+                                                        <ActuatorCurve name="value" actuator="RAnklePitch" recordable="1" mute="0" alwaysVisible="0">
+                                                            <Key frame="20" value="-16.2576" />
+                                                            <Key frame="40" value="-20.1248" />
+                                                            <Key frame="45" value="-20.9158" />
+                                                        </ActuatorCurve>
+                                                        <ActuatorCurve name="value" actuator="RAnkleRoll" recordable="1" mute="0" alwaysVisible="0">
+                                                            <Key frame="20" value="3.43018" />
+                                                            <Key frame="40" value="0.00240423" />
+                                                            <Key frame="45" value="-0.0854875" />
+                                                        </ActuatorCurve>
+                                                    </ActuatorList>
+                                                </Timeline>
+                                                <Resource name="Standing" type="Lock" timeout="0" />
+                                                <Resource name="HeadYaw" type="Lock" timeout="0" />
+                                                <Resource name="HeadPitch" type="Lock" timeout="0" />
+                                                <Resource name="LShoulderPitch" type="Lock" timeout="0" />
+                                                <Resource name="LShoulderRoll" type="Lock" timeout="0" />
+                                                <Resource name="LElbowRoll" type="Lock" timeout="0" />
+                                                <Resource name="LElbowYaw" type="Lock" timeout="0" />
+                                                <Resource name="LWristYaw" type="Lock" timeout="0" />
+                                                <Resource name="LHand" type="Lock" timeout="0" />
+                                                <Resource name="RShoulderPitch" type="Lock" timeout="0" />
+                                                <Resource name="RShoulderRoll" type="Lock" timeout="0" />
+                                                <Resource name="RElbowRoll" type="Lock" timeout="0" />
+                                                <Resource name="RElbowYaw" type="Lock" timeout="0" />
+                                                <Resource name="RWristYaw" type="Lock" timeout="0" />
+                                                <Resource name="RHand" type="Lock" timeout="0" />
+                                                <Resource name="LHipYawPitch" type="Lock" timeout="0" />
+                                                <Resource name="LHipRoll" type="Lock" timeout="0" />
+                                                <Resource name="LHipPitch" type="Lock" timeout="0" />
+                                                <Resource name="LKneePitch" type="Lock" timeout="0" />
+                                                <Resource name="LAnklePitch" type="Lock" timeout="0" />
+                                                <Resource name="LAnkleRoll" type="Lock" timeout="0" />
+                                                <Resource name="RHipRoll" type="Lock" timeout="0" />
+                                                <Resource name="RHipPitch" type="Lock" timeout="0" />
+                                                <Resource name="RKneePitch" type="Lock" timeout="0" />
+                                                <Resource name="RAnklePitch" type="Lock" timeout="0" />
+                                                <Resource name="RAnkleRoll" type="Lock" timeout="0" />
+                                            </Box>
+                                            <Box name="gotoWalk" robot="" id="1" tooltip="Jump to a given frame (edit parameters to modify it) and stop the timeline parent at this index. Note that all the behavior keyframes will be loaded, and therefore the event logic will still be running." bitmap_expanded="1" plugin="" x="352" y="14">
+                                                <bitmap>media/images/box/box-timeLine.png</bitmap>
+                                                <script language="4">
+                                                    <content>
+                                                        <![CDATA[class MyClass(GeneratedClass):
+    def __init__(self):
+        GeneratedClass.__init__(self)
+
+    def onUnload(self):
+        pass
+
+    def onInput_onStart(self):
+        name = self.getParameter("frame name")
+        self.log("%s -> %s" % (self.boxName, name))
+        self.gotoAndStopParent(name)
+
+    def onInput_onStop(self):
+        pass]]>
+</content>
+                                                </script>
+                                                <Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when diagram is loaded." id="1" />
+                                                <Input name="onStart" type="1" type_size="1" nature="2" inner="0" tooltip="Parent timeline gotoAndStop when a signal is received on this input." id="2" />
+                                                <Parameter name="frame name" inherits_from_parent="0" content_type="3" value="WalkAndExploreALittle" default_value="" custom_choice="0" tooltip="" id="3" />
+                                            </Box>
+                                            <Link inputowner="13" indexofinput="2" outputowner="0" indexofoutput="1" />
+                                            <Link inputowner="6" indexofinput="2" outputowner="13" indexofoutput="4" />
+                                            <Link inputowner="1" indexofinput="2" outputowner="6" indexofoutput="4" />
+                                        </Diagram>
+                                    </BehaviorKeyframe>
+                                    <BehaviorKeyframe name="WalkAndExploreALittle" index="14" bitmap="">
+                                        <Diagram scale="100">
+                                            <Box name="WalkAndDodge_ref" robot="" id="1" tooltip="Enter tooltip here" bitmap_expanded="1" plugin="" x="76" y="6">
+                                                <bitmap>media/images/box/box-diagram.png</bitmap>
+                                                <script language="4">
+                                                    <content>
+                                                        <![CDATA[]]>
+</content>
+                                                </script>
+                                                <Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when diagram is loaded." id="1" />
+                                                <Input name="onStart" type="1" type_size="1" nature="2" inner="0" tooltip="Box behavior starts when a signal is received on this input." id="2" />
+                                                <Input name="onStop" type="1" type_size="1" nature="3" inner="0" tooltip="Box behavior stops when a signal is received on this input." id="3" />
+                                                <Output name="output_video_crash" type="1" type_size="1" nature="2" inner="0" tooltip="" id="4" />
+                                                <Output name="onStopped" type="1" type_size="1" nature="1" inner="0" tooltip="Signal sent when box behavior is finished." id="5" />
+                                                <Output name="output_somethingAtLeft" type="1" type_size="1" nature="2" inner="0" tooltip="Output info, so we can decide to look at the obstacles" id="6" />
+                                                <Output name="output_somethingAtCenter" type="1" type_size="1" nature="2" inner="0" tooltip="" id="7" />
+                                                <Output name="output_somethingAtRight" type="1" type_size="1" nature="2" inner="0" tooltip="" id="8" />
+                                                <Output name="output_blocked" type="1" type_size="1" nature="2" inner="0" tooltip="" id="9" />
+                                                <Parameter name="bUseSonar" inherits_from_parent="0" content_type="0" value="1" default_value="0" tooltip="" id="10" />
+                                                <Parameter name="bUseBumpers" inherits_from_parent="1" content_type="0" value="1" default_value="1" tooltip="" id="11" />
+                                                <Parameter name="bEnableSound" inherits_from_parent="1" content_type="0" value="1" default_value="1" tooltip="" id="12" />
+                                                <Timeline fps="10" resources_acquisition="0" size="300" enable="0" start_frame="0" end_frame="-1" scale="10">
+                                                    <watches />
+                                                    <BehaviorLayer name="behavior_layer1" mute="0">
+                                                        <BehaviorKeyframe name="keyframe1" index="1" bitmap="">
+                                                            <Diagram scale="147">
+                                                                <Box name="ChangeCamera" robot="" id="1" tooltip="Change the currently used camera.&#x0A;*** ref box in: ./4_localize/ChangeCamera/ExampleChangeCamera.xar ***&#x0A;*** last modification date(git):   Thu Oct 15 16:26:21 2009 +0200 ***" bitmap_expanded="1" plugin="" x="94" y="202">
+                                                                    <bitmap>media/images/box/interaction/look.png</bitmap>
+                                                                    <script language="4">
+                                                                        <content>
+                                                                            <![CDATA[class MyClass(GeneratedClass):
+    def __init__(self):
+        GeneratedClass.__init__(self),
+        self.kCameraSelectID = 18;
+        self.cameraModule = ALProxy( "ALVideoDevice" ); # "ALVideoDevice"
+
+    def onLoad(self):
+        pass
+
+    def onUnload(self):
+        pass
+
+    def onInput_onUseTopCamera(self):
+        #~ self.log( self.boxName + ": Use Top Camera" );
+        self.cameraModule.setParam( self.kCameraSelectID, 0 );
+        self.output_Finished();
+
+    def onInput_onUseBottomCamera(self):
+        #~ self.log( self.boxName + ": Use Bottom Camera" );    
+        self.cameraModule.setParam( self.kCameraSelectID, 1 );
+        self.output_Finished();]]>
+</content>
+                                                                    </script>
+                                                                    <Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when diagram is loaded." id="1" />
+                                                                    <Input name="onUseTopCamera" type="1" type_size="1" nature="1" inner="0" tooltip="use the camera at the top of the head (forehead)" id="2" />
+                                                                    <Input name="onUseBottomCamera" type="1" type_size="1" nature="1" inner="0" tooltip="Use the camera at the bottom of the head (mouth)" id="3" />
+                                                                    <Output name="output_Finished" type="1" type_size="1" nature="1" inner="0" tooltip="The change is finished." id="4" />
+                                                                </Box>
+                                                                <Box name="FusionObstacles_ref" robot="" id="4" tooltip="Use sonar, bumper and vision to detect obstacles.&#x0A;output distance matrix containing 11 distances (left to right)." bitmap_expanded="1" plugin="" x="391" y="178">
+                                                                    <bitmap>media/images/box/icons_appu/obstacles.png</bitmap>
+                                                                    <script language="4">
+                                                                        <content>
+                                                                            <![CDATA[]]>
+</content>
+                                                                    </script>
+                                                                    <Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when diagram is loaded." id="1" />
+                                                                    <Input name="onStart" type="1" type_size="1" nature="2" inner="0" tooltip="Box behavior starts when a signal is received on this input." id="2" />
+                                                                    <Input name="onStop" type="1" type_size="1" nature="3" inner="0" tooltip="Box behavior stops when a signal is received on this input." id="3" />
+                                                                    <Output name="onStopped" type="1" type_size="1" nature="1" inner="0" tooltip="Signal sent when box behavior is finished." id="4" />
+                                                                    <Output name="output_distances_matrix" type="2" type_size="11" nature="2" inner="0" tooltip="" id="5" />
+                                                                    <Parameter name="bEnableSound" inherits_from_parent="1" content_type="0" value="1" default_value="1" tooltip="" id="6" />
+                                                                    <Timeline fps="10" resources_acquisition="0" size="300" enable="0" start_frame="0" end_frame="-1" scale="10">
+                                                                        <watches />
+                                                                        <BehaviorLayer name="behavior_layer1" mute="0">
+                                                                            <BehaviorKeyframe name="keyframe1" index="1" bitmap="">
+                                                                                <Diagram scale="-1">
+                                                                                    <Box name="DetectObstaclesUS_ref" robot="" id="1" tooltip="Detect objectacles near using ultrasound" bitmap_expanded="1" plugin="" x="118" y="124">
+                                                                                        <bitmap>media/images/box/sensors/ultrasound.png</bitmap>
+                                                                                        <script language="4">
+                                                                                            <content>
+                                                                                                <![CDATA[]]>
+</content>
+                                                                                        </script>
+                                                                                        <Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when Diagram is loaded." id="1" />
+                                                                                        <Input name="onStart" type="1" type_size="1" nature="2" inner="0" tooltip="Box behavior starts when a signal is received on this Input." id="2" />
+                                                                                        <Input name="onStop" type="1" type_size="1" nature="3" inner="0" tooltip="Box behavior stops when a signal is received on this Input." id="3" />
+                                                                                        <Output name="onStopped" type="1" type_size="1" nature="1" inner="0" tooltip="Behavior is finished" id="4" />
+                                                                                        <Output name="output_obstacles" type="2" type_size="2" nature="2" inner="0" tooltip="No obstacle." id="5" />
+                                                                                        <Output name="output_nothing" type="1" type_size="1" nature="2" inner="0" tooltip="onNothingRight" id="6" />
+                                                                                        <Timeline fps="10" resources_acquisition="0" size="300" enable="0" start_frame="0" end_frame="-1" scale="10">
+                                                                                            <watches />
+                                                                                            <BehaviorLayer name="behavior_layer1" mute="0">
+                                                                                                <BehaviorKeyframe name="keyframe1" index="1" bitmap="">
+                                                                                                    <Diagram scale="-1">
+                                                                                                        <Box name="Just Here to launch the extractors" robot="" id="1" tooltip="activates ALUltrasound extractor. Selects the right output. You can change the parameters in the script: - @period: period of acquisition of ultrasound devices. (in miliseconds) - @threshold_nothing: if both distances are more than this value, nothing will be activated. (in meters) - @threshold_obstacle: threshold for the detection of an obstacle. if one or both distances are below this value, an obstacle will be detected. The relevant output will be activated. (in meters)" bitmap_expanded="1" plugin="" x="88" y="201">
+                                                                                                            <bitmap>media/images/box/sensors/ultrasound.png</bitmap>
+                                                                                                            <script language="4">
+                                                                                                                <content>
+                                                                                                                    <![CDATA[class MyClass(GeneratedClass):
+    def __init__(self):
+        GeneratedClass.__init__(self)
+
+    def onLoad(self):
+        #~ puts code for box initialization here
+        pass
+
+    def onUnload(self):
+        #~ puts code for box cleanup here
+        pass
+
+    def onInput_onStart(self):
+        self.gotoAndStop(1)
+        pass
+
+    def onInput_onStop(self):
+        self.onUnload()
+        self.onStopped()
+        pass]]>
+</content>
+                                                                                                            </script>
+                                                                                                            <Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when Diagram is loaded." id="1" />
+                                                                                                            <Input name="onStart" type="1" type_size="1" nature="2" inner="0" tooltip="Box behavior starts when a signal is received on this Input." id="2" />
+                                                                                                            <Input name="onStop" type="1" type_size="1" nature="3" inner="0" tooltip="Box behavior stops when a signal is received on this Input." id="3" />
+                                                                                                            <Input name="SonarNothingDetected" type="0" type_size="1" nature="4" stm_value_name="SonarNothingDetected" inner="1" tooltip="Connected to ALMemory. Will be stimulated every time the value subscribed to changes, respecting the refresh period." id="4" />
+                                                                                                            <Input name="SonarLeftDetected" type="0" type_size="1" nature="4" stm_value_name="SonarLeftDetected" inner="1" tooltip="Connected to ALMemory. Will be stimulated every time the value subscribed to changes, respecting the refresh period." id="5" />
+                                                                                                            <Input name="SonarRightDetected" type="0" type_size="1" nature="4" stm_value_name="SonarRightDetected" inner="1" tooltip="Connected to ALMemory. Will be stimulated every time the value subscribed to changes, respecting the refresh period." id="6" />
+                                                                                                            <Input name="SonarLeftNothingDetected" type="0" type_size="1" nature="4" stm_value_name="SonarLeftNothingDetected" inner="1" tooltip="Connected to ALMemory. Will be stimulated every time the value subscribed to changes, respecting the refresh period." id="7" />
+                                                                                                            <Input name="SonarRightNothingDetected" type="0" type_size="1" nature="4" stm_value_name="SonarRightNothingDetected" inner="1" tooltip="Connected to ALMemory. Will be stimulated every time the value subscribed to changes, respecting the refresh period." id="8" />
+                                                                                                            <Output name="onStopped" type="1" type_size="1" nature="1" inner="0" tooltip="Behavior is finished" id="9" />
+                                                                                                            <Output name="nothingLeft" type="1" type_size="1" nature="2" inner="0" tooltip="nothingLeft" id="10" />
+                                                                                                            <Output name="left" type="2" type_size="1" nature="2" inner="0" tooltip="" id="11" />
+                                                                                                            <Output name="right" type="2" type_size="1" nature="2" inner="0" tooltip="" id="12" />
+                                                                                                            <Output name="nothingRight" type="1" type_size="1" nature="2" inner="0" tooltip="nothingLeft" id="13" />
+                                                                                                            <Timeline fps="10" resources_acquisition="0" size="300" enable="0" start_frame="0" end_frame="-1" scale="10">
+                                                                                                                <watches />
+                                                                                                                <BehaviorLayer name="behavior_layer1" mute="0">
+                                                                                                                    <BehaviorKeyframe name="keyframe1" index="1" bitmap="">
+                                                                                                                        <Diagram scale="-1">
+                                                                                                                            <Link inputowner="0" indexofinput="11" outputowner="0" indexofoutput="5" />
+                                                                                                                            <Link inputowner="0" indexofinput="12" outputowner="0" indexofoutput="6" />
+                                                                                                                            <Link inputowner="0" indexofinput="10" outputowner="0" indexofoutput="7" />
+                                                                                                                            <Link inputowner="0" indexofinput="13" outputowner="0" indexofoutput="8" />
+                                                                                                                        </Diagram>
+                                                                                                                    </BehaviorKeyframe>
+                                                                                                                </BehaviorLayer>
+                                                                                                                <ActuatorList />
+                                                                                                            </Timeline>
+                                                                                                        </Box>
+                                                                                                        <Box name="DetectObstacleUS_Loop" robot="" id="2" tooltip="detect les obstacles mais attention l&apos;extraceur n&apos;est pas lancé par cette boite (d&apos;ou la boite connexe)" bitmap_expanded="1" plugin="" x="144" y="38">
+                                                                                                            <bitmap>media/images/box/loop.png</bitmap>
+                                                                                                            <script language="4">
+                                                                                                                <content>
+                                                                                                                    <![CDATA[# DetectObstacleUS
+# v0.81
+import time
+class MyClass(GeneratedClass):
+    """ insert here your comments about this class """
+    def __init__(self):
+        GeneratedClass.__init__(self);
+        self.BIND_PYTHON( self.getName(),"myDataChanged" );
+        
+    def onLoad(self):
+        self.bMustStop = False;
+        self.bIsRunning = False;
+        self.rDistPrevL = 1.;
+        self.rDistPrevR = 1.;
+
+    def onUnload(self):
+        self.onInput_onStop(); # stop current loop execution
+
+    def onInput_onStart(self):
+        self.log( self.boxName + ": start - begin" );
+        
+        if( self.bIsRunning ):
+            self.log( self.boxName + ": already started => nothing" );
+            return;
+
+        self.bIsRunning = True;
+        self.bMustStop = False;
+        
+        rPeriod = self.getParameter( 'rPeriod' );
+        rThreshold = self.getParameter( 'rThreshold' );        
+        strTemplate = 'Device/SubDeviceList/US/%s/Sensor/Value';
+        aListVarUS = [ strTemplate % 'Left', strTemplate % 'Right' ];
+        ALMemory.subscribeToMicroEvent( 'SonarMiddleDetected', self.getName(), "", "myDataChanged" ); # just to launch the sonar extractor (but it doesn't work !!!)
+        # we post a big value, so when Ultrasound doesn't work, they stop triggering...
+        ALMemory.insertData( strTemplate % 'Left', 2.55 );
+        ALMemory.insertData( strTemplate % 'Right', 2.55 );
+        bFuckedUS = False;
+        while( not self.bMustStop ):
+            rDistL, rDistR = ALMemory.getListData( aListVarUS );
+            self.rDistPrevL = ( self.rDistPrevL + rDistL ) / 2.;
+            self.rDistPrevR = ( self.rDistPrevR + rDistR ) / 2.;
+            self.log( "%s: %5.2f, %5.2f => %5.2f, %5.2f" % ( self.boxName, rDistL, rDistR, self.rDistPrevL, self.rDistPrevR ) );
+            if( self.rDistPrevL < rThreshold or self.rDistPrevR < rThreshold ): # or ou and, it depends if you want fake positif or false negative...
+                self.output_obstacles( [ self.rDistPrevL, self.rDistPrevR ] );
+            else:
+                self.output_nothing();
+            if( self.rDistPrevL > 2.5499 and self.rDistPrevR > 2.5499 and not bFuckedUS ):
+                bFuckedUS = True;
+                self.output_us_is_fucked();
+            time.sleep( rPeriod );
+        # end while
+        ALMemory.unsubscribeToMicroEvent( 'SonarNothingDetected', self.getName() );        
+        self.bIsRunning = False;
+        self.onStopped();    
+        self.log( self.boxName + ": start - end" ); 
+
+    def onInput_onStop(self):
+        self.bMustStop = True; # stop current loop execution
+        
+    def myDataChanged(self, pDataName, pValue, pMessage):
+        self.log( "%s: %s: %s" % ( self.boxName, pDataName, str( pValue ) ) );
+        pass]]>
+</content>
+                                                                                                            </script>
+                                                                                                            <Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when diagram is loaded." id="1" />
+                                                                                                            <Input name="onStart" type="1" type_size="1" nature="2" inner="0" tooltip="Box behavior starts when a signal is received on this input." id="2" />
+                                                                                                            <Input name="onStop" type="1" type_size="1" nature="3" inner="0" tooltip="Box behavior stops when a signal is received on this input." id="3" />
+                                                                                                            <Output name="onStopped" type="1" type_size="1" nature="1" inner="0" tooltip="Signal sent when box behavior is finished." id="4" />
+                                                                                                            <Output name="output_obstacles" type="2" type_size="2" nature="2" inner="0" tooltip="" id="5" />
+                                                                                                            <Output name="output_nothing" type="1" type_size="1" nature="2" inner="0" tooltip="" id="6" />
+                                                                                                            <Output name="output_us_is_fucked" type="1" type_size="1" nature="2" inner="0" tooltip="" id="7" />
+                                                                                                            <Parameter name="rPeriod" inherits_from_parent="0" content_type="2" value="0.5" default_value="1" min="0" max="100000" tooltip="period in seconds" id="8" />
+                                                                                                            <Parameter name="rThreshold" inherits_from_parent="0" content_type="2" value="0.31" default_value="0.4" min="0" max="3" tooltip="obstacles detection threshold in meters" id="9" />
+                                                                                                        </Box>
+                                                                                                        <Box name="Enter name here" robot="" id="3" tooltip="Enter tooltip here" bitmap_expanded="1" plugin="localizationbox_plugin" x="280" y="177">
+                                                                                                            <script language="4">
+                                                                                                                <content>
+                                                                                                                    <![CDATA[class MyClass(GeneratedClass):
+	def __init__(self):
+		GeneratedClass.__init__(self)
+		self.tts = ALProxy("ALTextToSpeech")
+
+	def onInput_onStart(self):
+		sChinese = ""
+		sEnglish = "Warning: my Sonar doesn't work!"
+		sFrench = "Attention: mes sonars ne marchent pas!"
+		sGerman = ""
+		sItalian = ""
+		sJapanese = ""
+		sKorean = ""
+		sPortuguese = ""
+		sSpanish = ""
+		sDefaultLang = self.tts.getLanguage()
+		self.onStopped(eval("s"+sDefaultLang))]]>
+</content>
+                                                                                                            </script>
+                                                                                                            <pluginContent>
+                                                                                                                <chinese></chinese>
+                                                                                                                <english>Warning: my Sonar doesn&apos;t work!</english>
+                                                                                                                <french>Attention: mes sonars ne marchent pas!</french>
+                                                                                                                <german></german>
+                                                                                                                <italian></italian>
+                                                                                                                <japanese></japanese>
+                                                                                                                <korean></korean>
+                                                                                                                <portuguese></portuguese>
+                                                                                                                <spanish></spanish>
+                                                                                                                <language>1</language>
+                                                                                                            </pluginContent>
+                                                                                                            <Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when diagram is loaded." id="1" />
+                                                                                                            <Input name="onStart" type="1" type_size="1" nature="2" inner="0" tooltip="Box behavior starts when a signal is received on this input." id="2" />
+                                                                                                            <Input name="onStop" type="1" type_size="1" nature="3" inner="0" tooltip="Box behavior stops when a signal is received on this input." id="3" />
+                                                                                                            <Output name="onStopped" type="3" type_size="1" nature="1" inner="0" tooltip="Signal sent when box behavior is finished." id="4" />
+                                                                                                        </Box>
+                                                                                                        <Box name="SayTextPrerender_ref" robot="" id="8" tooltip="Receive a string, precompute it, then say it!&#x0A;All steps are outputted to add synchro or interesting behaviors...&#x0A;&#x0A;v1.23 - abcdk" bitmap_expanded="1" plugin="" x="537" y="170">
+                                                                                                            <bitmap>media/images/box/icons_appu/sayPrecomputed.png</bitmap>
+                                                                                                            <script language="4">
+                                                                                                                <content>
+                                                                                                                    <![CDATA[# SayTextPrerender
+# v1.23
+
+import abcdk.speech as speech
+
+class MyClass(GeneratedClass):
+    def __init__(self):
+        GeneratedClass.__init__(self);
+        self.nStateInit = 0;
+        self.nStatePreparing = 1;
+        self.nStateSpeaking = 2;
+        self.nStateStopped = 3;
+        
+    def onLoad(self):
+        self.nStep = self.nStateInit;
+        self.bStopped = False;
+    
+    def onUnload(self):
+        self.onInput_onStop();
+
+    def onInput_onStart(self, p):
+        if( self.nStep == self.nStateSpeaking or self.nStep == self.nStatePreparing ):
+            self.log( "%s: already speaking, won't say that sentence: '%s'" % ( self.boxName, p ) );
+            return;
+        if( p == None ):
+            self.output_onStopSpeaking(); # on le fait ca ou pas ?
+            return;            
+
+        self.bStopped = False;
+        txt = p;
+        self.nStep = self.nStatePreparing;
+        self.output_onPreparing();
+        rLength = None;
+        if( self.getParameter( "bWithLight" ) ):
+            rLength = speech.sayAndCacheAndLight( txt, True, self.getParameter( 'bStoreToNonVolatilePath' ), nUseLang = self.getParameter( 'nNumLanguage' ) );
+        else:
+            rLength = speech.sayAndCache( txt, True, self.getParameter( 'bStoreToNonVolatilePath' ), nUseLang = self.getParameter( 'nNumLanguage' ) );
+        self.output_onPrepared( rLength );
+        if( not self.getParameter( 'bJustPrepare' ) ):
+            if( not self.bStopped ):
+                self.nStep = self.nStateSpeaking;
+                self.output_onStartSpeaking( rLength );
+                if( self.getParameter( "bWithLight" ) ):
+                    speech.sayAndCacheAndLight( txt, nUseLang = self.getParameter( 'nNumLanguage' ) );
+                else:
+                    speech.sayAndCache( txt, nUseLang = self.getParameter( 'nNumLanguage' ), bDirectPlay = self.getParameter( 'bDirectPlay' ) );
+                self.output_onStopSpeaking();            
+        else:
+            pass
+        self.nStep = self.nStateStopped;
+    
+    def onInput_onStop(self):
+        nCpt = 0;
+        # adding a timeout
+        nMaxCpt = 60;
+        self.bStopped = True;
+        while( self.nStep == self.nStatePreparing and nCpt <= nMaxCpt ): # can't kill while preparing
+            print( "%s.onStop: waiting to stop than the sound is prepared..." % self.boxName );
+            time.sleep( 0.5 );
+            nCpt += 1;
+        if( nCpt > nMaxCpt ):
+            altools.playSound( 'warning_speech_error.wav' );
+        # on le fait plusieurs fois car des fois on peut se trouver pile entre le set du play et le lancage de la commande
+        for i in range( 3 ):
+            if( self.nStep == self.nStateSpeaking ):
+                altools.mySystemCall( "killall aplay" );     # todo: better killling method!
+                time.sleep( 0.2 );
+                
+# SayTextPrerender - end
+pass]]>
+</content>
+                                                                                                            </script>
+                                                                                                            <Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when diagram is loaded." id="1" />
+                                                                                                            <Input name="onStart" type="3" type_size="1" nature="2" inner="0" tooltip="Box behavior starts when a signal is received on this input." id="2" />
+                                                                                                            <Input name="onStop" type="1" type_size="1" nature="3" inner="0" tooltip="Box behavior stops when a signal is received on this input." id="3" />
+                                                                                                            <Output name="output_onPreparing" type="1" type_size="1" nature="2" inner="0" tooltip="Text are being prepared" id="4" />
+                                                                                                            <Output name="output_onPrepared" type="2" type_size="1" nature="2" inner="0" tooltip="The sound is prepared and ready to be launched.&#x0A;The length of the speak is outputted." id="5" />
+                                                                                                            <Output name="output_onStartSpeaking" type="2" type_size="1" nature="2" inner="0" tooltip="Nao begin to speak.&#x0A;The length of the speak is outputted." id="6" />
+                                                                                                            <Output name="output_onStopSpeaking" type="1" type_size="1" nature="2" inner="0" tooltip="Nao has stop speaking." id="7" />
+                                                                                                            <Parameter name="bWithLight" inherits_from_parent="0" content_type="0" value="1" default_value="1" tooltip="use light in eyes to speak" id="8" />
+                                                                                                            <Parameter name="bJustPrepare" inherits_from_parent="0" content_type="0" value="0" default_value="0" tooltip="Don&apos;t say the text now, just generate it." id="9" />
+                                                                                                            <Parameter name="bStoreToNonVolatilePath" inherits_from_parent="0" content_type="0" value="1" default_value="1" tooltip="copy the generated file to a non volatile path." id="10" />
+                                                                                                            <Parameter name="nNumLanguage" inherits_from_parent="0" content_type="1" value="-1" default_value="-1" min="-1" max="30" tooltip="To speak with a different speak language, specify it there (default -1: current one)" id="11" />
+                                                                                                            <Parameter name="bDirectPlay" inherits_from_parent="0" content_type="0" value="1" default_value="1" tooltip="Launch the speak sound without a latency of 1-2 sec (directly) (automatically enabled when speaking with light)." id="12" />
+                                                                                                        </Box>
+                                                                                                        <Link inputowner="2" indexofinput="2" outputowner="0" indexofoutput="2" />
+                                                                                                        <Link inputowner="0" indexofinput="6" outputowner="2" indexofoutput="6" />
+                                                                                                        <Link inputowner="1" indexofinput="2" outputowner="0" indexofoutput="2" />
+                                                                                                        <Link inputowner="0" indexofinput="5" outputowner="2" indexofoutput="5" />
+                                                                                                        <Link inputowner="3" indexofinput="2" outputowner="2" indexofoutput="7" />
+                                                                                                        <Link inputowner="8" indexofinput="2" outputowner="3" indexofoutput="4" />
+                                                                                                    </Diagram>
+                                                                                                </BehaviorKeyframe>
+                                                                                            </BehaviorLayer>
+                                                                                            <ActuatorList />
+                                                                                        </Timeline>
+                                                                                    </Box>
+                                                                                    <Box name="DetectArmsObstacles" robot="" id="2" tooltip="Test de detection des bras qui touchent des obstacles pendant qu&apos;on marchent" bitmap_expanded="1" plugin="" x="118" y="252">
+                                                                                        <bitmap>media/images/box/box-diagram.png</bitmap>
+                                                                                        <script language="4">
+                                                                                            <content>
+                                                                                                <![CDATA[import time
+import abcdk.arraytools as arraytools
+import abcdk.motiontools as motiontools
+
+class MyClass(GeneratedClass):
+    """ insert here your comments about this class """
+    def __init__(self):
+        GeneratedClass.__init__(self);
+        self.bMustStop = False;
+        self.bIsRunning = False;
+        self.aJointMove = [ 
+                                    motiontools.JointMove( "LShoulderRoll" ), motiontools.JointMove( "RShoulderRoll" ),
+                                    motiontools.JointMove( "LElbowRoll" ), motiontools.JointMove( "RElbowRoll" )                                     
+                                    ];
+
+    def onLoad(self):
+        self.bMustStop = False;
+        self.bIsRunning = False;
+
+    def onUnload(self):
+        self.onInput_onStop(); # stop current loop execution
+
+    def onInput_onStart(self):
+        self.log( self.boxName + ": start - begin" );
+        
+        if( self.bIsRunning ):
+            self.log( self.boxName + ": already started => nothing" );
+            return;
+
+        ALMotion.setStiffnesses( ["LShoulderRoll", "RShoulderRoll"], 0.12, 0.05 );
+#        ALMotion.setStiffnesses( [ "LShoulderPitch", "RShoulderPitch" ], 0.05, 0.05 );
+        ALMotion.setStiffnesses( [ "LElbowRoll", "RElbowRoll" ], 0.04, 0.05 );        
+
+        self.bIsRunning = True;
+        self.bMustStop = False;
+        
+        rPeriod = self.getParameter( 'rPeriod' );
+        nNbrJoint = len( self.aJointMove );
+        nNbrOutput = 2; # we concatene side by side
+        abTouch = arraytools.arrayCreate( nNbrOutput, False );
+        while( not self.bMustStop ):
+            bTouch = False;
+            for i in range( nNbrJoint ):
+                if( self.aJointMove[i].update() != 0 ):
+                    abTouch[i%2] = True;
+                    bTouch = True;                    
+                else:
+                    if( i < 2 ):
+                        abTouch[i%2] = False;
+                    else:
+                        abTouch[i%2] |= False;                    
+            if( bTouch ):
+                self.output_touched( abTouch );
+            time.sleep( rPeriod );
+        # end while
+        self.bIsRunning = False;
+        self.onStopped();    
+        self.log( self.boxName + ": start - end" ); 
+
+    def onInput_onStop(self):
+        self.bMustStop = True; # stop current loop execution]]>
+</content>
+                                                                                        </script>
+                                                                                        <Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when diagram is loaded." id="1" />
+                                                                                        <Input name="onStart" type="1" type_size="1" nature="2" inner="0" tooltip="Box behavior starts when a signal is received on this input." id="2" />
+                                                                                        <Input name="onStop" type="1" type_size="1" nature="3" inner="0" tooltip="Box behavior stops when a signal is received on this input." id="3" />
+                                                                                        <Output name="onStopped" type="1" type_size="1" nature="1" inner="0" tooltip="Signal sent when box behavior is finished." id="4" />
+                                                                                        <Output name="output_touched" type="2" type_size="2" nature="2" inner="0" tooltip="Some arms has touched something [left touched, right touched]" id="5" />
+                                                                                        <Parameter name="rPeriod" inherits_from_parent="0" content_type="2" value="0.14" default_value="1" min="0" max="1e+06" tooltip="period in seconds" id="6" />
+                                                                                    </Box>
+                                                                                    <Box name="ExtractObstacles_ref" robot="" id="3" tooltip="Detect obstacles" bitmap_expanded="1" plugin="" x="301" y="75">
+                                                                                        <bitmap>media/images/box/interaction/look.png</bitmap>
+                                                                                        <script language="4">
+                                                                                            <content>
+                                                                                                <![CDATA[import abcdk.sound as sound
+
+class MyClass(GeneratedClass):
+    def __init__(self):
+        GeneratedClass.__init__(self)
+#        self.extractor = ALProxy("UsageVisionObstacle"); # moved in onLoad for dynamic module loading
+        self.strALMemoryValRoot =  "extractors/UsageVisionObstacle/";
+        self.astrALMemoryVal = [ "distances_matrix" ];
+        self.bSoundDirectPlay = True;
+        self.BIND_PYTHON( self.getName(),"myDataChanged" );
+        self.BIND_PYTHON( self.getName(),"myDataChangedBumper" );
+            
+    def onLoad(self):
+        self.extractor = ALProxy("UsageVisionObstacle");    
+        self.bIsRunning = False;
+        self.bDebugMode = False;
+        self.nBumperCpt = 0; # frame emulating bumpers obstacles
+        self.arBumperDistance = [ 0,0 ]; # the real distance emulated for bumpers (L,R)
+        self.nUS_Cpt = 0;
+        self.arUS_Distance = [ 0,0 ];  # an init value
+        
+        self.nArmsCpt = 0;         # arms detection
+        self.arArmsDistance = [ 0,0 ];  # an init value
+    
+    def onUnload(self):
+        self.onInput_onStop();
+
+    def onInput_onStart(self ):
+        rPeriod = self.getParameter( "refreshPeriodMs" );
+        if( self.bIsRunning == False ):
+            self.bIsRunning = True;
+            self.extractor.subscribe(self.getName(),  rPeriod, 0.0 )
+            # on a plus besoin de se registrer vu que c'est fait dans le module directement
+            for val in self.astrALMemoryVal:
+                strTotalName = self.strALMemoryValRoot + val;
+                ALMemory.subscribeToMicroEvent(strTotalName, self.getName(), val, "myDataChanged") # set to "subscribeOnData" if you want to trigger output_NoMark after every analysis without mark
+#                ALMemory.subscribeOnDataSetTimePolicy(strTotalName, self.getName(),rPeriod/2)
+
+            if( self.getParameter( 'bUseBumpers' ) ):
+                ALMemory.subscribeToMicroEvent( 'LeftBumperPressed', self.getName(), "L", "myDataChangedBumper" );
+                ALMemory.subscribeToMicroEvent( 'RightBumperPressed', self.getName(), "R", "myDataChangedBumper" );
+                
+            self.log("%s detection: on" % self.boxName );
+        
+    def onInput_onStop(self):
+        if(self.bIsRunning == True):
+            self.bIsRunning = False
+            self.extractor.unsubscribe(self.getName())
+            for val in self.astrALMemoryVal:
+                strTotalName = self.strALMemoryValRoot + val;
+                ALMemory.unsubscribeToMicroEvent(strTotalName, self.getName())
+            if( self.getParameter( 'bUseBumpers' ) ):
+                ALMemory.unsubscribeToMicroEvent( 'LeftBumperPressed', self.getName() );
+                ALMemory.unsubscribeToMicroEvent( 'RightBumperPressed', self.getName() );
+                
+            self.log("%s detection: off" % self.boxName );
+            self.onStopped();
+            
+    def onInput_onSetDebugMode(self ):
+        self.bDebugMode = not self.bDebugMode;
+        self.extractor.setDebugMode( self.bDebugMode );
+        if( self.bDebugMode ):
+            try:
+                cv = ALProxy( 'CameraViewer' );
+                cv.subscribeLog( "obstacle_distances" );
+            except:
+                self.log( "WARNING: no telepathe found !!!" );
+        
+    def onInput_onUS(self, p):
+        self.log( "%s: onInput_onUS" % self.boxName );
+        if( self.getParameter( 'bUseSonar' ) ):
+            ALLeds.post.fadeListRGB( "ChestLeds", [0xFF, 0x00], [0.2,1.5] );
+            if( self.getParameter( 'bEnableSound' ) ):
+                sound.playSound( 'bipReco2.wav', bWait = False, bDirectPlay = self.bSoundDirectPlay );
+            self.nUS_Cpt = 1000 / self.getParameter( "refreshPeriodMs" ); # 3000: temps de l'emulation en ms
+            for i in range( 2 ):
+                if( p[i] < 0.33 ):
+                    self.arUS_Distance[i] = p[i]*100;
+                else:
+                    self.arUS_Distance[i] = 400;
+    # onInput_onUS - end
+    
+    def onInput_onArmsTouch(self, p):
+        if( self.getParameter( 'bEnableSound' ) ):
+            sound.playSound( 'bipReco8.wav', bWait = False, bDirectPlay = self.bSoundDirectPlay );
+        self.nArmsCpt = 2000 / self.getParameter( "refreshPeriodMs" );
+        for i in range( 2 ):
+            if( p[i] ):
+                self.arArmsDistance[i] = 13;
+            else:
+                self.arArmsDistance[i] = 1000;
+    # onInput_onArmsTouch - end
+
+    def myDataChangedBumper(self, pDataName, pValue, pMessage):
+            if( pValue ):
+                # we will have some frame emulating an obstacle
+                self.log( "BUMPER!" );
+                if( pMessage == 'L' ):
+                    strLedName = "LeftFootLeds";
+                    self.arBumperDistance[0] = 30;
+                else:
+                    strLedName = "RightFootLeds";
+                    self.arBumperDistance[1] = 30;
+                ALLeds.post.fadeListRGB( strLedName, [0xFF, 0x00], [0.2,1.5] );
+                if( self.getParameter( 'bEnableSound' ) ):    
+                    sound.playSound( 'bipReco9.wav', bWait = False, bDirectPlay = self.bSoundDirectPlay );
+                self.nBumperCpt = 3000 / self.getParameter( "refreshPeriodMs" );
+      
+    def myDataChanged(self, pDataName, pValue, pMessage):
+#        self.log( "%s::myDataChanged: pDataName: %s, pValue: %s, pMessage: %s" % ( self.boxName, pDataName, pValue, pMessage ) );
+        outputFunc = getattr( self, "output_" + pMessage );
+#        bBumpL, bBumpR = ALMemory.getListData( ['LeftBumperPressed', 'RightBumperPressed'] );
+        nIdxCenter = 5;
+        nIdxStepL = 0;
+        nIdxStepR = 10;        
+        if( pMessage[0] == 'd' ):
+
+            if( self.nUS_Cpt > 0 ):
+                self.nUS_Cpt -= 1;
+                self.log( "CPT US TOUCH: %f (%f,%f)" % ( self.nUS_Cpt, self.arUS_Distance[0], self.arUS_Distance[1] ) );
+                # on éparpille la proba des ultrasons autour du centre
+                rCoefAlentour = 1.5; # coef de dispertion
+                if( self.arUS_Distance[0] < 100 ):
+                    pValue[nIdxStepL] = min( pValue[nIdxStepL], 200 );
+                pValue[nIdxCenter-3] = min( pValue[nIdxCenter-3], self.arUS_Distance[0] * rCoefAlentour );
+                pValue[nIdxCenter-2] = min( pValue[nIdxCenter-2], self.arUS_Distance[0] );
+                pValue[nIdxCenter-1] = min( pValue[nIdxCenter-1], self.arUS_Distance[0] );
+                pValue[nIdxCenter+0] = min( pValue[nIdxCenter+0], ( self.arUS_Distance[0] + self.arUS_Distance[1] ) / 2.  );
+                pValue[nIdxCenter+1] = min( pValue[nIdxCenter+1], self.arUS_Distance[1] );
+                pValue[nIdxCenter+2] = min( pValue[nIdxCenter+2], self.arUS_Distance[1] );
+                pValue[nIdxCenter+3] = min( pValue[nIdxCenter+3], self.arUS_Distance[1] * rCoefAlentour );
+                if( self.arUS_Distance[1] < 100 ):
+                    pValue[nIdxStepR] = min( pValue[nIdxStepR], 200 );
+                
+            if( self.nBumperCpt > 0 ):
+                self.nBumperCpt -= 1;
+                self.log( "CPT BUMP TOUCH: %f" % self.nBumperCpt );
+                rCoefAlentour = 1.5; # coef de dispertion
+                pValue[nIdxCenter-2] = min( pValue[nIdxCenter-2], self.arBumperDistance[0] * rCoefAlentour );
+                pValue[nIdxCenter-1] = min( pValue[nIdxCenter-1], self.arBumperDistance[0] );
+                pValue[nIdxCenter+0] = min( pValue[nIdxCenter+0], ( self.arBumperDistance[0] + self.arBumperDistance[1] ) / 2.  );
+                pValue[nIdxCenter+1] = min( pValue[nIdxCenter+1], self.arBumperDistance[1] );
+                pValue[nIdxCenter+2] = min( pValue[nIdxCenter+2], self.arBumperDistance[1] * rCoefAlentour  );
+                if( self.nBumperCpt <= 0 ):
+                    # reset
+                    self.arBumperDistance[0] = 999.;
+                    self.arBumperDistance[1] = 999.;
+
+            if( self.nArmsCpt > 0 ):
+                self.nArmsCpt -= 1;
+                self.log( "CPT ARMS TOUCH: %f" % self.nArmsCpt );
+                # dans le doute on bloque step et avant
+                pValue[nIdxStepL] = min( pValue[nIdxStepL], self.arArmsDistance[0] );
+                pValue[nIdxStepR] = min( pValue[nIdxStepR], self.arArmsDistance[1] );
+                pValue[nIdxCenter-1] = min( pValue[nIdxCenter-1], self.arArmsDistance[0] );
+                pValue[nIdxCenter+1] = min( pValue[nIdxCenter+1], self.arArmsDistance[1] );
+                    
+            #~ if( self.nCptInhibeStraight ):
+                #~ self.log( "INIHIBATE STRAIGHT: %d" %  self.nCptInhibeStraight );
+                #~ self.nCptInhibeStraight -= 1;
+                #~ pValue[nIdxCenter-1] = 0;
+                #~ pValue[nIdxCenter] = 0;
+                #~ pValue[nIdxCenter+1] = 0;
+                        
+            
+            # output has params:
+            outputFunc( pValue );
+            nLimit = 999;
+            #~ if( pValue[nIdxCenter-3] < nLimit ):
+                #~ self.output_dist_ll( pValue[nIdxCenter-3] );
+            #~ if( pValue[nIdxCenter-2] < nLimit ):                
+                #~ self.output_dist_l( pValue[nIdxCenter-2] );
+            #~ if( pValue[nIdxCenter] < nLimit ):                
+                #~ self.output_dist_c( pValue[nIdxCenter] );
+            #~ if( pValue[nIdxCenter+2] < nLimit ):                
+                #~ self.output_dist_r( pValue[nIdxCenter+2] );
+            #~ if( pValue[nIdxCenter+3] < nLimit ):                
+                #~ self.output_dist_rr( pValue[nIdxCenter+3] );
+                
+            self.log( "%s:results matrix: %s" % ( self.boxName, pValue ) );
+            if( self.bDebugMode ):
+                # poste dans les débugs dans télépathe
+                aListDir = [ 
+                                -2,  0, # TODO: update depuis les sources cpp qui ont changé
+                                -2, -1,
+                                -2, -2,
+                                -1, -2,
+                                 0, -2,
+                                 0, -2,
+                                 0, -2,
+                                 1, -2,
+                                 2, -2,
+                                 2, -1,
+                                 2,  0,
+                                ];
+                aListOffset = [
+                                     -10,  2,
+                                     -16,  0,
+                                     -16,  0,
+                                     -16,  0,
+                                     -16, -2,
+                                      0,  -2,
+                                      16, -2,
+                                      16,  0,
+                                      16,  0,
+                                      16,  0,
+                                      10,  2,
+                                    ];
+                aListRay = [];
+                for nDir in range( len( pValue ) ):
+#                    self.log( "nDir: %d" % nDir );
+                    for i in range( pValue[nDir] / 40 ):
+                        x = ( 80 + aListOffset[nDir*2] + aListDir[nDir*2] * i*6 ) / 160.;
+                        y = ( 120 - 3 + aListOffset[nDir*2+1] + aListDir[nDir*2+1] * i*6 ) / 120.;
+                        if( x <= 1 and x >= 0 and y <= 1 and y >= 0 ):
+#                            self.log( "x:%f, y: %f" % ( x, y ) );                        
+                            aListRay.append( [ x, y, 0.2, 1, 0, 0, 0, 255, "%d-%d " % ( nDir, int( i ) ) ] ); # la chaine doit changer pour différencier les objets
+                ALMemory.insertData( "obstacle_distances", aListRay );
+        else:
+            # no params
+            outputFunc();
+    # myDataChanged - end
+    
+pass]]>
+</content>
+                                                                                        </script>
+                                                                                        <Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when diagram is loaded." id="1" />
+                                                                                        <Input name="onStart" type="1" type_size="1" nature="2" inner="0" tooltip="Box behavior starts when a signal is received on this input." id="2" />
+                                                                                        <Input name="onStop" type="1" type_size="1" nature="3" inner="0" tooltip="Box behavior stops when a signal is received on this input." id="3" />
+                                                                                        <Input name="onUS" type="2" type_size="2" nature="1" inner="0" tooltip="An external info told us they is some obstacles in front of Nao" id="4" />
+                                                                                        <Input name="onArmsTouch" type="2" type_size="2" nature="1" inner="0" tooltip="" id="5" />
+                                                                                        <Input name="onSetDebugMode" type="1" type_size="1" nature="1" inner="0" tooltip="Call me if you want to have the possibility to have many times the same mark. By default, once a mark is seen, there will be no triggering until another mark is seen." id="6" />
+                                                                                        <Output name="onStopped" type="1" type_size="1" nature="1" inner="0" tooltip="sdfqsdf" id="7" />
+                                                                                        <Output name="output_distances_matrix" type="0" type_size="1" nature="2" inner="0" tooltip="output distance in straight line" id="8" />
+                                                                                        <Output name="output_dist_ll" type="2" type_size="1" nature="2" inner="0" tooltip="" id="9" />
+                                                                                        <Output name="output_dist_l" type="2" type_size="1" nature="2" inner="0" tooltip="" id="10" />
+                                                                                        <Output name="output_dist_c" type="2" type_size="1" nature="2" inner="0" tooltip="" id="11" />
+                                                                                        <Output name="output_dist_r" type="2" type_size="1" nature="2" inner="0" tooltip="" id="12" />
+                                                                                        <Output name="output_dist_rr" type="2" type_size="1" nature="2" inner="0" tooltip="" id="13" />
+                                                                                        <Parameter name="refreshPeriodMs" inherits_from_parent="0" content_type="1" value="300" default_value="200" min="0" max="100000" tooltip="The refresh period of the extractor in milliseconds, eg: 500." id="14" />
+                                                                                        <Parameter name="bUseBumpers" inherits_from_parent="1" content_type="0" value="1" default_value="1" tooltip="" id="15" />
+                                                                                        <Parameter name="bUseSonar" inherits_from_parent="1" content_type="0" value="1" default_value="1" tooltip="" id="16" />
+                                                                                    </Box>
+                                                                                    <Link inputowner="3" indexofinput="2" outputowner="0" indexofoutput="2" />
+                                                                                    <Link inputowner="1" indexofinput="2" outputowner="0" indexofoutput="2" />
+                                                                                    <Link inputowner="3" indexofinput="4" outputowner="1" indexofoutput="5" />
+                                                                                    <Link inputowner="0" indexofinput="5" outputowner="3" indexofoutput="8" />
+                                                                                    <Link inputowner="2" indexofinput="2" outputowner="0" indexofoutput="2" />
+                                                                                    <Link inputowner="3" indexofinput="5" outputowner="2" indexofoutput="5" />
+                                                                                </Diagram>
+                                                                            </BehaviorKeyframe>
+                                                                        </BehaviorLayer>
+                                                                        <ActuatorList />
+                                                                    </Timeline>
+                                                                </Box>
+                                                                <Box name="AnalyseObstacles" robot="" id="7" tooltip="Enter tooltip here" bitmap_expanded="1" plugin="" x="592" y="226">
+                                                                    <bitmap>media/images/box/box-diagram.png</bitmap>
+                                                                    <script language="4">
+                                                                        <content>
+                                                                            <![CDATA[import random
+
+import abcdk.leds as leds
+import abcdk.numeric as numeric
+
+class MyClass(GeneratedClass):
+    def __init__(self):
+        GeneratedClass.__init__(self)
+
+    def onLoad(self):
+        #~ puts code for box initialization here
+        self.rX = 0.1;
+        self.rY = 0.0;
+        self.rT = 0.0;
+        self.rSendX = -1.0;
+        self.rSendY = -1.0;        
+        self.rSendT = -1.0;
+        self.rStepFrequency = 0.5;
+        self.rSendStepFrequency = -1.0;
+        self.nCptBlocked = 0;
+        self.nCptSideStep = 0;
+        self.nCptTurnSos = 0;
+
+    def onUnload(self):
+        #~ puts code for box cleanup here
+        pass
+
+    def onInput_onStart(self, dist_matrix):
+        center = 5;
+        firstindexleft = 3;
+        firstindexright = 7;
+        stepl = 0;
+        stepr = 10;
+        nLimit = 400;
+        nLimitNear = 100;
+        rSpeedFront = 1.0;
+        rSpeedRot = 0.4;
+        rSpeedStep = 0.4;
+        # estimation de l'encombrement gauche/droite
+        rSumLeft = ( dist_matrix[firstindexleft] + dist_matrix[firstindexleft-1] + dist_matrix[firstindexleft-2] + dist_matrix[firstindexleft-3] + dist_matrix[center-1] ) / 5.;
+        rSumRight = ( dist_matrix[firstindexright] + dist_matrix[firstindexright+1] + dist_matrix[firstindexright+2] + dist_matrix[firstindexright+3] + dist_matrix[center+1] ) / 5.;
+        
+        rDistCenter = min( dist_matrix[center-1], dist_matrix[center+0], dist_matrix[center+1] );
+        
+        # compute nearest obstacles in radians:
+        for i in range( center - 1, stepl, -1 ): # step excluded
+            if( dist_matrix[i] < 600 ):
+                rAngleObstaclesL = (center - i)*0.2;
+                break;
+        else:
+            rAngleObstaclesL = 2.; # no obstacles found
+            
+        for i in range( center + 1, stepr ):
+            if( dist_matrix[i] < 600 ):
+                rAngleObstaclesR = -(i - center)*0.2;
+                break;
+        else:
+            rAngleObstaclesR = -2.;
+        
+                
+        # debug sur les brainleds
+        nDebugRight = numeric.limitRange( int( rDistCenter / (500/6) ), 0, 6 );
+        nDebugLeft = 6;
+        if( rDistCenter <  nLimitNear ):
+            nDebugLeft = 0;
+        elif( rDistCenter <  nLimit ):
+            nDebugLeft = 3;
+        leds.setBrainVuMeter( nDebugLeft, nDebugRight, 0.8, bDontWait = True, bInverseSide = True );
+        
+        
+        # output for watcher
+        if( dist_matrix[center-2] < 300 ):
+            self.output_obstacle_l();
+        if( dist_matrix[center] < 300 ):
+            self.output_obstacle_c();
+        if( dist_matrix[center+2] < 300 ):
+            self.output_obstacle_r();
+
+            
+        if( rDistCenter > nLimit ):
+            # speed max
+            self.rX = rSpeedFront;
+            self.rY = 0;
+            self.rT = ( rAngleObstaclesL + rAngleObstaclesR ) / 8.; # on ne veut pas balancer trop fort sur cette direction
+            ALMotion.setWalkArmsEnable( True, True );
+            self.rStepFrequency = 1.0;
+            self.nCptSideStep = 0; # only in some case, we reinit it.
+            self.nCptBlocked = 0;            
+        elif( rDistCenter > nLimitNear ):
+            # speed medium
+            self.rX = rSpeedFront / 2;        
+            self.rY = 0;
+            rRotMax = 0.5;
+            self.rT = numeric.limitRange( ( rSumLeft - rSumRight ) / 1000., -rRotMax, rRotMax ); # angle negatif => avance to the right
+            self.nCptBlocked = 0;
+            self.nCptTurnSos = 0;
+        elif( ( dist_matrix[stepl] > nLimit or dist_matrix[stepr] > nLimit ) and self.nCptSideStep < 20 ):
+            # side step
+            self.nCptSideStep += 1;
+            rStepMax = 0.5;
+            if( dist_matrix[stepl] > dist_matrix[stepr] ):
+                self.rY = numeric.limitRange( dist_matrix[stepl] / 400., 0, rStepMax ); # d'autant plus vite que c'est libre
+            else:
+                self.rY = numeric.limitRange( dist_matrix[stepr] / 400., 0, -rStepMax );
+            self.rX = 0;
+            self.rT = 0;
+            ALMotion.setWalkArmsEnable( False, False );
+        elif( self.nCptBlocked < 30 ):
+            # cul de sac => recule et rotation
+            self.output_blocked();        
+            self.nCptBlocked += 1;
+            rRotMax = 0.8;
+            rRotMin = 0.25;
+            self.rY = 0;            
+            self.rT = numeric.limitRange( ( rSumLeft - rSumRight ) / 1000., -rRotMax, rRotMax );
+            if( abs( self.rT ) < rRotMin ):
+                if( self.rT < 0 ):
+                    self.rT = -rRotMin;
+                else:
+                    self.rT = rRotMin;                
+            if( self.nCptBlocked < 6 ):
+                self.rX = -rSpeedFront / 2.; # recul franchement au début
+                self.rT /= 2.; # en tournant un peu moins
+            else:
+                self.rX =  -rSpeedFront / 5.; # puis ne recul (presque plus)
+                
+#            self.rX = 0; # temp debug
+#            self.rT = 0; # temp debug
+        elif( self.nCptTurnSos < 30 ):
+            self.nCptTurnSos += 1;
+            rRotMax = 0.8;            
+            self.rX = 0;
+            self.rY = 0;            
+            self.rT = rRotMax;
+            self.rStepFrequency = 0.4;
+        else:
+            # ouin ouin
+            self.rX = 0;
+            self.rY = 0;            
+            self.rT = 0;
+        
+            if( random.random() < 0.01 ):
+                tts = ALProxy( "ALTextToSpeech" );
+                tts.say( "ouin ouin!" );
+            
+        
+        self.log( "xyt: %s, %s, %s (rAngleObstaclesL: %s, rAngleObstaclesR: %s)" % ( str( self.rX ), str( self.rY ), str( self.rT ), str( rAngleObstaclesL ), str( rAngleObstaclesR ) ) );
+        if( self.getParameter( 'bOnlyStraight' ) ):
+            self.rY = 0.;
+            self.rT = 0.;
+            
+        if( self.rSendX != self.rX ):
+            self.rSendX = self.rX;
+            self.output_x( self.rX );
+        if( self.rSendY != self.rY ):
+            self.rSendY = self.rY;
+            self.output_y( self.rY );
+        if( self.rSendT != self.rT ):
+            self.rSendT = self.rT;            
+            self.output_t( self.rT );
+
+        if( self.rSendStepFrequency != self.rStepFrequency ):
+            # c'est beaucoup moins couteux de ne renvoyer que les parametres qui changent !
+            self.rSendStepFrequency = self.rStepFrequency;
+            self.output_step_frequency( self.rStepFrequency );
+        self.onStopped() #~ activate output of the box
+
+    def onInput_onStop(self):
+        self.onUnload() #~ it is recommanded to call onUnload of this box in a onStop method, as the code written in onUnload is used to stop the box as well
+        pass]]>
+</content>
+                                                                    </script>
+                                                                    <Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when diagram is loaded." id="1" />
+                                                                    <Input name="onStart" type="0" type_size="1" nature="2" inner="0" tooltip="Box behavior starts when a signal is received on this input." id="2" />
+                                                                    <Input name="onStop" type="1" type_size="1" nature="3" inner="0" tooltip="Box behavior stops when a signal is received on this input." id="3" />
+                                                                    <Output name="onStopped" type="1" type_size="1" nature="1" inner="0" tooltip="Signal sent when box behavior is finished." id="4" />
+                                                                    <Output name="output_x" type="2" type_size="1" nature="2" inner="0" tooltip="" id="5" />
+                                                                    <Output name="output_y" type="2" type_size="1" nature="2" inner="0" tooltip="" id="6" />
+                                                                    <Output name="output_t" type="2" type_size="1" nature="2" inner="0" tooltip="" id="7" />
+                                                                    <Output name="output_step_frequency" type="2" type_size="1" nature="2" inner="0" tooltip="" id="8" />
+                                                                    <Output name="output_obstacle_l" type="1" type_size="1" nature="2" inner="0" tooltip="" id="9" />
+                                                                    <Output name="output_obstacle_c" type="1" type_size="1" nature="2" inner="0" tooltip="" id="10" />
+                                                                    <Output name="output_obstacle_r" type="1" type_size="1" nature="2" inner="0" tooltip="" id="11" />
+                                                                    <Output name="output_blocked" type="1" type_size="1" nature="2" inner="0" tooltip="" id="12" />
+                                                                    <Parameter name="bOnlyStraight" inherits_from_parent="0" content_type="0" value="0" default_value="0" tooltip="Nao has only the right to walk straight" id="13" />
+                                                                </Box>
+                                                                <Box name="WaitDetectCrashVision" robot="" id="9" tooltip="The wait that can be stopped immediately and reset at any time.&#x0A;&#x0A;Stopping the box won&apos;t output a signal.&#x0A;*** ref box in: ./4_localize/Time/Wait/ExampleWait.xar ***&#x0A;*** last modification date(svn): Version it! ***" bitmap_expanded="1" plugin="" x="392" y="5">
+                                                                    <bitmap>media/images/box/wait.png</bitmap>
+                                                                    <script language="4">
+                                                                        <content>
+                                                                            <![CDATA[# Wait_ThreadSafe
+# v1.0
+import threading # opkg install python-threading
+import mutex
+#import altools
+
+class MyClass(GeneratedClass):
+    def __init__(self):
+        GeneratedClass.__init__(self)
+        self.mutex = mutex.mutex();    
+        self.tb = False;
+      
+    def onUnload(self):
+        self.onInput_onStop();
+    
+    def triggerOutput( self, rPeriod = 1 ):
+        self.timerOutput();
+        self.onInput_onStop(); # to clean everything
+  
+    def startTimer( self, rPeriod = 1 ):
+        if( self.tb ):
+            self.tb.cancel();
+        self.tb = threading.Timer( rPeriod, self.triggerOutput, [rPeriod] );
+        self.tb.start();
+        
+    def onInput_onStart(self):
+#        print( "%s: %s: entering" % ( self.boxName, altools.getHumanTimeStamp() ) );
+        while( self.mutex.testandset() == False ):
+            time.sleep( 0.05 );
+        self.startTimer( self.getParameter("timeout") );
+        self.mutex.unlock();
+#        print( "%s: %s: exiting" % ( self.boxName, altools.getHumanTimeStamp() ) );
+        
+    def onInput_onStop(self):
+        while( self.mutex.testandset() == False ):
+            time.sleep( 0.05 );
+        if( self.tb ):
+            self.tb.cancel();
+            self.tb = False;
+        self.mutex.unlock();]]>
+</content>
+                                                                    </script>
+                                                                    <Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when diagram is loaded." id="1" />
+                                                                    <Input name="onStart" type="1" type_size="1" nature="2" inner="0" tooltip="Start the timer with a specified period value (in seconds)" id="2" />
+                                                                    <Input name="onStop" type="1" type_size="1" nature="3" inner="0" tooltip="Stop the timer" id="3" />
+                                                                    <Output name="timerOutput" type="1" type_size="1" nature="2" inner="0" tooltip="send a bang after a certain amount of time.&#x0A;Warning: not outputted if stopped before time lapse." id="4" />
+                                                                    <Parameter name="timeout" inherits_from_parent="0" content_type="2" value="2.5" default_value="1" min="0" max="5000" tooltip="After how many seconds the box will timeout and stimulate its ouput." id="5" />
+                                                                </Box>
+                                                                <Box name="OmniWalk" robot="" id="10" tooltip="Enter tooltip here" bitmap_expanded="1" plugin="" x="811" y="71">
+                                                                    <bitmap>media/images/box/movement/walk_forward.png</bitmap>
+                                                                    <script language="4">
+                                                                        <content>
+                                                                            <![CDATA[class MyClass(GeneratedClass):
+    def __init__(self):
+        GeneratedClass.__init__(self)
+
+    def onLoad(self):
+        #~ puts code for box initialization here
+        self.rX = 0.;
+        self.rY = 0.;
+        self.rT = 0.;
+        self.rStep = 0.;
+        self.bStopped = False;        
+
+    def onUnload(self):
+        #~ puts code for box cleanup here
+        self.onInput_onStop();
+
+    def onInput_onStart(self):
+        self.bStopped = False;
+
+    def onInput_onStop(self):
+        self.bStopped = True;
+        ALMotion.setWalkTargetVelocity(0., 0., 0., 0.);
+        # to ensure the walk is really stopped:        
+        time.sleep( 0.5 );
+        ALMotion.setWalkTargetVelocity(0., 0., 0., 0. );
+        self.onStopped() #~ activate output of the box        
+
+    def onInput_onWalkX(self, p):
+        self.rX = p;
+        self.sendNewWalkTarget();
+        
+    def onInput_onWalkY(self, p):
+        self.rY = p;
+        self.sendNewWalkTarget();
+        
+    def onInput_onWalkT(self, p):
+        self.rT = p;
+        self.sendNewWalkTarget();
+        
+    def onInput_onWalkStepFrequency(self, p):
+        self.rStep = p;
+        self.sendNewWalkTarget();
+        
+    def sendNewWalkTarget( self ):
+        if( not self.bStopped ):
+            ALMotion.setWalkTargetVelocity(self.rX, self.rY, self.rT, self.rStep);]]>
+</content>
+                                                                    </script>
+                                                                    <Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when diagram is loaded." id="1" />
+                                                                    <Input name="onStop" type="1" type_size="1" nature="3" inner="0" tooltip="Box behavior stops when a signal is received on this input." id="2" />
+                                                                    <Input name="onStart" type="1" type_size="1" nature="2" inner="0" tooltip="Box behavior starts when a signal is received on this input." id="3" />
+                                                                    <Input name="onWalkX" type="2" type_size="1" nature="1" inner="0" tooltip="" id="4" />
+                                                                    <Input name="onWalkY" type="2" type_size="1" nature="1" inner="0" tooltip="" id="5" />
+                                                                    <Input name="onWalkT" type="2" type_size="1" nature="1" inner="0" tooltip="" id="6" />
+                                                                    <Input name="onWalkStepFrequency" type="2" type_size="1" nature="1" inner="0" tooltip="" id="7" />
+                                                                    <Output name="onStopped" type="1" type_size="1" nature="1" inner="0" tooltip="Signal sent when box behavior is finished." id="8" />
+                                                                </Box>
+                                                                <Box name="bras long du corps" robot="" id="14" tooltip="This box is empty (contains a single motion layer with no motors defined in it) and should be used to create any movement you&apos;d like." bitmap_expanded="1" plugin="" x="90" y="8">
+                                                                    <bitmap>media/images/box/movement/move.png</bitmap>
+                                                                    <script language="4">
+                                                                        <content>
+                                                                            <![CDATA[class MyClass(GeneratedClass):
+	def __init__(self):
+		GeneratedClass.__init__(self)
+
+	def onUnload(self):
+		#puts code for box cleanup here
+		""
+
+	def onInput_onStart(self):
+		#self.onStopped() # activate output of the box
+		""
+
+	def onInput_onStop(self):
+		""]]>
+</content>
+                                                                    </script>
+                                                                    <Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when Diagram is loaded." id="1" />
+                                                                    <Input name="onStart" type="1" type_size="1" nature="2" inner="0" tooltip="Box behavior starts when a signal is received on this Input." id="2" />
+                                                                    <Input name="onStop" type="1" type_size="1" nature="3" inner="0" tooltip="Box behavior stops when a signal is received on this Input." id="3" />
+                                                                    <Output name="onStopped" type="1" type_size="1" nature="1" inner="0" tooltip="Signal sent when Box behavior is finished." id="4" />
+                                                                    <Timeline fps="15" resources_acquisition="0" size="300" enable="1" start_frame="0" end_frame="-1" scale="10">
+                                                                        <watches />
+                                                                        <ActuatorList>
+                                                                            <ActuatorCurve name="value" actuator="LShoulderPitch" recordable="1" mute="0" alwaysVisible="0">
+                                                                                <Key frame="15" value="77.2544" />
+                                                                            </ActuatorCurve>
+                                                                            <ActuatorCurve name="value" actuator="LShoulderRoll" recordable="1" mute="0" alwaysVisible="0">
+                                                                                <Key frame="15" value="29.4413" />
+                                                                            </ActuatorCurve>
+                                                                            <ActuatorCurve name="value" actuator="LElbowYaw" recordable="1" mute="0" alwaysVisible="0">
+                                                                                <Key frame="15" value="-40.2568" />
+                                                                            </ActuatorCurve>
+                                                                            <ActuatorCurve name="value" actuator="LElbowRoll" recordable="1" mute="0" alwaysVisible="0">
+                                                                                <Key frame="15" value="-31.0234" />
+                                                                            </ActuatorCurve>
+                                                                            <ActuatorCurve name="value" actuator="RShoulderPitch" recordable="1" mute="0" alwaysVisible="0">
+                                                                                <Key frame="15" value="95.8044" />
+                                                                            </ActuatorCurve>
+                                                                            <ActuatorCurve name="value" actuator="RShoulderRoll" recordable="1" mute="0" alwaysVisible="0">
+                                                                                <Key frame="15" value="-23.3816" />
+                                                                            </ActuatorCurve>
+                                                                            <ActuatorCurve name="value" actuator="RElbowYaw" recordable="1" mute="0" alwaysVisible="0">
+                                                                                <Key frame="15" value="75.145" />
+                                                                            </ActuatorCurve>
+                                                                            <ActuatorCurve name="value" actuator="RElbowRoll" recordable="1" mute="0" alwaysVisible="0">
+                                                                                <Key frame="15" value="39.5537" />
+                                                                            </ActuatorCurve>
+                                                                        </ActuatorList>
+                                                                    </Timeline>
+                                                                </Box>
+                                                                <Box name="Animation" robot="" id="15" tooltip="This box is empty (contains a single motion layer with no motor position&#x0A;defined in it) and should be used to create any animation you would like." bitmap_expanded="1" plugin="" x="91" y="103">
+                                                                    <bitmap>media/images/box/movement/move.png</bitmap>
+                                                                    <script language="4">
+                                                                        <content>
+                                                                            <![CDATA[class MyClass(GeneratedClass):
+	def __init__(self):
+		GeneratedClass.__init__(self)
+
+	def onUnload(self):
+		#puts code for box cleanup here
+		""
+
+	def onInput_onStart(self):
+		#self.onStopped() # activate output of the box
+		""
+
+	def onInput_onStop(self):
+		""]]>
+</content>
+                                                                    </script>
+                                                                    <Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when Diagram is loaded." id="1" />
+                                                                    <Input name="onStart" type="1" type_size="1" nature="2" inner="0" tooltip="Animation starts when a signal is received on this input." id="2" />
+                                                                    <Input name="onStop" type="1" type_size="1" nature="3" inner="0" tooltip="Animation stops when a signal is received on this input." id="3" />
+                                                                    <Output name="onStopped" type="1" type_size="1" nature="1" inner="0" tooltip="Signal sent when animation is finished." id="4" />
+                                                                    <Timeline fps="15" resources_acquisition="0" size="300" enable="1" start_frame="0" end_frame="-1" scale="10">
+                                                                        <watches />
+                                                                        <ActuatorList>
+                                                                            <ActuatorCurve name="value" actuator="HeadYaw" recordable="1" mute="0" alwaysVisible="0">
+                                                                                <Key frame="15" value="-0.266079" />
+                                                                            </ActuatorCurve>
+                                                                            <ActuatorCurve name="value" actuator="HeadPitch" recordable="1" mute="0" alwaysVisible="0">
+                                                                                <Key frame="15" value="29.5" />
+                                                                            </ActuatorCurve>
+                                                                            <ActuatorCurve name="value" actuator="LShoulderPitch" recordable="1" mute="0" alwaysVisible="0">
+                                                                                <Key frame="15" value="90.8776" />
+                                                                            </ActuatorCurve>
+                                                                            <ActuatorCurve name="value" actuator="LShoulderRoll" recordable="1" mute="0" alwaysVisible="0">
+                                                                                <Key frame="15" value="10.2809" />
+                                                                            </ActuatorCurve>
+                                                                            <ActuatorCurve name="value" actuator="LElbowYaw" recordable="1" mute="0" alwaysVisible="0">
+                                                                                <Key frame="15" value="-70.7552" />
+                                                                            </ActuatorCurve>
+                                                                            <ActuatorCurve name="value" actuator="LElbowRoll" recordable="1" mute="0" alwaysVisible="0">
+                                                                                <Key frame="15" value="-31.2871" />
+                                                                            </ActuatorCurve>
+                                                                            <ActuatorCurve name="value" actuator="LWristYaw" recordable="1" mute="0" alwaysVisible="0">
+                                                                                <Key frame="15" value="5.2711" />
+                                                                            </ActuatorCurve>
+                                                                            <ActuatorCurve name="value" actuator="LHand" recordable="1" mute="0" alwaysVisible="0">
+                                                                                <Key frame="15" value="0.4684" />
+                                                                            </ActuatorCurve>
+                                                                            <ActuatorCurve name="value" actuator="RShoulderPitch" recordable="1" mute="0" alwaysVisible="0">
+                                                                                <Key frame="15" value="85.5211" />
+                                                                            </ActuatorCurve>
+                                                                            <ActuatorCurve name="value" actuator="RShoulderRoll" recordable="1" mute="0" alwaysVisible="0">
+                                                                                <Key frame="15" value="-5.53958" />
+                                                                            </ActuatorCurve>
+                                                                            <ActuatorCurve name="value" actuator="RElbowYaw" recordable="1" mute="0" alwaysVisible="0">
+                                                                                <Key frame="15" value="67.7621" />
+                                                                            </ActuatorCurve>
+                                                                            <ActuatorCurve name="value" actuator="RElbowRoll" recordable="1" mute="0" alwaysVisible="0">
+                                                                                <Key frame="15" value="24.8758" />
+                                                                            </ActuatorCurve>
+                                                                            <ActuatorCurve name="value" actuator="RWristYaw" recordable="1" mute="0" alwaysVisible="0">
+                                                                                <Key frame="15" value="8.96255" />
+                                                                            </ActuatorCurve>
+                                                                            <ActuatorCurve name="value" actuator="RHand" recordable="1" mute="0" alwaysVisible="0">
+                                                                                <Key frame="15" value="0.4688" />
+                                                                            </ActuatorCurve>
+                                                                        </ActuatorList>
+                                                                    </Timeline>
+                                                                </Box>
+                                                                <Box name="Switch Case" robot="" id="3" tooltip="Test input value and stimulate the output matching to this value. If there is no&#x0A;matching output, the default output (onDefault) is stimulated.&#x0A;&#x0A;You can edit a case by left double-clicking on the line. You can add a&#x0A;case by right clicking on a line and selecting &apos;Insert a row&apos;. You can delete&#x0A;a case by right clicking on a line and selecting &apos;Remove a row&apos;." bitmap_expanded="1" plugin="dispatcher_plugin" x="255" y="290">
+                                                                    <bitmap>media/images/box/interaction/choice.png</bitmap>
+                                                                    <script language="4">
+                                                                        <content>
+                                                                            <![CDATA[class MyClass(GeneratedClass):
+	def __init__(self):
+		GeneratedClass.__init__(self)
+
+	def onInput_onStart(self, p):
+		if(p == ("life")):
+			self.output_1(p)
+		elif(p == ("standup")):
+			self.output_2(p)
+		elif(p == ("sitdown")):
+			self.output_3(p)
+		elif(p == ("wait")):
+			self.output_4(p)
+		elif(p == ("rest")):
+			self.output_5(p)
+		elif(p == ("system")):
+			self.output_6(p)
+		else:
+			self.onDefault()]]>
+</content>
+                                                                    </script>
+                                                                    <pluginContent>
+                                                                        <keywords>
+                                                                            <keyword>&quot;life&quot;</keyword>
+                                                                            <keyword>&quot;standup&quot;</keyword>
+                                                                            <keyword>&quot;sitdown&quot;</keyword>
+                                                                            <keyword>&quot;wait&quot;</keyword>
+                                                                            <keyword>&quot;rest&quot;</keyword>
+                                                                            <keyword>&quot;system&quot;</keyword>
+                                                                            <keyword></keyword>
+                                                                        </keywords>
+                                                                    </pluginContent>
+                                                                    <Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when diagram is loaded." id="1" />
+                                                                    <Input name="onStart" type="0" type_size="1" nature="1" inner="0" tooltip="Value to test." id="2" />
+                                                                    <Output name="onDefault" type="1" type_size="1" nature="2" inner="0" tooltip="If the input value does not match any value set on the box." id="3" />
+                                                                    <Output name="output_1" type="0" type_size="1" nature="2" inner="0" tooltip="This IO has been automatically added by box. Read box tooltip for more information." id="4" />
+                                                                    <Output name="output_2" type="0" type_size="1" nature="2" inner="0" tooltip="This IO has been automatically added by box. Read box tooltip for more information." id="5" />
+                                                                    <Output name="output_3" type="0" type_size="1" nature="2" inner="0" tooltip="This IO has been automatically added by box. Read box tooltip for more information." id="6" />
+                                                                    <Output name="output_4" type="0" type_size="1" nature="2" inner="0" tooltip="This IO has been automatically added by box. Read box tooltip for more information." id="7" />
+                                                                    <Output name="output_5" type="0" type_size="1" nature="2" inner="0" tooltip="This IO has been automatically added by box. Read box tooltip for more information." id="8" />
+                                                                    <Output name="output_6" type="0" type_size="1" nature="2" inner="0" tooltip="This IO has been automatically added by box. Read box tooltip for more information." id="9" />
+                                                                </Box>
+                                                                <Box name="Subscribe" robot="" id="11" tooltip="Listen to a specified event" bitmap_expanded="1" plugin="" x="104" y="305">
+                                                                    <bitmap>media/images/box/box-diagram.png</bitmap>
+                                                                    <script language="4">
+                                                                        <content>
+                                                                            <![CDATA[class MyClass(GeneratedClass):
+    def __init__(self):
+        GeneratedClass.__init__(self)
+        
+    def __del__(self):
+        # should remove event here
+        pass
+
+    def onLoad(self):
+        pass
+
+    def onUnload(self):
+        ALMemory.unsubscribeToEvent(self.getParameter("Event name"), self.id)
+
+    def onValueChanged(self, name, value, msg):
+        """Documentation so that method is automatically binded"""
+        self.onEvent(value)
+    
+    def onInput_onStart(self):
+        ALMemory.subscribeToEvent(self.getParameter("Event name"), self.id, "onValueChanged")
+
+    def onInput_onStop(self):
+        pass]]>
+</content>
+                                                                    </script>
+                                                                    <Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when diagram is loaded." id="1" />
+                                                                    <Input name="onStart" type="1" type_size="1" nature="2" inner="0" tooltip="Box behavior starts when a signal is received on this input." id="2" />
+                                                                    <Input name="onStop" type="1" type_size="1" nature="3" inner="0" tooltip="Box behavior stops when a signal is received on this input." id="3" />
+                                                                    <Output name="onEvent" type="0" type_size="1" nature="2" inner="0" tooltip="Signal sent when box behavior is finished." id="4" />
+                                                                    <Parameter name="Event name" inherits_from_parent="0" content_type="3" value="autonomous/state" default_value="" custom_choice="0" tooltip="" id="5" />
+                                                                </Box>
+                                                                <Link inputowner="1" indexofinput="3" outputowner="0" indexofoutput="2" />
+                                                                <Link inputowner="0" indexofinput="9" outputowner="7" indexofoutput="12" />
+                                                                <Link inputowner="9" indexofinput="2" outputowner="4" indexofoutput="5" />
+                                                                <Link inputowner="7" indexofinput="2" outputowner="4" indexofoutput="5" />
+                                                                <Link inputowner="4" indexofinput="3" outputowner="9" indexofoutput="4" />
+                                                                <Link inputowner="0" indexofinput="6" outputowner="7" indexofoutput="9" />
+                                                                <Link inputowner="0" indexofinput="7" outputowner="7" indexofoutput="10" />
+                                                                <Link inputowner="0" indexofinput="8" outputowner="7" indexofoutput="11" />
+                                                                <Link inputowner="10" indexofinput="2" outputowner="9" indexofoutput="4" />
+                                                                <Link inputowner="10" indexofinput="4" outputowner="7" indexofoutput="5" />
+                                                                <Link inputowner="10" indexofinput="5" outputowner="7" indexofoutput="6" />
+                                                                <Link inputowner="10" indexofinput="6" outputowner="7" indexofoutput="7" />
+                                                                <Link inputowner="10" indexofinput="7" outputowner="7" indexofoutput="8" />
+                                                                <Link inputowner="0" indexofinput="4" outputowner="9" indexofoutput="4" />
+                                                                <Link inputowner="14" indexofinput="2" outputowner="0" indexofoutput="2" />
+                                                                <Link inputowner="9" indexofinput="2" outputowner="15" indexofoutput="4" />
+                                                                <Link inputowner="10" indexofinput="3" outputowner="15" indexofoutput="4" />
+                                                                <Link inputowner="4" indexofinput="2" outputowner="15" indexofoutput="4" />
+                                                                <Link inputowner="15" indexofinput="2" outputowner="0" indexofoutput="2" />
+                                                                <Link inputowner="3" indexofinput="2" outputowner="11" indexofoutput="4" />
+                                                                <Link inputowner="11" indexofinput="2" outputowner="0" indexofoutput="2" />
+                                                                <Link inputowner="10" indexofinput="2" outputowner="3" indexofoutput="5" />
+                                                                <Link inputowner="15" indexofinput="2" outputowner="3" indexofoutput="7" />
+                                                            </Diagram>
+                                                        </BehaviorKeyframe>
+                                                    </BehaviorLayer>
+                                                    <ActuatorList />
+                                                </Timeline>
+                                                <Resource name="Standing" type="Lock" timeout="0" />
+                                                <Resource name="All motors" type="Lock" timeout="0" />
+                                            </Box>
+                                            <Box name="Enter name here" robot="" id="4" tooltip="Enter tooltip here" bitmap_expanded="1" plugin="localizationbox_plugin" x="232" y="5">
+                                                <script language="4">
+                                                    <content>
+                                                        <![CDATA[class MyClass(GeneratedClass):
+	def __init__(self):
+		GeneratedClass.__init__(self)
+		self.tts = ALProxy("ALTextToSpeech")
+
+	def onInput_onStart(self):
+		sChinese = "真诡异，我的眼睛好像出了问题"
+		sEnglish = "It seems like I've got a problem with my eyes, all's weird!"
+		sFrench = "Je crois que j'ai un problème avec mes yeux car ce que je vois est très bizarre!"
+		sGerman = ""
+		sItalian = ""
+		sJapanese = ""
+		sKorean = ""
+		sPortuguese = ""
+		sSpanish = ""
+		sDefaultLang = self.tts.getLanguage()
+		self.onStopped(eval("s"+sDefaultLang))]]>
+</content>
+                                                </script>
+                                                <pluginContent>
+                                                    <chinese>真诡异，我的眼睛好像出了问题</chinese>
+                                                    <english>It seems like I&apos;ve got a problem with my eyes, all&apos;s weird!</english>
+                                                    <french>Je crois que j&apos;ai un problème avec mes yeux car ce que je vois est très bizarre!</french>
+                                                    <german></german>
+                                                    <italian></italian>
+                                                    <japanese></japanese>
+                                                    <korean></korean>
+                                                    <portuguese></portuguese>
+                                                    <spanish></spanish>
+                                                    <language>1</language>
+                                                </pluginContent>
+                                                <Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when diagram is loaded." id="1" />
+                                                <Input name="onStart" type="1" type_size="1" nature="2" inner="0" tooltip="Box behavior starts when a signal is received on this input." id="2" />
+                                                <Input name="onStop" type="1" type_size="1" nature="3" inner="0" tooltip="Box behavior stops when a signal is received on this input." id="3" />
+                                                <Output name="onStopped" type="3" type_size="1" nature="1" inner="0" tooltip="Signal sent when box behavior is finished." id="4" />
+                                            </Box>
+                                            <Box name="Say Text" robot="" id="3" tooltip="Say the text set in parameters." bitmap_expanded="1" plugin="" x="499" y="5">
+                                                <bitmap>media/images/box/interaction/say.png</bitmap>
+                                                <script language="4">
+                                                    <content>
+                                                        <![CDATA[import time
+
+class MyClass(GeneratedClass):
+    def __init__(self):
+        GeneratedClass.__init__(self)
+        self.tts = ALProxy('ALTextToSpeech')
+        self.ttsStop = ALProxy('ALTextToSpeech', True) #Create another proxy as wait is blocking if audioout is remote
+
+    def onLoad(self):
+        self.bIsRunning = False
+        self.ids = []
+        
+    def onUnload(self):
+        for id in self.ids:
+            try:
+                self.ttsStop.stop(id)
+            except:
+                pass
+        while( self.bIsRunning ):
+            time.sleep( 0.2 )
+
+    def onInput_onStart(self, p):
+        self.bIsRunning = True
+        try:
+            sentence = "\RSPD="+ str( self.getParameter("Speed (%)") ) + "\ "
+            sentence += "\VCT="+ str( self.getParameter("Voice shaping (%)") ) + "\ "
+            sentence += str(p)
+            sentence +=  "\RST\ "
+            id = self.tts.post.say(str(sentence))
+            self.ids.append(id)
+            self.tts.wait(id, 0)
+        finally:
+            try:
+                self.ids.remove(id)
+            except:
+                pass
+            if( self.ids == [] ):
+                self.onStopped() # activate output of the box
+                self.bIsRunning = False
+
+    def onInput_onStop(self):
+        self.onUnload()]]>
+</content>
+                                                </script>
+                                                <Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when Diagram is loaded." id="1" />
+                                                <Input name="onStart" type="3" type_size="1" nature="2" inner="0" tooltip="Box behavior starts when a signal is received on this Input." id="2" />
+                                                <Input name="onStop" type="1" type_size="1" nature="3" inner="0" tooltip="Box behavior stops when a signal is received on this Input." id="3" />
+                                                <Output name="onStopped" type="1" type_size="1" nature="1" inner="0" tooltip="Signal sent when Box behavior is finished." id="4" />
+                                                <Parameter name="Voice shaping (%)" inherits_from_parent="1" content_type="1" value="100" default_value="100" min="50" max="150" tooltip='Used to modify at runtime the voice feature (tone, speed). In a slighty&#x0A;different way than pitch and speed, it gives a kind of &quot;gender or age&#x0A;modification&quot; effect.&#x0A;&#x0A;For instance, a quite good male derivation of female voice can be&#x0A;obtained setting this parameter to 78%.&#x0A;&#x0A;Note: For a better effect, you can compensate this parameter with the&#x0A;speed parameter. For example, if you want to decrease by 20% the voice&#x0A;shaping, you will have to increase by 20% the speed to keep a constant&#x0A;average speed.' id="5" />
+                                                <Parameter name="Speed (%)" inherits_from_parent="1" content_type="1" value="100" default_value="100" min="50" max="200" tooltip="Changes the speed of the voice.&#x0A;&#x0A;Note: For a better effect, you can compensate this parameter with the voice&#x0A;shaping parameter. For example, if you want to increase by 20% the speed, you&#x0A;will have to decrease by 20% the voice shaping to keep a constant average&#x0A;speed." id="6" />
+                                            </Box>
+                                            <Box name="gotoExit" robot="" id="2" tooltip="Jump to a given frame (edit parameters to modify it) and stop the timeline parent at this index. Note that all the behavior keyframes will be loaded, and therefore the event logic will still be running." bitmap_expanded="1" plugin="" x="641" y="5">
+                                                <bitmap>media/images/box/box-timeLine.png</bitmap>
+                                                <script language="4">
+                                                    <content>
+                                                        <![CDATA[class MyClass(GeneratedClass):
+    def __init__(self):
+        GeneratedClass.__init__(self)
+
+    def onUnload(self):
+        pass
+
+    def onInput_onStart(self):
+        name = self.getParameter("frame name")
+        self.log("%s -> %s" % (self.boxName, name))
+        self.gotoAndStopParent(name)
+
+    def onInput_onStop(self):
+        pass]]>
+</content>
+                                                </script>
+                                                <Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when diagram is loaded." id="1" />
+                                                <Input name="onStart" type="1" type_size="1" nature="2" inner="0" tooltip="Parent timeline gotoAndStop when a signal is received on this input." id="2" />
+                                                <Parameter name="frame name" inherits_from_parent="0" content_type="3" value="Exit" default_value="" custom_choice="0" tooltip="" id="3" />
+                                            </Box>
+                                            <Link inputowner="1" indexofinput="2" outputowner="0" indexofoutput="1" />
+                                            <Link inputowner="4" indexofinput="2" outputowner="1" indexofoutput="4" />
+                                            <Link inputowner="3" indexofinput="2" outputowner="4" indexofoutput="4" />
+                                            <Link inputowner="2" indexofinput="2" outputowner="3" indexofoutput="4" />
+                                        </Diagram>
+                                    </BehaviorKeyframe>
+                                    <BehaviorKeyframe name="Exit" index="32" bitmap="">
+                                        <Diagram scale="-1">
+                                            <Box name="ChangeCamera" robot="" id="2" tooltip="Change the currently used camera.&#x0A;*** ref box in: ./4_localize/ChangeCamera/ExampleChangeCamera.xar ***&#x0A;*** last modification date(git):   Thu Oct 15 16:26:21 2009 +0200 ***" bitmap_expanded="1" plugin="" x="163" y="11">
+                                                <bitmap>media/images/box/interaction/look.png</bitmap>
+                                                <script language="4">
+                                                    <content>
+                                                        <![CDATA[class MyClass(GeneratedClass):
+    def __init__(self):
+        GeneratedClass.__init__(self),
+        self.kCameraSelectID = 18;
+        self.cameraModule = ALProxy( "ALVideoDevice" ); # "ALVideoDevice"
+
+    def onLoad(self):
+        pass
+
+    def onUnload(self):
+        pass
+
+    def onInput_onUseTopCamera(self):
+        #~ self.log( self.boxName + ": Use Top Camera" );
+        self.cameraModule.setParam( self.kCameraSelectID, 0 );
+        self.output_Finished();
+
+    def onInput_onUseBottomCamera(self):
+        #~ self.log( self.boxName + ": Use Bottom Camera" );    
+        self.cameraModule.setParam( self.kCameraSelectID, 1 );
+        self.output_Finished();]]>
+</content>
+                                                </script>
+                                                <Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when diagram is loaded." id="1" />
+                                                <Input name="onUseTopCamera" type="1" type_size="1" nature="1" inner="0" tooltip="use the camera at the top of the head (forehead)" id="2" />
+                                                <Input name="onUseBottomCamera" type="1" type_size="1" nature="1" inner="0" tooltip="Use the camera at the bottom of the head (mouth)" id="3" />
+                                                <Output name="output_Finished" type="1" type_size="1" nature="1" inner="0" tooltip="The change is finished." id="4" />
+                                            </Box>
+                                            <Box name="ReallyStopWalkAgain" robot="" id="3" tooltip="Enter tooltip here" bitmap_expanded="1" plugin="" x="294" y="11">
+                                                <bitmap>media/images/box/box-diagram.png</bitmap>
+                                                <script language="4">
+                                                    <content>
+                                                        <![CDATA[class MyClass(GeneratedClass):
+    def __init__(self):
+        GeneratedClass.__init__(self)
+
+    def onLoad(self):
+        #~ puts code for box initialization here
+        pass
+
+    def onUnload(self):
+        #~ puts code for box cleanup here
+        pass
+
+    def onInput_onStart(self):
+        # really, really stop the walk
+        ALMotion.setWalkTargetVelocity( 0., 0., 0., 0. );
+        while ALMotion.walkIsActive():
+            time.sleep(0.05);
+        self.onStopped()
+        pass
+
+    def onInput_onStop(self):
+        self.onUnload() #~ it is recommanded to call onUnload of this box in a onStop method, as the code written in onUnload is used to stop the box as well
+        pass]]>
+</content>
+                                                </script>
+                                                <Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when diagram is loaded." id="1" />
+                                                <Input name="onStart" type="1" type_size="1" nature="2" inner="0" tooltip="Box behavior starts when a signal is received on this input." id="2" />
+                                                <Input name="onStop" type="1" type_size="1" nature="3" inner="0" tooltip="Box behavior stops when a signal is received on this input." id="3" />
+                                                <Output name="onStopped" type="1" type_size="1" nature="1" inner="0" tooltip="Signal sent when box behavior is finished." id="4" />
+                                            </Box>
+                                            <Box name="FastStiff" robot="" id="7" tooltip="Enter tooltip here" bitmap_expanded="1" plugin="" x="298" y="108">
+                                                <bitmap>media/images/box/box-diagram.png</bitmap>
+                                                <script language="4">
+                                                    <content>
+                                                        <![CDATA[class MyClass(GeneratedClass):
+    def __init__(self):
+        GeneratedClass.__init__(self)
+
+    def onLoad(self):
+        pass
+
+    def onUnload(self):
+        pass
+
+    def onInput_onStart(self):
+        ALMotion.stiffnessInterpolation("Body", 1., 0.7 );
+        self.onStopped() #~ activate output of the box]]>
+</content>
+                                                </script>
+                                                <Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when diagram is loaded." id="1" />
+                                                <Input name="onStart" type="1" type_size="1" nature="2" inner="0" tooltip="Box behavior starts when a signal is received on this input." id="2" />
+                                                <Output name="onStopped" type="1" type_size="1" nature="1" inner="0" tooltip="Signal sent when box behavior is finished." id="3" />
+                                            </Box>
+                                            <Box name="LegsStand" robot="" id="19" tooltip="This box is empty (contains a single motion layer with no motor position&#x0A;defined in it) and should be used to create any animation you would like." bitmap_expanded="1" plugin="" x="458" y="14">
+                                                <bitmap>media/images/box/movement/move.png</bitmap>
+                                                <script language="4">
+                                                    <content>
+                                                        <![CDATA[class MyClass(GeneratedClass):
+	def __init__(self):
+		GeneratedClass.__init__(self)
+
+	def onUnload(self):
+		#puts code for box cleanup here
+		""
+
+	def onInput_onStart(self):
+		#self.onStopped() # activate output of the box
+		""
+
+	def onInput_onStop(self):
+		""]]>
+</content>
+                                                </script>
+                                                <Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when Diagram is loaded." id="1" />
+                                                <Input name="onStart" type="1" type_size="1" nature="2" inner="0" tooltip="Animation starts when a signal is received on this input." id="2" />
+                                                <Input name="onStop" type="1" type_size="1" nature="3" inner="0" tooltip="Animation stops when a signal is received on this input." id="3" />
+                                                <Output name="onStopped" type="1" type_size="1" nature="1" inner="0" tooltip="Signal sent when animation is finished." id="4" />
+                                                <Timeline fps="15" resources_acquisition="0" size="300" enable="1" start_frame="0" end_frame="-1" scale="10">
+                                                    <watches />
+                                                    <ActuatorList>
+                                                        <ActuatorCurve name="value" actuator="LHipYawPitch" recordable="1" mute="0" alwaysVisible="0">
+                                                            <Key frame="35" value="-9.22623" />
+                                                        </ActuatorCurve>
+                                                        <ActuatorCurve name="value" actuator="LHipRoll" recordable="1" mute="0" alwaysVisible="0">
+                                                            <Key frame="35" value="6.4185" />
+                                                        </ActuatorCurve>
+                                                        <ActuatorCurve name="value" actuator="LHipPitch" recordable="1" mute="0" alwaysVisible="0">
+                                                            <Key frame="35" value="11.692" />
+                                                        </ActuatorCurve>
+                                                        <ActuatorCurve name="value" actuator="LKneePitch" recordable="1" mute="0" alwaysVisible="0">
+                                                            <Key frame="35" value="-5.18802" />
+                                                        </ActuatorCurve>
+                                                        <ActuatorCurve name="value" actuator="LAnklePitch" recordable="1" mute="0" alwaysVisible="0">
+                                                            <Key frame="35" value="4.04062" />
+                                                        </ActuatorCurve>
+                                                        <ActuatorCurve name="value" actuator="LAnkleRoll" recordable="1" mute="0" alwaysVisible="0">
+                                                            <Key frame="35" value="-6.15002" />
+                                                        </ActuatorCurve>
+                                                        <ActuatorCurve name="value" actuator="RHipRoll" recordable="1" mute="0" alwaysVisible="0">
+                                                            <Key frame="35" value="-3.86483" />
+                                                        </ActuatorCurve>
+                                                        <ActuatorCurve name="value" actuator="RHipPitch" recordable="1" mute="0" alwaysVisible="0">
+                                                            <Key frame="35" value="10.8083" />
+                                                        </ActuatorCurve>
+                                                        <ActuatorCurve name="value" actuator="RKneePitch" recordable="1" mute="0" alwaysVisible="0">
+                                                            <Key frame="35" value="-4.2164" />
+                                                        </ActuatorCurve>
+                                                        <ActuatorCurve name="value" actuator="RAnklePitch" recordable="1" mute="0" alwaysVisible="0">
+                                                            <Key frame="35" value="3.51807" />
+                                                        </ActuatorCurve>
+                                                        <ActuatorCurve name="value" actuator="RAnkleRoll" recordable="1" mute="0" alwaysVisible="0">
+                                                            <Key frame="35" value="3.78175" />
+                                                        </ActuatorCurve>
+                                                    </ActuatorList>
+                                                </Timeline>
+                                                <Resource name="LHipYawPitch" type="Lock" timeout="2" />
+                                                <Resource name="LHipRoll" type="Lock" timeout="2" />
+                                                <Resource name="LHipPitch" type="Lock" timeout="2" />
+                                                <Resource name="LKneePitch" type="Lock" timeout="2" />
+                                                <Resource name="LAnklePitch" type="Lock" timeout="2" />
+                                                <Resource name="LAnkleRoll" type="Lock" timeout="2" />
+                                                <Resource name="RHipRoll" type="Lock" timeout="2" />
+                                                <Resource name="RHipPitch" type="Lock" timeout="2" />
+                                                <Resource name="RKneePitch" type="Lock" timeout="2" />
+                                                <Resource name="RAnklePitch" type="Lock" timeout="2" />
+                                                <Resource name="RAnkleRoll" type="Lock" timeout="2" />
+                                            </Box>
+                                            <Link inputowner="3" indexofinput="2" outputowner="2" indexofoutput="4" />
+                                            <Link inputowner="7" indexofinput="2" outputowner="2" indexofoutput="4" />
+                                            <Link inputowner="2" indexofinput="2" outputowner="0" indexofoutput="1" />
+                                            <Link inputowner="19" indexofinput="2" outputowner="3" indexofoutput="4" />
+                                            <Link inputowner="0" indexofinput="4" outputowner="19" indexofoutput="4" />
+                                        </Diagram>
+                                    </BehaviorKeyframe>
+                                </BehaviorLayer>
+                                <BehaviorLayer name="behavior_layer4" mute="0">
+                                    <BehaviorKeyframe name="Modules C++" index="1" bitmap="">
+                                        <Diagram scale="-1">
+                                            <Box name="Stop" robot="" id="9" tooltip="Stop the parent timeline at the current frame index.&#x0A;&#x0A;!!Warning!! This box does not stop the behavior! It is only the timeline which will&#x0A;stop playing, the keyframes and boxes will still be running." bitmap_expanded="1" plugin="" x="87" y="117">
+                                                <bitmap>media/images/box/box-timeLine.png</bitmap>
+                                                <script language="4">
+                                                    <content>
+                                                        <![CDATA[class MyClass(GeneratedClass):
+    def __init__(self):
+        GeneratedClass.__init__(self)
+
+    def onInput_onStop(self):
+        self.stopTimelineParent()]]>
+</content>
+                                                </script>
+                                                <Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when diagram is loaded." id="1" />
+                                                <Input name="onStop" type="1" type_size="1" nature="1" inner="0" tooltip="Parent timeline stops when a signal is received on this input." id="2" />
+                                            </Box>
+                                            <Box name="ModuleC++" robot="" id="11" tooltip="Use a resource as a C++ module or python module, and register it for Naoqi." bitmap_expanded="1" plugin="" x="214" y="20">
+                                                <bitmap>media/images/box/appu/allauncher.png</bitmap>
+                                                <script language="4">
+                                                    <content>
+                                                        <![CDATA[class MyClass(GeneratedClass):
+    def __init__(self):
+        GeneratedClass.__init__(self)
+        self.launcher = ALProxy("ALLauncher")
+        self.moduleList = []
+
+    def onLoad(self):
+        pass
+
+    def onUnload(self):
+        self.onInput_onStop()
+
+    def onInput_onStart(self):
+        if not self.launcher.isModulePresent(self.getParameter("Module name")):
+            self.fm = ALProxy("ALFrameManager")
+            self.moduleList = self.launcher.launchLocal(self.fm.getBehaviorPath(self.behaviorId) + "/" + self.getParameter("Library"))
+            self.log(str(self.moduleList))
+        self.Loaded()
+
+    def onInput_onStop(self):
+        try:
+            for module in self.moduleList:
+                if self.launcher.isModulePresent(module):                
+                    proxy = ALProxy(module)
+                    self.log( "Exiting module %s" % module )
+                    proxy.exit()
+                    self.log( "Exited module %s" % module )                    
+        except:
+            pass
+        self.onStopped()]]>
+</content>
+                                                </script>
+                                                <Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when diagram is loaded." id="1" />
+                                                <Input name="onStart" type="1" type_size="1" nature="2" inner="0" tooltip="Box behavior starts when a signal is received on this input." id="2" />
+                                                <Input name="onStop" type="1" type_size="1" nature="3" inner="0" tooltip="Box behavior stops when a signal is received on this input." id="3" />
+                                                <Output name="onStopped" type="1" type_size="1" nature="1" inner="0" tooltip="Signal sent when box behavior is finished." id="4" />
+                                                <Output name="Loaded" type="1" type_size="1" nature="2" inner="0" tooltip="" id="5" />
+                                                <Parameter name="Module name" inherits_from_parent="0" content_type="3" value="UsageVisionObstacle" default_value="UsageVisionObstacle" custom_choice="0" tooltip="" id="6">
+                                                    <Choice value="UsageNoiseExtractor" />
+                                                    <Choice value="UsageOpenCV" />
+                                                    <Choice value="UsageVisionInfo" />
+                                                    <Choice value="Usage" />
+                                                    <Choice value="UsageVisionObstacle" />
+                                                </Parameter>
+                                                <Parameter name="Library" inherits_from_parent="0" content_type="3" value="libusagevision.1.10.10.so" default_value="libusagevision.1.10.10.so" custom_choice="1" tooltip="" id="7">
+                                                    <Choice value="libusagesound.1.8.11.so" />
+                                                    <Choice value="libusageopencv.1.8.11.so" />
+                                                    <Choice value="libusagevision.1.8.11.so" />
+                                                    <Choice value="libusageopencv.1.10.6.so" />
+                                                    <Choice value="libusagesound.1.10.6.so" />
+                                                    <Choice value="libusagevision.1.10.6.so" />
+                                                    <Choice value="libusage.1.10.6.so" />
+                                                    <Choice value="libusage.1.8.11.so" />
+                                                    <Choice value="libusagevision.1.10.10.so" />
+                                                </Parameter>
+                                            </Box>
+                                            <Box name="ModuleC++" robot="" id="12" tooltip="Use a resource as a C++ module or python module, and register it for Naoqi." bitmap_expanded="1" plugin="" x="88" y="20">
+                                                <bitmap>media/images/box/appu/allauncher.png</bitmap>
+                                                <script language="4">
+                                                    <content>
+                                                        <![CDATA[class MyClass(GeneratedClass):
+    def __init__(self):
+        GeneratedClass.__init__(self)
+        self.launcher = ALProxy("ALLauncher")
+        self.moduleList = []
+
+    def onLoad(self):
+        pass
+
+    def onUnload(self):
+        self.onInput_onStop()
+
+    def onInput_onStart(self):
+        if not self.launcher.isModulePresent(self.getParameter("Module name")):
+            self.fm = ALProxy("ALFrameManager")
+            self.moduleList = self.launcher.launchLocal(self.fm.getBehaviorPath(self.behaviorId) + "/" + self.getParameter("Library"))
+            self.log(str(self.moduleList))
+        self.Loaded()
+
+    def onInput_onStop(self):
+        try:
+            for module in self.moduleList:
+                if self.launcher.isModulePresent(module):                
+                    proxy = ALProxy(module)
+                    self.log( "Exiting module %s" % module )
+                    proxy.exit()
+                    self.log( "Exited module %s" % module )                    
+        except:
+            pass
+        self.onStopped()]]>
+</content>
+                                                </script>
+                                                <Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when diagram is loaded." id="1" />
+                                                <Input name="onStart" type="1" type_size="1" nature="2" inner="0" tooltip="Box behavior starts when a signal is received on this input." id="2" />
+                                                <Input name="onStop" type="1" type_size="1" nature="3" inner="0" tooltip="Box behavior stops when a signal is received on this input." id="3" />
+                                                <Output name="onStopped" type="1" type_size="1" nature="1" inner="0" tooltip="Signal sent when box behavior is finished." id="4" />
+                                                <Output name="Loaded" type="1" type_size="1" nature="2" inner="0" tooltip="" id="5" />
+                                                <Parameter name="Module name" inherits_from_parent="0" content_type="3" value="UsageVisionObstacle" default_value="UsageVisionObstacle" custom_choice="0" tooltip="" id="6">
+                                                    <Choice value="UsageNoiseExtractor" />
+                                                    <Choice value="UsageOpenCV" />
+                                                    <Choice value="UsageVisionInfo" />
+                                                    <Choice value="Usage" />
+                                                    <Choice value="UsageVisionObstacle" />
+                                                </Parameter>
+                                                <Parameter name="Library" inherits_from_parent="0" content_type="3" value="libautonomous.so" default_value="libusagevision.1.10.10.so" custom_choice="1" tooltip="" id="7">
+                                                    <Choice value="libusagesound.1.8.11.so" />
+                                                    <Choice value="libusageopencv.1.8.11.so" />
+                                                    <Choice value="libusagevision.1.8.11.so" />
+                                                    <Choice value="libusageopencv.1.10.6.so" />
+                                                    <Choice value="libusagesound.1.10.6.so" />
+                                                    <Choice value="libusagevision.1.10.6.so" />
+                                                    <Choice value="libusage.1.10.6.so" />
+                                                    <Choice value="libusage.1.8.11.so" />
+                                                    <Choice value="libusagevision.1.10.10.so" />
+                                                </Parameter>
+                                            </Box>
+                                            <Box name="ObstacleThesh" robot="" id="1" tooltip="Enter tooltip here" bitmap_expanded="1" plugin="" x="339" y="20">
+                                                <bitmap>media/images/box/box-diagram.png</bitmap>
+                                                <script language="4">
+                                                    <content>
+                                                        <![CDATA[class MyClass(GeneratedClass):
+    def __init__(self):
+        GeneratedClass.__init__(self)
+
+    def onLoad(self):
+        pass
+
+    def onUnload(self):
+        pass
+
+    def onInput_onStart(self):
+        uvb = ALProxy( 'UsageVisionObstacle' )
+        uvb.setThreshold(self.getParameter("nObstaclesThreshold"))
+        self.onStopped()
+
+    def onInput_onStop(self):
+        pass]]>
+</content>
+                                                </script>
+                                                <Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when diagram is loaded." id="1" />
+                                                <Input name="onStart" type="1" type_size="1" nature="2" inner="0" tooltip="Box behavior starts when a signal is received on this input." id="2" />
+                                                <Input name="onStop" type="1" type_size="1" nature="3" inner="0" tooltip="Box behavior stops when a signal is received on this input." id="3" />
+                                                <Output name="onStopped" type="1" type_size="1" nature="1" inner="0" tooltip="Signal sent when box behavior is finished." id="4" />
+                                            </Box>
+                                            <Box name="Setup" robot="" id="7" tooltip="Allow to change current camera configuration for gain, white balance and exposition." bitmap_expanded="1" plugin="" x="476" y="20">
+                                                <bitmap>media/images/box/interaction/picture.png</bitmap>
+                                                <script language="4">
+                                                    <content>
+                                                        <![CDATA[class MyClass(GeneratedClass):
+    def __init__(self):
+        GeneratedClass.__init__(self)
+        
+    def onLoad(self):
+        pass
+
+    def onUnload(self):
+        self.onInput_onStop()
+
+    def onInput_onStart(self):
+        cam = ALProxy( "ALVideoDevice");
+        if cam.isFrameGrabberOff():
+            cam.startFrameGrabber()
+        cam.setParam(11, self.getParameter("AutoExposition"))
+        cam.setParam(12, self.getParameter("AutoWhiteBalance"))
+        cam.setParam(13, self.getParameter("AutoGain"))
+        self.onStopped() #~ activate output of the box
+
+    def onInput_onStop(self):
+        cam = ALProxy( "ALVideoDevice");
+        cam.setParam(11, 1)        # kCameraAutoExpositionID
+        cam.setParam(12, 1)        # kCameraAutoWhiteBalanceID
+        cam.setParam(13, 1)        # kCameraAutoGainID]]>
+</content>
+                                                </script>
+                                                <Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when diagram is loaded." id="1" />
+                                                <Input name="onStart" type="1" type_size="1" nature="2" inner="0" tooltip="Box behavior starts when a signal is received on this input." id="2" />
+                                                <Input name="onStop" type="1" type_size="1" nature="3" inner="0" tooltip="Box behavior stops when a signal is received on this input." id="3" />
+                                                <Output name="onStopped" type="1" type_size="1" nature="1" inner="0" tooltip="Signal sent when box behavior is finished." id="4" />
+                                                <Parameter name="AutoWhiteBalance" inherits_from_parent="0" content_type="1" value="0" default_value="1" min="0" max="1" tooltip="" id="5" />
+                                                <Parameter name="AutoGain" inherits_from_parent="0" content_type="1" value="1" default_value="1" min="0" max="1" tooltip="" id="6" />
+                                                <Parameter name="AutoExposition" inherits_from_parent="0" content_type="1" value="1" default_value="1" min="0" max="1" tooltip="" id="7" />
+                                            </Box>
+                                            <Link inputowner="11" indexofinput="2" outputowner="12" indexofoutput="5" />
+                                            <Link inputowner="9" indexofinput="2" outputowner="0" indexofoutput="1" />
+                                            <Link inputowner="12" indexofinput="2" outputowner="0" indexofoutput="1" />
+                                            <Link inputowner="1" indexofinput="2" outputowner="11" indexofoutput="5" />
+                                            <Link inputowner="7" indexofinput="2" outputowner="1" indexofoutput="4" />
+                                        </Diagram>
+                                    </BehaviorKeyframe>
+                                </BehaviorLayer>
+                                <ActuatorList />
+                            </Timeline>
+                        </Box>
+                        <Link inputowner="0" indexofinput="4" outputowner="5" indexofoutput="4" />
+                        <Link inputowner="5" indexofinput="2" outputowner="0" indexofoutput="2" />
+                    </Diagram>
+                </BehaviorKeyframe>
+            </BehaviorLayer>
+            <ActuatorList />
+        </Timeline>
+    </Box>
+</ChoregrapheProject>

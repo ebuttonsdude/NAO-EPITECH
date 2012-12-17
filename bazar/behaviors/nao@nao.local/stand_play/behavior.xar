@@ -1,0 +1,511 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ChoregrapheProject xmlns="http://www.aldebaran-robotics.com/schema/choregraphe/project.xsd" xar_version="3">
+    <Box name="root" robot="" id="-1" tooltip="Root box of Choregraphe&apos;s project. Highest level possible." bitmap_expanded="1" plugin="" x="0" y="0">
+        <bitmap>media/images/box/root.png</bitmap>
+        <script language="4">
+            <content>
+                <![CDATA[]]>
+</content>
+        </script>
+        <Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when diagram is loaded." id="1" />
+        <Input name="onStart" type="1" type_size="1" nature="2" inner="0" tooltip="Box behavior starts when a signal is received on this input." id="2" />
+        <Input name="onStop" type="1" type_size="1" nature="3" inner="0" tooltip="Box behavior stops when a signal is received on this input." id="3" />
+        <Output name="onStopped" type="1" type_size="1" nature="1" inner="0" tooltip="Signal sent when box behavior is finished." id="4" />
+        <Timeline fps="10" resources_acquisition="0" size="300" enable="0" start_frame="0" end_frame="-1" scale="10">
+            <watches />
+            <BehaviorLayer name="behavior_layer1" mute="0">
+                <BehaviorKeyframe name="keyframe1" index="1" bitmap="">
+                    <Diagram scale="94">
+                        <Box name="ShuffleInt" robot="" id="1" tooltip="Generate a random number between 0 and a max number." bitmap_expanded="1" plugin="" x="533" y="265">
+                            <bitmap>media/images/box/box-script.png</bitmap>
+                            <script language="4">
+                                <content>
+                                    <![CDATA[import random;
+
+class MyClass(GeneratedClass):
+    def __init__(self):
+        GeneratedClass.__init__(self)
+        self.nIndex = 0
+        self.nCount = 0
+        self.aShuffle = None
+        
+    def onUnload(self):
+        pass
+
+    def onInput_onStart(self, p):
+        if self.nIndex == self.nCount:
+            self.nIndex = 0
+            self.nCount = p
+            if self.aShuffle == None:
+                self.aShuffle = range(self.nCount)
+            random.shuffle(self.aShuffle)    
+            
+        self.Random(self.aShuffle[self.nIndex])
+        self.nIndex += 1]]>
+</content>
+                            </script>
+                            <Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when diagram is loaded." id="1" />
+                            <Input name="onStart" type="2" type_size="1" nature="2" inner="0" tooltip="The max number of the random (excluded)" id="2" />
+                            <Output name="Random" type="2" type_size="1" nature="2" inner="0" tooltip="Position name and a random value" id="3" />
+                            <Parameter name="count" inherits_from_parent="0" content_type="1" value="1" default_value="9" min="1" max="100" tooltip="" id="4" />
+                        </Box>
+                        <Box name="ListOfFile" robot="" id="2" tooltip="Enter tooltip here" bitmap_expanded="1" plugin="" x="537" y="140">
+                            <bitmap>media/images/box/box-diagram.png</bitmap>
+                            <script language="4">
+                                <content>
+                                    <![CDATA[import os
+
+class MyClass(GeneratedClass):
+    def __init__(self):
+        GeneratedClass.__init__(self)
+        self.aAnimationsList = []
+        
+    def onLoad(self):
+        pass
+
+    def onUnload(self):
+        pass
+
+    def onInput_onStart(self):
+        self.log("Stand play: list of files")
+        if len(self.aAnimationsList) == 0:
+            list = os.listdir(ALFrameManager.getBehaviorPath(self.behaviorId) + '/' + self.getParameter("Base directory"))
+            for e in list:
+                if e.find(".xar") != -1:
+                    self.aAnimationsList.append(e)
+            #~ self.log(str(self.aAnimationsList))
+        self.onStopped(len(self.aAnimationsList))
+
+    def onInput_onFileIndex(self, p):
+        if self.aAnimationsList != None and p < len(self.aAnimationsList):
+            self.onFilename(ALFrameManager.getBehaviorPath(self.behaviorId) + '/' + self.getParameter("Base directory") + "/" + self.aAnimationsList[p])
+        else:
+            self.onFilename(None)
+        pass
+    
+    def onInput_onStop(self):
+        pass]]>
+</content>
+                            </script>
+                            <Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when diagram is loaded." id="1" />
+                            <Input name="onStart" type="1" type_size="1" nature="2" inner="0" tooltip="Box behavior starts when a signal is received on this input." id="2" />
+                            <Input name="onStop" type="1" type_size="1" nature="3" inner="0" tooltip="Box behavior stops when a signal is received on this input." id="3" />
+                            <Input name="onFileIndex" type="2" type_size="1" nature="1" inner="0" tooltip="" id="4" />
+                            <Output name="onStopped" type="2" type_size="1" nature="1" inner="0" tooltip="Signal sent when box behavior is finished." id="5" />
+                            <Output name="onFilename" type="3" type_size="1" nature="2" inner="0" tooltip="" id="6" />
+                            <Parameter name="Base directory" inherits_from_parent="0" content_type="3" value="animations/quiet" default_value="" custom_choice="0" tooltip="" id="7" />
+                        </Box>
+                        <Box name="Play" robot="" id="20" tooltip="Allow user to play any installed behavior." bitmap_expanded="1" plugin="" x="680" y="331">
+                            <bitmap>media/images/box/icons_appu/Upload.png</bitmap>
+                            <script language="4">
+                                <content>
+                                    <![CDATA[# v1.1
+# 17/12/2010
+# Need NaoQi version > 1.6.x
+import sys
+import os
+
+class MyClass(GeneratedClass):
+    def __init__(self):
+        GeneratedClass.__init__(self)
+        self.Loader = None
+        
+    def __del__(self):
+        self.Loader.unload(self.sXarName)
+            
+    def onLoad(self):
+        path1 = ALFrameManager.getBehaviorPath(self.behaviorId)
+        if path1 not in sys.path:
+            sys.path.append(path1)
+        import LoadingManager3
+        if self.Loader == None:
+            self.Loader = LoadingManager3.LoadingManager()
+        self.sXarName = None            
+        
+    def onUnload(self):
+        self.onInput_onStop()
+        
+    def onInput_onStart(self, p):
+        self.sXarName = p
+        self.log("Play: %s" % self.sXarName)
+        if os.path.isfile(self.sXarName):
+            self.log(self.sXarName)
+            id = self.Loader.load(self.sXarName)
+            self.log(id)
+            self.XarLoaded()
+            oBehavior = eval(id)
+            self.Loader.play(self.sXarName, id, oBehavior, True, {})            
+        else:
+            self.log("Could not find behavior : %s" % self.sXarName)
+            self.XarLoaded()
+        self.onStopped()        
+        
+    def onInput_onStop(self):
+        self.log("unloaded while playing : %s" % self.sXarName)
+        self.Loader.stop(self.sXarName)
+        self.sXarName = None]]>
+</content>
+                            </script>
+                            <Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when diagram is loaded." id="1" />
+                            <Input name="onStart" type="3" type_size="1" nature="2" inner="0" tooltip="Preloads the demo to make it start playing faster." id="2" />
+                            <Input name="onStop" type="1" type_size="1" nature="3" inner="0" tooltip="Stop the current playing demo." id="3" />
+                            <Output name="onStopped" type="1" type_size="1" nature="1" inner="0" tooltip="This output is activated when the demo has finished playing." id="4" />
+                            <Output name="XarLoaded" type="1" type_size="1" nature="2" inner="0" tooltip="This output is activated when the demo has finished loading." id="5" />
+                            <Resource name="Standing" type="Lock" timeout="0" />
+                        </Box>
+                        <Box name="Finished" robot="" id="4" tooltip="Enter tooltip here" bitmap_expanded="1" plugin="" x="814" y="339">
+                            <bitmap>media/images/box/box-diagram.png</bitmap>
+                            <script language="4">
+                                <content>
+                                    <![CDATA[class MyClass(GeneratedClass):
+    def __init__(self):
+        GeneratedClass.__init__(self)
+        
+    def onLoad(self):
+        pass
+
+    def onUnload(self):
+        self.onInput_onStop()
+
+    def onInput_onOk(self):
+        eval(self.behaviorId).addParameter("output", True, True)
+        self.onInput_onStop()
+
+    def onInput_onNOk(self):
+        eval(self.behaviorId).addParameter("output", False, True)
+        self.onInput_onStop()
+        
+    def onInput_onStop(self):
+        try:
+            eval(self.behaviorId).setParameter("finished", True)
+        except:
+            eval(self.behaviorId).addParameter("finished", True, True)]]>
+</content>
+                            </script>
+                            <Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when diagram is loaded." id="1" />
+                            <Input name="onOk" type="1" type_size="1" nature="2" inner="0" tooltip="Box behavior stops when a signal is received on this input." id="2" />
+                            <Input name="onNOk" type="1" type_size="1" nature="2" inner="0" tooltip="" id="3" />
+                            <Input name="onStop" type="1" type_size="1" nature="3" inner="0" tooltip="Box behavior starts when a signal is received on this input." id="4" />
+                            <Output name="onStopped" type="1" type_size="1" nature="1" inner="0" tooltip="Signal sent when box behavior is finished." id="5" />
+                        </Box>
+                        <Box name="WaitSignals" robot="" id="6" tooltip="Wait for multiple time activation. Define the number of time it must be activated to trigger the output." bitmap_expanded="1" plugin="" x="248" y="332">
+                            <bitmap>media/images/box/box-script.png</bitmap>
+                            <script language="4">
+                                <content>
+                                    <![CDATA[# WaitSignals
+#~ Author : Julien Amsellem
+#~ Date : 17/12/2010
+#~ Version : 1.0
+
+class MyClass(GeneratedClass):
+    def __init__(self):
+        GeneratedClass.__init__(self)
+        self.ok = 0
+        self.nCount = self.getParameter("Count")
+        
+    def onUnload(self):
+        pass
+
+    def onInput_onStart(self):
+        self.ok += 1
+        if self.ok >= self.nCount:
+            self.log("Stiffness OK")
+            self.onStopped()
+            self.ok = 0
+            
+    def onInput_onStop(self):
+        self.ok = 0]]>
+</content>
+                            </script>
+                            <Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when Diagram is loaded." id="1" />
+                            <Input name="onStart" type="1" type_size="1" nature="2" inner="0" tooltip="Box behavior starts when a signal is received on this Input." id="2" />
+                            <Input name="onStop" type="1" type_size="1" nature="3" inner="0" tooltip="" id="3" />
+                            <Output name="onStopped" type="1" type_size="1" nature="1" inner="0" tooltip="Signal sent when Box behavior is finished." id="4" />
+                            <Parameter name="Count" inherits_from_parent="0" content_type="1" value="3" default_value="2" min="1" max="100" tooltip="Number of process to synchronize" id="5" />
+                        </Box>
+                        <Box name="StiffnessHead" robot="" id="10" tooltip="Set motors stiffness." bitmap_expanded="1" plugin="" x="87" y="207">
+                            <bitmap>media/images/box/movement/stiffness.png</bitmap>
+                            <script language="4">
+                                <content>
+                                    <![CDATA[import time
+
+class MyClass(GeneratedClass):
+    def __init__(self):
+        GeneratedClass.__init__(self)
+
+    def onLoad(self):
+        self.bIsRunning = False
+
+    def onUnload(self):
+        self.bIsRunning = False
+
+    def setStiffness(self, stiffness):
+        self.bIsRunning = True
+        duration = self.getParameter("Duration (s)")
+        if(self.getParameter("Head")):
+            ALMotion.post.stiffnessInterpolation("Head", stiffness, duration)
+        if(self.getParameter("Left arm")):
+            ALMotion.post.stiffnessInterpolation("LArm", stiffness, duration)
+        if(self.getParameter("Right arm")):
+            ALMotion.post.stiffnessInterpolation("RArm", stiffness, duration)
+        if(self.getParameter("Left leg")):
+            ALMotion.post.stiffnessInterpolation("LLeg", stiffness, duration)
+        if(self.getParameter("Right leg")):
+            ALMotion.post.stiffnessInterpolation("RLeg", stiffness, duration)
+        time.sleep(duration)
+        self.bIsRunning = False
+
+    def onInput_onSet(self):
+        if( self.bIsRunning ):
+            return
+        self.setStiffness(self.getParameter("Motors stiffness (%)")/100.)
+        self.onReady() #~ activate output of the box]]>
+</content>
+                            </script>
+                            <Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when diagram is loaded." id="1" />
+                            <Input name="onSet" type="1" type_size="1" nature="1" inner="0" tooltip="When this input is stimulated, the stiffness of the selected motors is set to&#x0A;the stiffness parameter value." id="2" />
+                            <Output name="onReady" type="1" type_size="1" nature="2" inner="0" tooltip="Signal sent when stiffness has been set." id="3" />
+                            <Parameter name="Head" inherits_from_parent="0" content_type="0" value="1" default_value="1" tooltip="Do we want to modify the head stiffness?" id="4" />
+                            <Parameter name="Left arm" inherits_from_parent="0" content_type="0" value="0" default_value="1" tooltip="Do we want to modify the left arm stiffness?" id="5" />
+                            <Parameter name="Right arm" inherits_from_parent="0" content_type="0" value="0" default_value="1" tooltip="Do we want to modify the right arm stiffness?" id="6" />
+                            <Parameter name="Left leg" inherits_from_parent="0" content_type="0" value="0" default_value="1" tooltip="Do we want to modify the left leg stiffness?" id="7" />
+                            <Parameter name="Right leg" inherits_from_parent="0" content_type="0" value="0" default_value="1" tooltip="Do we want to modify the right leg stiffness?" id="8" />
+                            <Parameter name="Motors stiffness (%)" inherits_from_parent="0" content_type="1" value="40" default_value="100" min="0" max="100" tooltip="Stiffness value the motors are set to." id="9" />
+                            <Parameter name="Duration (s)" inherits_from_parent="0" content_type="2" value="1" default_value="1" min="0.02" max="10" tooltip="How much time to go to the max/min stiffness in seconds." id="10" />
+                        </Box>
+                        <Box name="StiffnessArms" robot="" id="12" tooltip="Set motors stiffness." bitmap_expanded="1" plugin="" x="86" y="347">
+                            <bitmap>media/images/box/movement/stiffness.png</bitmap>
+                            <script language="4">
+                                <content>
+                                    <![CDATA[import time
+
+class MyClass(GeneratedClass):
+    def __init__(self):
+        GeneratedClass.__init__(self)
+
+    def onLoad(self):
+        self.bIsRunning = False
+
+    def onUnload(self):
+        self.bIsRunning = False
+
+    def setStiffness(self, stiffness):
+        self.bIsRunning = True
+        duration = self.getParameter("Duration (s)")
+        if(self.getParameter("Head")):
+            ALMotion.post.stiffnessInterpolation("Head", stiffness, duration)
+        if(self.getParameter("Left arm")):
+            ALMotion.post.stiffnessInterpolation("LArm", stiffness, duration)
+        if(self.getParameter("Right arm")):
+            ALMotion.post.stiffnessInterpolation("RArm", stiffness, duration)
+        if(self.getParameter("Left leg")):
+            ALMotion.post.stiffnessInterpolation("LLeg", stiffness, duration)
+        if(self.getParameter("Right leg")):
+            ALMotion.post.stiffnessInterpolation("RLeg", stiffness, duration)
+        time.sleep(duration)
+        self.bIsRunning = False
+
+    def onInput_onSet(self):
+        if( self.bIsRunning ):
+            return
+        self.setStiffness(self.getParameter("Motors stiffness (%)")/100.)
+        self.onReady() #~ activate output of the box]]>
+</content>
+                            </script>
+                            <Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when diagram is loaded." id="1" />
+                            <Input name="onSet" type="1" type_size="1" nature="1" inner="0" tooltip="When this input is stimulated, the stiffness of the selected motors is set to&#x0A;the stiffness parameter value." id="2" />
+                            <Output name="onReady" type="1" type_size="1" nature="2" inner="0" tooltip="Signal sent when stiffness has been set." id="3" />
+                            <Parameter name="Head" inherits_from_parent="0" content_type="0" value="0" default_value="1" tooltip="Do we want to modify the head stiffness?" id="4" />
+                            <Parameter name="Left arm" inherits_from_parent="0" content_type="0" value="1" default_value="1" tooltip="Do we want to modify the left arm stiffness?" id="5" />
+                            <Parameter name="Right arm" inherits_from_parent="0" content_type="0" value="1" default_value="1" tooltip="Do we want to modify the right arm stiffness?" id="6" />
+                            <Parameter name="Left leg" inherits_from_parent="0" content_type="0" value="0" default_value="1" tooltip="Do we want to modify the left leg stiffness?" id="7" />
+                            <Parameter name="Right leg" inherits_from_parent="0" content_type="0" value="0" default_value="1" tooltip="Do we want to modify the right leg stiffness?" id="8" />
+                            <Parameter name="Motors stiffness (%)" inherits_from_parent="0" content_type="1" value="70" default_value="100" min="0" max="100" tooltip="Stiffness value the motors are set to." id="9" />
+                            <Parameter name="Duration (s)" inherits_from_parent="0" content_type="2" value="1" default_value="1" min="0.02" max="10" tooltip="How much time to go to the max/min stiffness in seconds." id="10" />
+                        </Box>
+                        <Box name="StiffnessLegs" robot="" id="13" tooltip="Set motors stiffness." bitmap_expanded="1" plugin="" x="83" y="453">
+                            <bitmap>media/images/box/movement/stiffness.png</bitmap>
+                            <script language="4">
+                                <content>
+                                    <![CDATA[import time
+
+class MyClass(GeneratedClass):
+    def __init__(self):
+        GeneratedClass.__init__(self)
+
+    def onLoad(self):
+        self.bIsRunning = False
+
+    def onUnload(self):
+        self.bIsRunning = False
+
+    def setStiffness(self, stiffness):
+        self.bIsRunning = True
+        duration = self.getParameter("Duration (s)")
+        if(self.getParameter("Head")):
+            ALMotion.post.stiffnessInterpolation("Head", stiffness, duration)
+        if(self.getParameter("Left arm")):
+            ALMotion.post.stiffnessInterpolation("LArm", stiffness, duration)
+        if(self.getParameter("Right arm")):
+            ALMotion.post.stiffnessInterpolation("RArm", stiffness, duration)
+        if(self.getParameter("Left leg")):
+            ALMotion.post.stiffnessInterpolation("LLeg", stiffness, duration)
+        if(self.getParameter("Right leg")):
+            ALMotion.post.stiffnessInterpolation("RLeg", stiffness, duration)
+        time.sleep(duration)
+        self.bIsRunning = False
+
+    def onInput_onSet(self):
+        if( self.bIsRunning ):
+            return
+        self.setStiffness(self.getParameter("Motors stiffness (%)")/100.)
+        self.onReady() #~ activate output of the box]]>
+</content>
+                            </script>
+                            <Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when diagram is loaded." id="1" />
+                            <Input name="onSet" type="1" type_size="1" nature="1" inner="0" tooltip="When this input is stimulated, the stiffness of the selected motors is set to&#x0A;the stiffness parameter value." id="2" />
+                            <Output name="onReady" type="1" type_size="1" nature="2" inner="0" tooltip="Signal sent when stiffness has been set." id="3" />
+                            <Parameter name="Head" inherits_from_parent="0" content_type="0" value="0" default_value="1" tooltip="Do we want to modify the head stiffness?" id="4" />
+                            <Parameter name="Left arm" inherits_from_parent="0" content_type="0" value="0" default_value="1" tooltip="Do we want to modify the left arm stiffness?" id="5" />
+                            <Parameter name="Right arm" inherits_from_parent="0" content_type="0" value="0" default_value="1" tooltip="Do we want to modify the right arm stiffness?" id="6" />
+                            <Parameter name="Left leg" inherits_from_parent="0" content_type="0" value="1" default_value="1" tooltip="Do we want to modify the left leg stiffness?" id="7" />
+                            <Parameter name="Right leg" inherits_from_parent="0" content_type="0" value="1" default_value="1" tooltip="Do we want to modify the right leg stiffness?" id="8" />
+                            <Parameter name="Motors stiffness (%)" inherits_from_parent="0" content_type="1" value="80" default_value="100" min="0" max="100" tooltip="Stiffness value the motors are set to." id="9" />
+                            <Parameter name="Duration (s)" inherits_from_parent="0" content_type="2" value="1" default_value="1" min="0.02" max="10" tooltip="How much time to go to the max/min stiffness in seconds." id="10" />
+                        </Box>
+                        <Box name="ChooseAnim" robot="" id="8" tooltip="Select quiet or loud animations.&#x0A;Probability is higher for quiet animations." bitmap_expanded="1" plugin="" x="371" y="328">
+                            <bitmap>media/images/box/box-diagram.png</bitmap>
+                            <script language="4">
+                                <content>
+                                    <![CDATA[class MyClass(GeneratedClass):
+    def __init__(self):
+        GeneratedClass.__init__(self)
+
+    def onLoad(self):
+        #~ puts code for box initialization here
+        pass
+
+    def onUnload(self):
+        #~ puts code for box cleanup here
+        pass
+
+    def onInput_onStart(self):
+        nRandom = random.randint(0, 9)
+        if nRandom >= 9:
+            self.onLoud()
+        else:
+            self.onQuiet()
+
+    def onInput_onStop(self):
+        #~ self.onUnload()
+        pass]]>
+</content>
+                            </script>
+                            <Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when diagram is loaded." id="1" />
+                            <Input name="onStart" type="1" type_size="1" nature="2" inner="0" tooltip="Box behavior starts when a signal is received on this input." id="2" />
+                            <Input name="onStop" type="1" type_size="1" nature="3" inner="0" tooltip="Box behavior stops when a signal is received on this input." id="3" />
+                            <Output name="onQuiet" type="1" type_size="1" nature="1" inner="0" tooltip="Signal sent when box behavior is finished." id="4" />
+                            <Output name="onLoud" type="1" type_size="1" nature="1" inner="0" tooltip="" id="5" />
+                        </Box>
+                        <Box name="ShuffleInt" robot="" id="3" tooltip="Generate a random number between 0 and a max number." bitmap_expanded="1" plugin="" x="527" y="554">
+                            <bitmap>media/images/box/box-script.png</bitmap>
+                            <script language="4">
+                                <content>
+                                    <![CDATA[import random;
+
+class MyClass(GeneratedClass):
+    def __init__(self):
+        GeneratedClass.__init__(self)
+        self.nIndex = 0
+        self.nCount = 0
+        self.aShuffle = None
+        
+    def onUnload(self):
+        pass
+
+    def onInput_onStart(self, p):
+        if self.nIndex == self.nCount:
+            self.nIndex = 0
+            self.nCount = p
+            if self.aShuffle == None:
+                self.aShuffle = range(self.nCount)
+            random.shuffle(self.aShuffle)    
+            
+        self.Random(self.aShuffle[self.nIndex])
+        self.nIndex += 1]]>
+</content>
+                            </script>
+                            <Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when diagram is loaded." id="1" />
+                            <Input name="onStart" type="2" type_size="1" nature="2" inner="0" tooltip="The max number of the random (excluded)" id="2" />
+                            <Output name="Random" type="2" type_size="1" nature="2" inner="0" tooltip="Position name and a random value" id="3" />
+                            <Parameter name="count" inherits_from_parent="0" content_type="1" value="1" default_value="9" min="1" max="100" tooltip="" id="4" />
+                        </Box>
+                        <Box name="ListOfFile" robot="" id="5" tooltip="Enter tooltip here" bitmap_expanded="1" plugin="" x="526" y="428">
+                            <bitmap>media/images/box/box-diagram.png</bitmap>
+                            <script language="4">
+                                <content>
+                                    <![CDATA[import os
+
+class MyClass(GeneratedClass):
+    def __init__(self):
+        GeneratedClass.__init__(self)
+        self.aAnimationsList = []
+        
+    def onLoad(self):
+        pass
+
+    def onUnload(self):
+        pass
+
+    def onInput_onStart(self):
+        self.log("Stand play: list of files")
+        if len(self.aAnimationsList) == 0:
+            list = os.listdir(ALFrameManager.getBehaviorPath(self.behaviorId) + '/' + self.getParameter("Base directory"))
+            for e in list:
+                if e.find(".xar") != -1:
+                    self.aAnimationsList.append(e)
+            #~ self.log(str(self.aAnimationsList))
+        self.onStopped(len(self.aAnimationsList))
+
+    def onInput_onFileIndex(self, p):
+        if self.aAnimationsList != None and p < len(self.aAnimationsList):
+            self.onFilename(ALFrameManager.getBehaviorPath(self.behaviorId) + '/' + self.getParameter("Base directory") + "/" + self.aAnimationsList[p])
+        else:
+            self.onFilename(None)
+        pass
+    
+    def onInput_onStop(self):
+        pass]]>
+</content>
+                            </script>
+                            <Input name="onLoad" type="1" type_size="1" nature="0" inner="1" tooltip="Signal sent when diagram is loaded." id="1" />
+                            <Input name="onStart" type="1" type_size="1" nature="2" inner="0" tooltip="Box behavior starts when a signal is received on this input." id="2" />
+                            <Input name="onStop" type="1" type_size="1" nature="3" inner="0" tooltip="Box behavior stops when a signal is received on this input." id="3" />
+                            <Input name="onFileIndex" type="2" type_size="1" nature="1" inner="0" tooltip="" id="4" />
+                            <Output name="onStopped" type="2" type_size="1" nature="1" inner="0" tooltip="Signal sent when box behavior is finished." id="5" />
+                            <Output name="onFilename" type="3" type_size="1" nature="2" inner="0" tooltip="" id="6" />
+                            <Parameter name="Base directory" inherits_from_parent="0" content_type="3" value="animations/loud" default_value="" custom_choice="0" tooltip="" id="7" />
+                        </Box>
+                        <Link inputowner="1" indexofinput="2" outputowner="2" indexofoutput="5" />
+                        <Link inputowner="2" indexofinput="4" outputowner="1" indexofoutput="3" />
+                        <Link inputowner="20" indexofinput="2" outputowner="2" indexofoutput="6" />
+                        <Link inputowner="6" indexofinput="2" outputowner="13" indexofoutput="3" />
+                        <Link inputowner="6" indexofinput="2" outputowner="12" indexofoutput="3" />
+                        <Link inputowner="6" indexofinput="2" outputowner="10" indexofoutput="3" />
+                        <Link inputowner="10" indexofinput="2" outputowner="0" indexofoutput="2" />
+                        <Link inputowner="12" indexofinput="2" outputowner="0" indexofoutput="2" />
+                        <Link inputowner="13" indexofinput="2" outputowner="0" indexofoutput="2" />
+                        <Link inputowner="4" indexofinput="2" outputowner="20" indexofoutput="4" />
+                        <Link inputowner="3" indexofinput="2" outputowner="5" indexofoutput="5" />
+                        <Link inputowner="5" indexofinput="4" outputowner="3" indexofoutput="3" />
+                        <Link inputowner="8" indexofinput="2" outputowner="6" indexofoutput="4" />
+                        <Link inputowner="2" indexofinput="2" outputowner="8" indexofoutput="4" />
+                        <Link inputowner="5" indexofinput="2" outputowner="8" indexofoutput="5" />
+                        <Link inputowner="20" indexofinput="2" outputowner="5" indexofoutput="6" />
+                    </Diagram>
+                </BehaviorKeyframe>
+            </BehaviorLayer>
+            <ActuatorList />
+        </Timeline>
+    </Box>
+</ChoregrapheProject>

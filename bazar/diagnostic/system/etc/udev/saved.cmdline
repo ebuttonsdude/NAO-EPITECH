@@ -1,0 +1,1 @@
+root=UUID=42424242-1120-1120-1120-424242424242 ro console=ttyS0,38400n8 profile usb-storage.delay_use=1 panic=1

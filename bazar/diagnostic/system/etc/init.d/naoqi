@@ -1,0 +1,19 @@
+#!/bin/sh
+
+NAME="naoqi"
+ARGS=""
+
+# weird what is that? This will fix user autoload.ini when they miss robotmodel.
+# user should not have to edit autoload.ini
+
+case "$1" in
+  start)
+    if [ nao = `whoami` ]; then
+      python /opt/naoqi/bin/fixautoload.py
+    else
+      su -c 'python /opt/naoqi/bin/fixautoload.py' - nao
+    fi
+    ;;
+esac
+
+. /etc/init.d/naoqi-common.sh

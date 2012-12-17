@@ -1,0 +1,1 @@
+KERNEL=="ra0", NAME="wlan0"

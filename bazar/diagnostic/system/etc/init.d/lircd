@@ -1,0 +1,58 @@
+#! /bin/sh
+#
+# This is an init script for Familiar
+# Copy it to /etc/init.d/lircd and type
+# > update-rc.d lircd defaults 20
+#
+LIRCCONF="/home/nao/remotes/lircd.conf"
+remotesdir="/home/nao/remotes /home/nao/remotes/config"
+check_dir(){
+  for folder in ${remotesdir};do
+    if ! test -d ${folder};then
+      mkdir ${folder}
+    fi
+    if test -G ${folder}; then
+      chown nao:nao ${folder}
+    fi
+  done
+  if ! test -f ${LIRCCONF}; then
+    cp /etc/lirc/nao2nao ${LIRCCONF}
+    chown nao:nao ${LIRCCONF}
+  fi
+}
+
+case "$1" in
+  start)
+    if  ! test -d /var/run/lirc; then
+      mkdir /var/run/lirc
+      chown -hR nao /var/run/lirc
+    fi
+
+    if ! test -f /var/log/lircd; then
+      touch /var/log/lircd
+      chmod 666 /var/log/lircd
+    fi
+    check_dir
+    echo -n "Starting lirc daemon: lircd"
+    su -c "/usr/sbin/lircd --output=/var/run/lirc/lircd1 --pidfile=/var/run/lirc/lircd1.pid ${LIRCCONF}" - nao
+    su -c "/usr/sbin/lircd --output=/var/run/lirc/lircd --pidfile=/var/run/lirc/lircd.pid ${LIRCCONF}" - nao
+    echo "."
+    ;;
+  stop)
+    echo -n "Stopping lirc daemon: lircd"
+    killall /usr/sbin/lircd
+    rm -rf /var/run/lirc
+    echo "."
+    ;;
+  restart)
+    /etc/init.d/lircd stop
+    sleep 1
+    /etc/init.d/lircd start
+    ;;
+  *)
+    echo "Usage: /etc/init.d/lircd {start|stop|reload|restart|force-reload}"
+    exit 1
+esac
+
+exit 0
+

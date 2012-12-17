@@ -1,0 +1,47 @@
+#!/bin/sh
+
+PATH=/sbin:/bin:/usr/sbin:/usr/bin
+
+DAEMON="wpa_supplicant"
+CONFIG="/etc/wpa_supplicant.conf"
+IF="wlan0"
+
+start() {
+  ifconfig wlan0 up
+  $DAEMON -u &
+
+}
+
+reload() {
+  echo "Reloading wpa_supplicant..."
+  killall -HUP $DAEMON
+}
+
+stop() {
+  ifdown $IF
+  echo "Stopping wpa_supplicant..."
+  killall -TERM $DAEMON
+
+}
+
+restart() {
+  stop
+  start
+}
+
+case "$1" in
+  start)
+    start;;
+  stop)
+    stop;;
+    reload|force-reload)
+    reload;;
+  restart)
+    restart;;
+  *)
+    echo "Usage: $0 {start|stop|restart|reload|force-reload}" >&2
+    exit 1
+    ;;
+esac
+
+exit 0

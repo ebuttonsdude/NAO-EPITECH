@@ -1,0 +1,6 @@
+# stock fstab - you probably want to override this with a machine specific one
+UUID=42424242-1120-1120-1120-424242424242 /          ext3      noatime       1  1
+UUID=24242424-1120-1120-1120-242424242424 /home      ext3      noatime       0  0
+UUID=66666666-6666-6666-6666-666666666666 /media/internal ext3 noatime       0  0
+tmpfs                /var/volatile        tmpfs      defaults                0  0
+tmpfs                /dev/shm             tmpfs   rw,nosuid,nodev,mode=1777  0  0

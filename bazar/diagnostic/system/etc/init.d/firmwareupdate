@@ -1,0 +1,42 @@
+#!/bin/sh
+
+case "$1" in
+  start)
+    #update chestboard whatever (break hardware compatibility to
+    # add imcompatible chestboard firmware change)
+    firmware-update -uf 2>&1 >>/var/log/firmware.log
+
+    #check if the hardware wont break with this software
+    firmware-version --check 2>&1 >>/var/log/firmware.log
+
+    #start firmware update
+    #WARNING : please dont read the comment below
+    #(ugly hack 1) wakeup the inertialboard sooner
+    flash-dspic -j -t INERTIALBOARD
+    #launch firmware update (this is not a hack)
+    firmware-update -f 2>&1 >>/var/log/firmware.log
+    #(ugly hack 2) boot the board (if flashed by firmwareupdate)
+    flash-dspic -j -t INERTIALBOARD
+    ;;
+
+  stop)
+    ;;
+
+  force-reload|restart)
+    $0 stop
+    $0 start
+    ;;
+
+  log)
+    tail -f /var/log/firmware.log
+    ;;
+
+  *)
+    echo "Usage: /etc/init.d/firmwareupdate {start|stop|restart|force-reload|log}"
+    exit 1
+    ;;
+
+esac
+
+exit 0
+

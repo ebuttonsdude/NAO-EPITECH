@@ -1,0 +1,22 @@
+#! /bin/sh
+#
+# halt		Execute the halt command.
+#
+# Version:      @(#)halt  2.84-2  07-Jan-2002  miquels@cistron.nl
+#
+
+PATH=/sbin:/bin:/usr/sbin:/usr/bin
+
+harakiri
+
+# send meca log
+if test -x /usr/sbin/meca-upload
+then
+	/usr/sbin/meca-upload
+fi
+
+harakiri
+
+halt -d -f -i -p $hddown
+
+: exit 0

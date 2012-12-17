@@ -1,0 +1,10 @@
+Report of Diagnostic
+
+2011-05-31 11:00:11.552054
+Body Id : 00000ALDR1008E001827
+Head Id : 1830
+Body Version : V3.3
+Head Version : V3.3
+
+
+Diagnostic OK

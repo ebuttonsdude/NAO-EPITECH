@@ -1,0 +1,500 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet title="XSL_formatting" type="text/xsl" href="/shared/bsp/xsl/rss/nolsol.xsl"?>
+
+<rss xmlns:media="http://search.yahoo.com/mrss/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">  
+  <channel> 
+    <title>BBC News - World</title>  
+    <link>http://www.bbc.co.uk/go/rss/int/news/-/news/world/</link>  
+    <description>The latest stories from the World section of the BBC News web site.</description>  
+    <language>en-gb</language>  
+    <lastBuildDate>Wed, 02 Feb 2011 09:41:32 GMT</lastBuildDate>  
+    <copyright>Copyright: (C) British Broadcasting Corporation, see http://news.bbc.co.uk/2/hi/help/rss/4498287.stm for terms and conditions of reuse.</copyright>  
+    <ttl>15</ttl>  
+    <atom:link href="http://feeds.bbci.co.uk/news/world/rss.xml" rel="self" type="application/rss+xml"/>  
+    <item> 
+      <title>Mubarak under pressure to go now</title>  
+      <description>Pressure remains on Egyptian President Hosni Mubarak to quit immediately after a speech in which he said he would not stand for re-election.</description>  
+      <link>http://www.bbc.co.uk/go/rss/int/news/-/news/world-middle-east-12342215</link>  
+      <guid isPermaLink="false">http://www.bbc.co.uk/news/world-middle-east-12342215</guid>  
+      <pubDate>Wed, 02 Feb 2011 10:22:01 GMT</pubDate>  
+      <media:thumbnail width="66" height="49" url="http://news.bbcimg.co.uk/media/images/51060000/jpg/_51060556_011171229-1.jpg"/>  
+      <media:thumbnail width="144" height="81" url="http://news.bbcimg.co.uk/media/images/51060000/jpg/_51060554_011171229-1.jpg"/> 
+    </item>  
+    <item> 
+      <title>Queenslanders bracing for cyclone</title>  
+      <description>Queensland residents are told it is now too late to escape as Cyclone Yasi - the most dangerous storm ever predicted to hit the Australian state - closes in.</description>  
+      <link>http://www.bbc.co.uk/go/rss/int/news/-/news/world-asia-pacific-12342031</link>  
+      <guid isPermaLink="false">http://www.bbc.co.uk/news/world-asia-pacific-12342031</guid>  
+      <pubDate>Wed, 02 Feb 2011 10:20:06 GMT</pubDate>  
+      <media:thumbnail width="66" height="49" url="http://news.bbcimg.co.uk/media/images/51060000/jpg/_51060644_011172092-1.jpg"/>  
+      <media:thumbnail width="144" height="81" url="http://news.bbcimg.co.uk/media/images/51060000/jpg/_51060646_011172092-1.jpg"/> 
+    </item>  
+    <item> 
+      <title>Yemen president 'to quit in 2013'</title>  
+      <description>Yemeni President Ali Abdullah Saleh says he will not extend his presidency, or appoint his son to the role, when his current term expires in 2013.</description>  
+      <link>http://www.bbc.co.uk/go/rss/int/news/-/news/world-middle-east-12343166</link>  
+      <guid isPermaLink="false">http://www.bbc.co.uk/news/world-middle-east-12343166</guid>  
+      <pubDate>Wed, 02 Feb 2011 10:12:55 GMT</pubDate>  
+      <media:thumbnail width="66" height="49" url="http://news.bbcimg.co.uk/media/images/51061000/jpg/_51061411_011142117-1.jpg"/>  
+      <media:thumbnail width="144" height="81" url="http://news.bbcimg.co.uk/media/images/51061000/jpg/_51061409_011142117-1.jpg"/> 
+    </item>  
+    <item> 
+      <title>Duvalier: Frozen funds not mine</title>  
+      <description>Haiti's ex-leader Jean-Claude Duvalier says millions of dollars frozen in Swiss bank accounts are not his and should go to rebuild Haiti.</description>  
+      <link>http://www.bbc.co.uk/go/rss/int/news/-/news/world-latin-america-12342862</link>  
+      <guid isPermaLink="false">http://www.bbc.co.uk/news/world-latin-america-12342862</guid>  
+      <pubDate>Wed, 02 Feb 2011 08:38:06 GMT</pubDate>  
+      <media:thumbnail width="66" height="49" url="http://news.bbcimg.co.uk/media/images/50906000/jpg/_50906464_duvaliercuafp.jpg"/>  
+      <media:thumbnail width="144" height="81" url="http://news.bbcimg.co.uk/media/images/51048000/jpg/_51048198_51048192.jpg"/> 
+    </item>  
+    <item> 
+      <title>Rugby prompts early NZ election call</title>  
+      <description>New Zealand's Prime Minister John Key announces the 2011 election date early so as not to interfere with the country's hosting of the Rugby World Cup.</description>  
+      <link>http://www.bbc.co.uk/go/rss/int/news/-/news/world-asia-pacific-12342832</link>  
+      <guid isPermaLink="false">http://www.bbc.co.uk/news/world-asia-pacific-12342832</guid>  
+      <pubDate>Wed, 02 Feb 2011 09:27:23 GMT</pubDate>  
+      <media:thumbnail width="66" height="49" url="http://news.bbcimg.co.uk/media/images/51061000/jpg/_51061886_010891981-1.jpg"/>  
+      <media:thumbnail width="144" height="81" url="http://news.bbcimg.co.uk/media/images/51060000/jpg/_51060815_010891981-1.jpg"/> 
+    </item>  
+    <item> 
+      <title>Nine killed in Peshawar explosion</title>  
+      <description>At least nine people are killed in a bomb attack near a police station in north-western Pakistan, police say.</description>  
+      <link>http://www.bbc.co.uk/go/rss/int/news/-/news/world-south-asia-12342244</link>  
+      <guid isPermaLink="false">http://www.bbc.co.uk/news/world-south-asia-12342244</guid>  
+      <pubDate>Wed, 02 Feb 2011 08:14:46 GMT</pubDate>  
+      <media:thumbnail width="66" height="49" url="http://news.bbcimg.co.uk/media/images/49824000/jpg/_49824070_010571155-2.jpg"/>  
+      <media:thumbnail width="144" height="81" url="http://news.bbcimg.co.uk/media/images/51061000/jpg/_51061021_011172238-1.jpg"/> 
+    </item>  
+    <item> 
+      <title>Jordan names new PM amid protest</title>  
+      <description>King Abdullah of Jordan sacks his government and appoints a new PM charged with carrying out reform, as protests continue.</description>  
+      <link>http://www.bbc.co.uk/go/rss/int/news/-/news/world-middle-east-12336960</link>  
+      <guid isPermaLink="false">http://www.bbc.co.uk/news/world-middle-east-12336960</guid>  
+      <pubDate>Tue, 01 Feb 2011 20:13:09 GMT</pubDate>  
+      <media:thumbnail width="66" height="49" url="http://news.bbcimg.co.uk/media/images/51053000/jpg/_51053011_011167195-1.jpg"/>  
+      <media:thumbnail width="144" height="81" url="http://news.bbcimg.co.uk/media/images/51053000/jpg/_51053009_011167195-1.jpg"/> 
+    </item>  
+    <item> 
+      <title>Afghan war 'winnable' - US general</title>  
+      <description>The US can win the Afghan war even if Pakistan does not shut down militant safe havens on its side of the border, a top US commander says.</description>  
+      <link>http://www.bbc.co.uk/go/rss/int/news/-/news/world-south-asia-12342242</link>  
+      <guid isPermaLink="false">http://www.bbc.co.uk/news/world-south-asia-12342242</guid>  
+      <pubDate>Wed, 02 Feb 2011 04:39:58 GMT</pubDate>  
+      <media:thumbnail width="66" height="49" url="http://news.bbcimg.co.uk/media/images/51060000/jpg/_51060490_010186984-1.jpg"/>  
+      <media:thumbnail width="144" height="81" url="http://news.bbcimg.co.uk/media/images/51060000/jpg/_51060491_010186984-1.jpg"/> 
+    </item>  
+    <item> 
+      <title>Simulated Mars mission 'on target'</title>  
+      <description>The crew of the Mars500 simulated mission to the Red Planet have gone into "orbit" around their target.</description>  
+      <link>http://www.bbc.co.uk/go/rss/int/news/-/news/science-environment-12337108</link>  
+      <guid isPermaLink="false">http://www.bbc.co.uk/news/science-environment-12337108</guid>  
+      <pubDate>Wed, 02 Feb 2011 03:36:49 GMT</pubDate>  
+      <media:thumbnail width="66" height="49" url="http://news.bbcimg.co.uk/media/images/51056000/jpg/_51056349_c0066612-spl.jpg"/>  
+      <media:thumbnail width="144" height="81" url="http://news.bbcimg.co.uk/media/images/51056000/jpg/_51056347_c0066612-spl.jpg"/> 
+    </item>  
+    <item> 
+      <title>Thorpe returns for 2012 Games bid</title>  
+      <description>Five-time Olympic champion Ian Thorpe says a visit to London has inspired him to come out of retirement in a bid to compete at the 2012 Olympics.</description>  
+      <link>http://news.bbc.co.uk/go/rss/int/news/-/sport1/hi/other_sports/swimming/9383385.stm</link>  
+      <guid isPermaLink="false">http://news.bbc.co.uk/sport1/hi/other_sports/swimming/9383385.stm</guid>  
+      <pubDate>Wed, 02 Feb 2011 07:31:39 GMT</pubDate>  
+      <media:thumbnail width="66" height="49" url="http://news.bbcimg.co.uk/media/images/51047000/jpg/_51047840_thorpe2.jpg"/>  
+      <media:thumbnail width="144" height="81" url="http://news.bbcimg.co.uk/media/images/51047000/jpg/_51047841_thorpe2.jpg"/> 
+    </item>  
+    <item> 
+      <title>Sumo hit by renewed match-fixing claims‎</title>  
+      <description>Japan's Sumo Association calls an emergency board meeting after media allegations of match-fixing, further tarnishing the scandal-plagued sport.</description>  
+      <link>http://www.bbc.co.uk/go/rss/int/news/-/news/world-asia-pacific-12342670</link>  
+      <guid isPermaLink="false">http://www.bbc.co.uk/news/world-asia-pacific-12342670</guid>  
+      <pubDate>Wed, 02 Feb 2011 07:50:23 GMT</pubDate>  
+      <media:thumbnail width="66" height="49" url="http://news.bbcimg.co.uk/media/images/51060000/jpg/_51060789_000531674-1.jpg"/>  
+      <media:thumbnail width="144" height="81" url="http://news.bbcimg.co.uk/media/images/51060000/jpg/_51060791_000531674-1.jpg"/> 
+    </item>  
+    <item> 
+      <title>Bhutan monk is first to fall foul of anti-smoking law</title>  
+      <description>A Buddhist monk is likely to face five years in prison for violating strict anti-smoking laws in the tiny Himalayan nation of Bhutan.</description>  
+      <link>http://www.bbc.co.uk/go/rss/int/news/-/news/world-south-asia-12329957</link>  
+      <guid isPermaLink="false">http://www.bbc.co.uk/news/world-south-asia-12329957</guid>  
+      <pubDate>Tue, 01 Feb 2011 09:47:51 GMT</pubDate>  
+      <media:thumbnail width="66" height="49" url="http://news.bbcimg.co.uk/media/images/51045000/jpg/_51045792_011101024-1.jpg"/>  
+      <media:thumbnail width="144" height="81" url="http://news.bbcimg.co.uk/media/images/51045000/jpg/_51045785_000191109-1.jpg"/> 
+    </item>  
+    <item> 
+      <title>Obama urges change in Egypt 'now'</title>  
+      <description>US President Barack Obama says an orderly transition of power "must begin now" in Egypt and lead to free and fair elections, after days of unrest.</description>  
+      <link>http://www.bbc.co.uk/go/rss/int/news/-/news/world-us-canada-12340885</link>  
+      <guid isPermaLink="false">http://www.bbc.co.uk/news/world-us-canada-12340885</guid>  
+      <pubDate>Wed, 02 Feb 2011 01:29:03 GMT</pubDate>  
+      <media:thumbnail width="66" height="49" url="http://news.bbcimg.co.uk/media/images/51060000/jpg/_51060352_011171003-1.jpg"/>  
+      <media:thumbnail width="144" height="81" url="http://news.bbcimg.co.uk/media/images/51060000/jpg/_51060354_011171003-1.jpg"/> 
+    </item>  
+    <item> 
+      <title>US caught in major winter storm</title>  
+      <description>The US is hit by another onslaught of bitter winter weather as a storm stretching across a third of the country moves north-east.</description>  
+      <link>http://www.bbc.co.uk/go/rss/int/news/-/news/world-us-canada-12339494</link>  
+      <guid isPermaLink="false">http://www.bbc.co.uk/news/world-us-canada-12339494</guid>  
+      <pubDate>Wed, 02 Feb 2011 10:39:08 GMT</pubDate>  
+      <media:thumbnail width="66" height="49" url="http://news.bbcimg.co.uk/media/images/51055000/jpg/_51055796_011137980-1.jpg"/>  
+      <media:thumbnail width="144" height="81" url="http://news.bbcimg.co.uk/media/images/51060000/jpg/_51060368_011170834-1.jpg"/> 
+    </item>  
+    <item> 
+      <title>Mexico's Slim to invest $8.3bn</title>  
+      <description>Mexican tycoon Carlos Slim, considered the world's richest man, unveils plans to invest $8.3bn (£5bn) in 19 countries.</description>  
+      <link>http://www.bbc.co.uk/go/rss/int/news/-/news/world-latin-america-12332326</link>  
+      <guid isPermaLink="false">http://www.bbc.co.uk/news/world-latin-america-12332326</guid>  
+      <pubDate>Tue, 01 Feb 2011 10:06:36 GMT</pubDate>  
+      <media:thumbnail width="66" height="49" url="http://news.bbcimg.co.uk/media/images/51046000/jpg/_51046361_51044339.jpg"/>  
+      <media:thumbnail width="144" height="81" url="http://news.bbcimg.co.uk/media/images/51044000/jpg/_51044342_51044339.jpg"/> 
+    </item>  
+    <item> 
+      <title>New images of remote Brazil tribe</title>  
+      <description>New pictures have been released of an isolated tribe living in rainforest on the Brazil-Peru border.</description>  
+      <link>http://www.bbc.co.uk/go/rss/int/news/-/news/science-environment-12325690</link>  
+      <guid isPermaLink="false">http://www.bbc.co.uk/news/science-environment-12325690</guid>  
+      <pubDate>Mon, 31 Jan 2011 17:50:04 GMT</pubDate>  
+      <media:thumbnail width="144" height="81" url="http://news.bbcimg.co.uk/media/images/51038000/jpg/_51038178_51038177.jpg"/> 
+    </item>  
+    <item> 
+      <title>Sudanese demonstrators detained</title>  
+      <description>At least 15 protesters are detained overnight in Sudan's capital, activists say, as demonstrations over high prices spread to other towns.</description>  
+      <link>http://www.bbc.co.uk/go/rss/int/news/-/news/world-africa-12343307</link>  
+      <guid isPermaLink="false">http://www.bbc.co.uk/news/world-africa-12343307</guid>  
+      <pubDate>Wed, 02 Feb 2011 10:22:55 GMT</pubDate>  
+      <media:thumbnail width="66" height="49" url="http://news.bbcimg.co.uk/media/images/51032000/jpg/_51032486_011150582-1.jpg"/>  
+      <media:thumbnail width="144" height="81" url="http://news.bbcimg.co.uk/media/images/51032000/jpg/_51032484_011150582-1.jpg"/> 
+    </item>  
+    <item> 
+      <title>France holds Ben Ali 'family jet'</title>  
+      <description>French prosecutors seize a jet said to belong to the family of ousted Tunisian President Zine al-Abidine Ben Ali.</description>  
+      <link>http://www.bbc.co.uk/go/rss/int/news/-/news/world-europe-12339533</link>  
+      <guid isPermaLink="false">http://www.bbc.co.uk/news/world-europe-12339533</guid>  
+      <pubDate>Tue, 01 Feb 2011 18:22:50 GMT</pubDate>  
+      <media:thumbnail width="66" height="49" url="http://news.bbcimg.co.uk/media/images/51057000/jpg/_51057861_011006801-1.jpg"/>  
+      <media:thumbnail width="144" height="81" url="http://news.bbcimg.co.uk/media/images/51057000/jpg/_51057859_011006801-1.jpg"/> 
+    </item>  
+    <item> 
+      <title>Than Shwe 'not on president list'</title>  
+      <description>Burma's new parliament nominates candidates for the posts of president and two vice-presidents - but Than Shwe, the top general, is not on the list.</description>  
+      <link>http://www.bbc.co.uk/go/rss/int/news/-/news/world-asia-pacific-12332274</link>  
+      <guid isPermaLink="false">http://www.bbc.co.uk/news/world-asia-pacific-12332274</guid>  
+      <pubDate>Tue, 01 Feb 2011 13:20:57 GMT</pubDate>  
+      <media:thumbnail width="66" height="49" url="http://news.bbcimg.co.uk/media/images/51047000/jpg/_51047829_011140004-1.jpg"/>  
+      <media:thumbnail width="144" height="81" url="http://news.bbcimg.co.uk/media/images/51047000/jpg/_51047831_011140004-1.jpg"/> 
+    </item>  
+    <item> 
+      <title>Thais guilty of Cambodia spying</title>  
+      <description>A Cambodian court finds two Thai nationalists guilty of espionage, in a case highlighting increasing tensions along the countries' border.</description>  
+      <link>http://www.bbc.co.uk/go/rss/int/news/-/news/world-asia-pacific-12338147</link>  
+      <guid isPermaLink="false">http://www.bbc.co.uk/news/world-asia-pacific-12338147</guid>  
+      <pubDate>Tue, 01 Feb 2011 17:10:25 GMT</pubDate>  
+      <media:thumbnail width="66" height="49" url="http://news.bbcimg.co.uk/media/images/51055000/jpg/_51055802_011167127-1.jpg"/>  
+      <media:thumbnail width="144" height="81" url="http://news.bbcimg.co.uk/media/images/51055000/jpg/_51055800_011167127-1.jpg"/> 
+    </item>  
+    <item> 
+      <title>Swiss man 'sexually abused 114'</title>  
+      <description>A Swiss male care worker confesses to abusing 114 children and disabled adults over three decades, prosecutors say.</description>  
+      <link>http://www.bbc.co.uk/go/rss/int/news/-/news/world-europe-12339534</link>  
+      <guid isPermaLink="false">http://www.bbc.co.uk/news/world-europe-12339534</guid>  
+      <pubDate>Tue, 01 Feb 2011 18:07:07 GMT</pubDate>  
+      <media:thumbnail width="66" height="49" url="http://news.bbcimg.co.uk/media/images/51058000/gif/_51058039_switzerland_bern.gif"/>  
+      <media:thumbnail width="144" height="81" url="http://news.bbcimg.co.uk/media/images/51058000/gif/_51058041_switzerland_bern.gif"/> 
+    </item>  
+    <item> 
+      <title>Giant pile-up near Paris airport</title>  
+      <description>A 50-vehicle pile-up caused by black ice blocks a slip road at Paris airport Charles de Gaulle, leaving 30 people injured.</description>  
+      <link>http://www.bbc.co.uk/go/rss/int/news/-/news/world-europe-12343686</link>  
+      <guid isPermaLink="false">http://www.bbc.co.uk/news/world-europe-12343686</guid>  
+      <pubDate>Wed, 02 Feb 2011 09:53:05 GMT</pubDate>  
+      <media:thumbnail width="66" height="49" url="http://news.bbcimg.co.uk/media/images/51061000/jpg/_51061881_010899485-1.jpg"/>  
+      <media:thumbnail width="144" height="81" url="http://news.bbcimg.co.uk/media/images/51061000/jpg/_51061883_010899485-1.jpg"/> 
+    </item>  
+    <item> 
+      <title>Tunisia protests 'left 200 dead'</title>  
+      <description>At least 219 people died during the protests that toppled Tunisia's President Zine al-Abidine Ben Ali last month, a UN team says.</description>  
+      <link>http://www.bbc.co.uk/go/rss/int/news/-/news/world-africa-12335692</link>  
+      <guid isPermaLink="false">http://www.bbc.co.uk/news/world-africa-12335692</guid>  
+      <pubDate>Tue, 01 Feb 2011 18:49:27 GMT</pubDate>  
+      <media:thumbnail width="66" height="49" url="http://news.bbcimg.co.uk/media/images/51050000/jpg/_51050161_011138272-1.jpg"/>  
+      <media:thumbnail width="144" height="81" url="http://news.bbcimg.co.uk/media/images/51050000/jpg/_51050163_011138272-1.jpg"/> 
+    </item>  
+    <item> 
+      <title>EU sanctions on Tunisia ex-leader</title>  
+      <description>The EU freezes the assets of ousted Tunisian President Zine al-Abidine Ben and his wife after a request from the country's new leaders.</description>  
+      <link>http://www.bbc.co.uk/go/rss/int/news/-/news/world-europe-12327180</link>  
+      <guid isPermaLink="false">http://www.bbc.co.uk/news/world-europe-12327180</guid>  
+      <pubDate>Mon, 31 Jan 2011 15:52:47 GMT</pubDate>  
+      <media:thumbnail width="66" height="49" url="http://news.bbcimg.co.uk/media/images/51032000/jpg/_51032599_011117488-1.jpg"/>  
+      <media:thumbnail width="144" height="81" url="http://news.bbcimg.co.uk/media/images/51032000/jpg/_51032597_011117488-1.jpg"/> 
+    </item>  
+    <item> 
+      <title>India ex-minister A Raja arrested</title>  
+      <description>India's former telecommunications minister A Raja is arrested in connection with an alleged multi-billion dollar corruption scandal.</description>  
+      <link>http://www.bbc.co.uk/go/rss/int/news/-/news/world-south-asia-12344236</link>  
+      <guid isPermaLink="false">http://www.bbc.co.uk/news/world-south-asia-12344236</guid>  
+      <pubDate>Wed, 02 Feb 2011 10:21:58 GMT</pubDate>  
+      <media:thumbnail width="66" height="49" url="http://news.bbcimg.co.uk/media/images/50573000/jpg/_50573413_010899251-1.jpg"/>  
+      <media:thumbnail width="144" height="81" url="http://news.bbcimg.co.uk/media/images/51063000/jpg/_51063495_010899251-1.jpg"/> 
+    </item>  
+    <item> 
+      <title>India 'abusing terror suspects'</title>  
+      <description>A global rights group accuses Indian security forces of carrying out torture, religious discrimination and arbitrary arrests in a new report.</description>  
+      <link>http://www.bbc.co.uk/go/rss/int/news/-/news/world-south-asia-12342487</link>  
+      <guid isPermaLink="false">http://www.bbc.co.uk/news/world-south-asia-12342487</guid>  
+      <pubDate>Wed, 02 Feb 2011 08:16:51 GMT</pubDate>  
+      <media:thumbnail width="66" height="49" url="http://news.bbcimg.co.uk/media/images/51061000/jpg/_51061054_indiacopssiligirap.jpg"/>  
+      <media:thumbnail width="144" height="81" url="http://news.bbcimg.co.uk/media/images/51061000/jpg/_51061098_indiacopssiligirap.jpg"/> 
+    </item>  
+    <item> 
+      <title>Concern over child mental health</title>  
+      <description>Campaigners question whether plans to improve child mental health services, due to be outlined by the government, will be successful in the face of cuts.</description>  
+      <link>http://www.bbc.co.uk/go/rss/int/news/-/news/health-12338540</link>  
+      <guid isPermaLink="false">http://www.bbc.co.uk/news/health-12338540</guid>  
+      <pubDate>Wed, 02 Feb 2011 06:04:04 GMT</pubDate>  
+      <media:thumbnail width="66" height="49" url="http://news.bbcimg.co.uk/media/images/51056000/jpg/_51056902_child.jpg"/>  
+      <media:thumbnail width="144" height="81" url="http://news.bbcimg.co.uk/media/images/51056000/jpg/_51056898_child.jpg"/> 
+    </item>  
+    <item> 
+      <title>Funding to combat knife violence</title>  
+      <description>The government is to spend £18m over the next two years to combat knife crime, after a report from ex-EastEnders star Brooke Kinsella.</description>  
+      <link>http://www.bbc.co.uk/go/rss/int/news/-/news/uk-12343927</link>  
+      <guid isPermaLink="false">http://www.bbc.co.uk/news/uk-12343927</guid>  
+      <pubDate>Wed, 02 Feb 2011 10:24:17 GMT</pubDate>  
+      <media:thumbnail width="66" height="49" url="http://news.bbcimg.co.uk/media/images/51062000/jpg/_51062291_kinsella2.jpg"/>  
+      <media:thumbnail width="144" height="81" url="http://news.bbcimg.co.uk/media/images/51062000/jpg/_51062290_kinsella2.jpg"/> 
+    </item>  
+    <item> 
+      <title>Citigroup takes ownership of EMI</title>  
+      <description>UK music company EMI falls into the hands of US bank Citigroup - ending a disastrous purchase by Guy Hands' private equity group Terra Firma.</description>  
+      <link>http://www.bbc.co.uk/go/rss/int/news/-/news/business-12339299</link>  
+      <guid isPermaLink="false">http://www.bbc.co.uk/news/business-12339299</guid>  
+      <pubDate>Tue, 01 Feb 2011 19:36:35 GMT</pubDate>  
+      <media:thumbnail width="66" height="49" url="http://news.bbcimg.co.uk/media/images/49545000/jpg/_49545393_emi.jpg"/>  
+      <media:thumbnail width="144" height="81" url="http://news.bbcimg.co.uk/media/images/49546000/jpg/_49546046_lilyallen.jpg"/> 
+    </item>  
+    <item> 
+      <title>US shares at highest since 2008</title>  
+      <description>US shares close at their highest level in more than two years as upbeat corporate earnings and manufacturing data add to confidence in recovery.</description>  
+      <link>http://www.bbc.co.uk/go/rss/int/news/-/news/business-12341441</link>  
+      <guid isPermaLink="false">http://www.bbc.co.uk/news/business-12341441</guid>  
+      <pubDate>Tue, 01 Feb 2011 23:13:06 GMT</pubDate>  
+      <media:thumbnail width="66" height="49" url="http://news.bbcimg.co.uk/media/images/51060000/jpg/_51060060_011119154-1.jpg"/>  
+      <media:thumbnail width="144" height="81" url="http://news.bbcimg.co.uk/media/images/51060000/jpg/_51060056_011119154-1.jpg"/> 
+    </item>  
+    <item> 
+      <title>Philips chief to chair Vodafone</title>  
+      <description>Mobile phone giant Vodafone chooses the boss of electronics firm Philips, Gerard Kleisterlee, as its new chairman.</description>  
+      <link>http://www.bbc.co.uk/go/rss/int/news/-/news/business-12343198</link>  
+      <guid isPermaLink="false">http://www.bbc.co.uk/news/business-12343198</guid>  
+      <pubDate>Wed, 02 Feb 2011 08:39:59 GMT</pubDate>  
+      <media:thumbnail width="66" height="49" url="http://news.bbcimg.co.uk/media/images/50994000/jpg/_50994991_011133714-1.jpg"/>  
+      <media:thumbnail width="144" height="81" url="http://news.bbcimg.co.uk/media/images/51061000/jpg/_51061190_paulkleisterlee.jpg"/> 
+    </item>  
+    <item> 
+      <title>Live - Australia v England</title>  
+      <description>The sixth one-day international looks set to go to the wire as Australia make a strong reply to England's 333-6 in Sydney.</description>  
+      <link>http://news.bbc.co.uk/go/rss/int/news/-/sport1/hi/cricket/england/9383097.stm</link>  
+      <guid isPermaLink="false">http://news.bbc.co.uk/sport1/hi/cricket/england/9383097.stm</guid>  
+      <pubDate>Wed, 02 Feb 2011 02:55:14 GMT</pubDate>  
+      <media:thumbnail width="66" height="49" url="http://news.bbcimg.co.uk/media/images/51060000/jpg/_51060587_prior466.jpg"/>  
+      <media:thumbnail width="144" height="81" url="http://news.bbcimg.co.uk/media/images/51063000/jpg/_51063238_trott2getty.jpg"/> 
+    </item>  
+    <item> 
+      <title>Rooney expects Chelsea challenge</title>  
+      <description>Manchester United striker Wayne Rooney, who scored twice in the 3-1 win over Aston Villa on Tuesday, says Chelsea can pushing his team all the way in the title race.</description>  
+      <link>http://news.bbc.co.uk/go/rss/int/news/-/sport1/hi/football/eng_prem/9384562.stm</link>  
+      <guid isPermaLink="false">http://news.bbc.co.uk/sport1/hi/football/eng_prem/9384562.stm</guid>  
+      <pubDate>Wed, 02 Feb 2011 10:00:04 GMT</pubDate>  
+      <media:thumbnail width="66" height="49" url="http://news.bbcimg.co.uk/media/images/51060000/jpg/_51060255_rooney_466x260reuters.jpg"/>  
+      <media:thumbnail width="144" height="81" url="http://news.bbcimg.co.uk/media/images/51060000/jpg/_51060256_rooney_466x260reuters.jpg"/> 
+    </item>  
+    <item> 
+      <title>Live text - F1 testing</title>  
+      <description>Lewis Hamilton, Sebastian Vettel, Fernando Alonso and Robert Kubica are all in action on the second day of the first F1 pre-season test in Valencia.</description>  
+      <link>http://news.bbc.co.uk/go/rss/int/news/-/sport1/hi/motorsport/formula_one/9384651.stm</link>  
+      <guid isPermaLink="false">http://news.bbc.co.uk/sport1/hi/motorsport/formula_one/9384651.stm</guid>  
+      <pubDate>Wed, 02 Feb 2011 08:18:33 GMT</pubDate>  
+      <media:thumbnail width="66" height="49" url="http://news.bbcimg.co.uk/media/images/51061000/jpg/_51061397_alonso.jpg"/>  
+      <media:thumbnail width="144" height="81" url="http://news.bbcimg.co.uk/media/images/51061000/jpg/_51061398_alonso.jpg"/> 
+    </item>  
+    <item> 
+      <title>Picasso muse painting up for sale</title>  
+      <description>A portrait of the muse who transformed painter Pablo Picasso's life and art is to go under the hammer at Sotheby's in London next week.</description>  
+      <link>http://www.bbc.co.uk/go/rss/int/news/-/news/entertainment-arts-12333330</link>  
+      <guid isPermaLink="false">http://www.bbc.co.uk/news/entertainment-arts-12333330</guid>  
+      <pubDate>Tue, 01 Feb 2011 11:27:07 GMT</pubDate>  
+      <media:thumbnail width="66" height="49" url="http://news.bbcimg.co.uk/media/images/51045000/jpg/_51045243_51045242.jpg"/>  
+      <media:thumbnail width="144" height="81" url="http://news.bbcimg.co.uk/media/images/51045000/jpg/_51045241_51045240.jpg"/> 
+    </item>  
+    <item> 
+      <title>Hagman to return for new Dallas</title>  
+      <description>US actor Larry Hagman is to appear in a TV remake of classic 1980s soap opera Dallas.</description>  
+      <link>http://www.bbc.co.uk/go/rss/int/news/-/news/entertainment-arts-12342985</link>  
+      <guid isPermaLink="false">http://www.bbc.co.uk/news/entertainment-arts-12342985</guid>  
+      <pubDate>Wed, 02 Feb 2011 08:55:03 GMT</pubDate>  
+      <media:thumbnail width="66" height="49" url="http://news.bbcimg.co.uk/media/images/51061000/jpg/_51061221_51061220.jpg"/>  
+      <media:thumbnail width="144" height="81" url="http://news.bbcimg.co.uk/media/images/51061000/jpg/_51061219_51061218.jpg"/> 
+    </item>  
+    <item> 
+      <title>Top Gear sparks Mexico complaints</title>  
+      <description>Mexico's ambassador in London complains to the BBC over "offensive, xenophobic and humiliating" comments made about his country on Top Gear.</description>  
+      <link>http://www.bbc.co.uk/go/rss/int/news/-/news/entertainment-arts-12338053</link>  
+      <guid isPermaLink="false">http://www.bbc.co.uk/news/entertainment-arts-12338053</guid>  
+      <pubDate>Tue, 01 Feb 2011 16:43:31 GMT</pubDate>  
+      <media:thumbnail width="66" height="49" url="http://news.bbcimg.co.uk/media/images/51055000/jpg/_51055817_011122588-1.jpg"/>  
+      <media:thumbnail width="144" height="81" url="http://news.bbcimg.co.uk/media/images/51055000/jpg/_51055813_011122588-1.jpg"/> 
+    </item>  
+    <item> 
+      <title>Pyramids deserted in Egypt unrest</title>  
+      <description>Egypt's famous pyramids have been closed as mass demonstrations continue in Cairo.</description>  
+      <link>http://www.bbc.co.uk/go/rss/int/news/-/news/world-middle-east-12338860</link>  
+      <guid isPermaLink="false">http://www.bbc.co.uk/news/world-middle-east-12338860</guid>  
+      <pubDate>Tue, 01 Feb 2011 16:09:14 GMT</pubDate>  
+      <media:thumbnail width="66" height="49" url="http://news.bbcimg.co.uk/media/images/51054000/jpg/_51054552_51054551.jpg"/>  
+      <media:thumbnail width="144" height="81" url="http://news.bbcimg.co.uk/media/images/51054000/jpg/_51054550_51054549.jpg"/> 
+    </item>  
+    <item> 
+      <title>Reporter meets Tahrir Square protesters</title>  
+      <description>George Alagiah meets protesters in Cairo's Tahrir Square holding protests to try to force President Hosni Mubarak from power.</description>  
+      <link>http://www.bbc.co.uk/go/rss/int/news/-/news/world-middle-east-12339344</link>  
+      <guid isPermaLink="false">http://www.bbc.co.uk/news/world-middle-east-12339344</guid>  
+      <pubDate>Tue, 01 Feb 2011 19:41:13 GMT</pubDate>  
+      <media:thumbnail width="66" height="49" url="http://news.bbcimg.co.uk/media/images/51058000/jpg/_51058324_jex_943534_de31-1.jpg"/>  
+      <media:thumbnail width="144" height="81" url="http://news.bbcimg.co.uk/media/images/51058000/jpg/_51058166_jex_943560_de25-1.jpg"/> 
+    </item>  
+    <item> 
+      <title>People power on the streets of Cairo</title>  
+      <description>President Hosni Mubarak has announced he will stand down at the country's next election in September - following another day of massive protest across Egypt.</description>  
+      <link>http://www.bbc.co.uk/go/rss/int/news/-/news/world-middle-east-12340593</link>  
+      <guid isPermaLink="false">http://www.bbc.co.uk/news/world-middle-east-12340593</guid>  
+      <pubDate>Tue, 01 Feb 2011 18:59:01 GMT</pubDate>  
+      <media:thumbnail width="66" height="49" url="http://news.bbcimg.co.uk/media/images/51057000/jpg/_51057977_jex_943493_de33.jpg"/>  
+      <media:thumbnail width="144" height="81" url="http://news.bbcimg.co.uk/media/images/51057000/jpg/_51057978_jex_943493_de33.jpg"/> 
+    </item>  
+    <item> 
+      <title>On a march with Alexandria protesters</title>  
+      <description>Protests in Egypt have not just focused on the capital Cairo.</description>  
+      <link>http://www.bbc.co.uk/go/rss/int/news/-/news/world-africa-12338861</link>  
+      <guid isPermaLink="false">http://www.bbc.co.uk/news/world-africa-12338861</guid>  
+      <pubDate>Tue, 01 Feb 2011 18:43:50 GMT</pubDate>  
+      <media:thumbnail width="66" height="49" url="http://news.bbcimg.co.uk/media/images/51057000/jpg/_51057946_51057945.jpg"/>  
+      <media:thumbnail width="144" height="81" url="http://news.bbcimg.co.uk/media/images/51057000/jpg/_51057944_51057943.jpg"/> 
+    </item>  
+    <item> 
+      <title>'James Bond volcano' erupts again</title>  
+      <description>A violent blast from Shinmoedake, a volcano erupting in Kyushu, Japan, has broken windows 8km (five miles) away.</description>  
+      <link>http://www.bbc.co.uk/go/rss/int/news/-/news/world-asia-pacific-12334825</link>  
+      <guid isPermaLink="false">http://www.bbc.co.uk/news/world-asia-pacific-12334825</guid>  
+      <pubDate>Tue, 01 Feb 2011 10:58:24 GMT</pubDate>  
+      <media:thumbnail width="66" height="49" url="http://news.bbcimg.co.uk/media/images/51047000/jpg/_51047609_jex_942708_de27-1.jpg"/>  
+      <media:thumbnail width="144" height="81" url="http://news.bbcimg.co.uk/media/images/51047000/jpg/_51047607_jex_942708_de27-1.jpg"/> 
+    </item>  
+    <item> 
+      <title>Yeltsin statue unveiled by Medvedev</title>  
+      <description>A statue has been unveiled of Boris Yeltsin to mark the 80th anniversary of his birth.</description>  
+      <link>http://www.bbc.co.uk/go/rss/int/news/-/news/world-europe-12339338</link>  
+      <guid isPermaLink="false">http://www.bbc.co.uk/news/world-europe-12339338</guid>  
+      <pubDate>Tue, 01 Feb 2011 16:47:19 GMT</pubDate>  
+      <media:thumbnail width="66" height="49" url="http://news.bbcimg.co.uk/media/images/51055000/jpg/_51055467_jex_943286_de12-1.jpg"/>  
+      <media:thumbnail width="144" height="81" url="http://news.bbcimg.co.uk/media/images/51055000/jpg/_51055464_jex_943286_de12-1.jpg"/> 
+    </item>  
+    <item> 
+      <title>Jordan names new PM amid protests</title>  
+      <description>King Abdullah of Jordan has dismissed his cabinet and appointed a new prime minister amid large street protests.</description>  
+      <link>http://www.bbc.co.uk/go/rss/int/news/-/news/world-middle-east-12340872</link>  
+      <guid isPermaLink="false">http://www.bbc.co.uk/news/world-middle-east-12340872</guid>  
+      <pubDate>Tue, 01 Feb 2011 22:04:58 GMT</pubDate>  
+      <media:thumbnail width="66" height="49" url="http://news.bbcimg.co.uk/media/images/51056000/jpg/_51056323_51056322.jpg"/>  
+      <media:thumbnail width="144" height="81" url="http://news.bbcimg.co.uk/media/images/51056000/jpg/_51056320_51056319.jpg"/> 
+    </item>  
+    <item> 
+      <title>Queensland braced for 'huge' cyclone</title>  
+      <description>Northern Queensland is preparing to be battered by a tropical cyclone described as "huge and life-threatening" by the state premier.</description>  
+      <link>http://www.bbc.co.uk/go/rss/int/news/-/news/world-asia-pacific-12338347</link>  
+      <guid isPermaLink="false">http://www.bbc.co.uk/news/world-asia-pacific-12338347</guid>  
+      <pubDate>Tue, 01 Feb 2011 17:37:21 GMT</pubDate>  
+      <media:thumbnail width="66" height="49" url="http://news.bbcimg.co.uk/media/images/51056000/jpg/_51056584_jex_943388_de44-1.jpg"/>  
+      <media:thumbnail width="144" height="81" url="http://news.bbcimg.co.uk/media/images/51056000/jpg/_51056582_jex_943388_de44-1.jpg"/> 
+    </item>  
+    <item> 
+      <title>One-minute World News</title>  
+      <description>Watch the latest news summary from BBC World News. International news updated 24 hours a day.</description>  
+      <link>http://www.bbc.co.uk/go/rss/int/news/-/news/10462520</link>  
+      <guid isPermaLink="false">http://www.bbc.co.uk/news/10462520</guid>  
+      <pubDate>Fri, 09 Jul 2010 07:56:06 GMT</pubDate>  
+      <media:thumbnail width="66" height="49" url="http://news.bbcimg.co.uk/media/images/48037000/jpg/_48037472_worldnews66.jpg"/>  
+      <media:thumbnail width="144" height="81" url="http://news.bbcimg.co.uk/media/images/48338000/jpg/_48338924_worldnews512.jpg"/> 
+    </item>  
+    <item> 
+      <title>Arab spring?</title>  
+      <description>Battle for the future of the Arab world is under way</description>  
+      <link>http://www.bbc.co.uk/go/rss/int/news/-/news/world-middle-east-12339521</link>  
+      <guid isPermaLink="false">http://www.bbc.co.uk/news/world-middle-east-12339521</guid>  
+      <pubDate>Wed, 02 Feb 2011 05:08:18 GMT</pubDate>  
+      <media:thumbnail width="66" height="49" url="http://news.bbcimg.co.uk/media/images/51056000/jpg/_51056731_011167934-1.jpg"/>  
+      <media:thumbnail width="144" height="81" url="http://news.bbcimg.co.uk/media/images/51056000/jpg/_51056797_011167934-1.jpg"/> 
+    </item>  
+    <item> 
+      <title>Anxious Israel</title>  
+      <description>Egypt's neighbour fears what might follow Mubarak</description>  
+      <link>http://www.bbc.co.uk/go/rss/int/news/-/news/world-middle-east-12338222</link>  
+      <guid isPermaLink="false">http://www.bbc.co.uk/news/world-middle-east-12338222</guid>  
+      <pubDate>Wed, 02 Feb 2011 00:41:47 GMT</pubDate>  
+      <media:thumbnail width="66" height="49" url="http://news.bbcimg.co.uk/media/images/51054000/jpg/_51054105_011150903-1.jpg"/>  
+      <media:thumbnail width="144" height="81" url="http://news.bbcimg.co.uk/media/images/51054000/jpg/_51054104_011150903-1.jpg"/> 
+    </item>  
+    <item> 
+      <title>Nothing to declare</title>  
+      <description>French-Belgian stereotypes wheeled out for comic racism film</description>  
+      <link>http://www.bbc.co.uk/go/rss/int/news/-/news/world-europe-12325795</link>  
+      <guid isPermaLink="false">http://www.bbc.co.uk/news/world-europe-12325795</guid>  
+      <pubDate>Wed, 02 Feb 2011 01:32:16 GMT</pubDate>  
+      <media:thumbnail width="66" height="49" url="http://news.bbcimg.co.uk/media/images/51060000/jpg/_51060374_customs.jpg"/>  
+      <media:thumbnail width="144" height="81" url="http://news.bbcimg.co.uk/media/images/51039000/jpg/_51039153_customs.jpg"/> 
+    </item>  
+    <item> 
+      <title>Cash crisis</title>  
+      <description>Funding falls short for new casing to secure Chernobyl nuclear wreckage</description>  
+      <link>http://www.bbc.co.uk/go/rss/int/news/-/news/science-environment-12335595</link>  
+      <guid isPermaLink="false">http://www.bbc.co.uk/news/science-environment-12335595</guid>  
+      <pubDate>Wed, 02 Feb 2011 03:14:25 GMT</pubDate>  
+      <media:thumbnail width="66" height="49" url="http://news.bbcimg.co.uk/media/images/51060000/jpg/_51060378_constructionwork.jpg"/>  
+      <media:thumbnail width="144" height="81" url="http://news.bbcimg.co.uk/media/images/51058000/jpg/_51058853_constructionwork.jpg"/> 
+    </item>  
+    <item> 
+      <title>Bedbugs' bite</title>  
+      <description>How do you beat the itchy little insects?</description>  
+      <link>http://www.bbc.co.uk/go/rss/int/news/-/news/world-us-canada-12331131</link>  
+      <guid isPermaLink="false">http://www.bbc.co.uk/news/world-us-canada-12331131</guid>  
+      <pubDate>Wed, 02 Feb 2011 03:54:50 GMT</pubDate>  
+      <media:thumbnail width="66" height="49" url="http://news.bbcimg.co.uk/media/images/51060000/jpg/_51060400_bedbugsfeeding466.jpg"/>  
+      <media:thumbnail width="144" height="81" url="http://news.bbcimg.co.uk/media/images/51060000/jpg/_51060401_bedbugsfeeding466.jpg"/> 
+    </item>  
+    <item> 
+      <title>Game changer?</title>  
+      <description>Software tycoon's $2bn grant could transform Indian education</description>  
+      <link>http://www.bbc.co.uk/go/rss/int/news/-/news/world-south-asia-12158978</link>  
+      <guid isPermaLink="false">http://www.bbc.co.uk/news/world-south-asia-12158978</guid>  
+      <pubDate>Tue, 01 Feb 2011 18:01:55 GMT</pubDate>  
+      <media:thumbnail width="66" height="49" url="http://news.bbcimg.co.uk/media/images/50742000/jpg/_50742353_50741750.jpg"/>  
+      <media:thumbnail width="144" height="81" url="http://news.bbcimg.co.uk/media/images/50742000/jpg/_50742352_50741750.jpg"/> 
+    </item>  
+    <item> 
+      <title>Our town</title>  
+      <description>Who will 'own' Harlem if African Americans become a minority?</description>  
+      <link>http://www.bbc.co.uk/go/rss/int/news/-/news/world-us-canada-12332914</link>  
+      <guid isPermaLink="false">http://www.bbc.co.uk/news/world-us-canada-12332914</guid>  
+      <pubDate>Tue, 01 Feb 2011 10:58:15 GMT</pubDate>  
+      <media:thumbnail width="66" height="49" url="http://news.bbcimg.co.uk/media/images/51046000/jpg/_51046170_bonnets6649.jpg"/>  
+      <media:thumbnail width="144" height="81" url="http://news.bbcimg.co.uk/media/images/51047000/jpg/_51047077_bonnets144.jpg"/> 
+    </item>  
+    <item> 
+      <title>Hero's welcome?</title>  
+      <description>Russia's returning spies will find it difficult to adjust</description>  
+      <link>http://www.bbc.co.uk/go/rss/int/news/-/news/10581574</link>  
+      <guid isPermaLink="false">http://www.bbc.co.uk/news/10581574</guid>  
+      <pubDate>Fri, 09 Jul 2010 19:07:42 GMT</pubDate>  
+      <media:thumbnail width="66" height="49" url="http://news.bbcimg.co.uk/media/images/48311000/jpg/_48311912_russ0907_lonsdale_gett.jpg"/>  
+      <media:thumbnail width="144" height="81" url="http://news.bbcimg.co.uk/media/images/48311000/jpg/_48311911_russ0907_lonsdale_gett.jpg"/> 
+    </item> 
+  </channel> 
+</rss>

@@ -1,0 +1,5 @@
+* NAO wifi                   { wifi_00304f872cb8_4e414f2077696669_managed_psk }
+* Wired                      { ethernet_0001c00ad311_cable }
+  Ionis Portal               { wifi_00304f872cb8_496f6e697320506f7274616c_managed_none }
+  ISEFAC-AMPHI               { wifi_00304f872cb8_4953454641432d414d504849_managed_wep }
+  wireless-iit-direction     { wifi_00304f872cb8_776972656c6573732d6969742d646972656374696f6e_managed_psk }
