@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ModulePreference name="aldebaran-robotics.com@ALLife" xmlns="http://www.aldebaran-robotics.com/ns/ALPreference" schemaLocation="ModulePreference.xsd">
+  <Preference name="Style" description="The style of your autonomous life (default:'default', possible values: 'Shanghai', 'life2', ...)" value="life2" type="string" />
+  <Preference name="Area" description="Store the default area of the autonomous life (0: stay seated; 1: stay here (can stand); 2: limited to the current area; 3: totally free)" value="3" type="int" />
+  <Preference name="ExcitingRatio" description="A modifier to change the excitement of a robot" value="1.0" type="float" />
+  <Preference name="FullExcitedAtStartup" description="Has Nao to be nearly completely excited at startup ? (default:false)" value="false" type="bool" />
+  <Preference name="TryToStandMaxTime" description="Does Nao should try to stand the maximum of time possible without heating? (default:false)" value="true" type="bool" />
+  <Preference name="Friend_IP" description="IP of some Nao's friend (default:'')" value="" type="string" />
+  <Preference name="Friend_IP" description="IP of some Nao's friend (default:'')" value="" type="string" />
+  <Preference name="Friend_IP" description="IP of some Nao's friend (default:'')" value="" type="string" />
+  <Preference name="FeetFixed" description="Is Nao has his feet fixed ? (default:false)" value="false" type="bool" />
+  <Preference name="OverReactToNaoMark" description="Is Nao over reacting to naomark ? (default:false)" value="false" type="bool" />
+  <Preference name="AdjustSoundVolume" description="Is Nao adjust sound volume to ambiance ? (default:true)" value="true" type="bool" />
+  <Preference name="SoundVolume" description="The sound volume of your robots (used only if AdjustSoundVolume is enabled)" value="100" type="int" />
+  <Preference name="FreezeWhenProgrammed" description="Is Nao freeze when choregraphe connects to him ? (default:false)" value="true" type="bool" />  
+  <Preference name="DisableStiffness" description="Prevent Life to set/change the stiffness of the robot ? (default:false)" value="false" type="bool" />
+  
+  <!--  
+  # Alex: beurk la suivante, ne fonctionne pas, on peut pas faire de preferences contenant un tableau!
+  <Preference name="AuthorizedBehaviorType" description="Define with behavior type can be launched. (default:['system', 'autonomous', 'exploration', 'dance', 'story', 'init_interaction', 'interaction'])" value=['system'] type="array" />
+  -->
+    
+  <Preference name="AuthorizedBehaviorType" description="Define with behavior type can be launched." value="system" type="string" />
+  <Preference name="AuthorizedBehaviorType" description="Define with behavior type can be launched." value="autonomous" type="string" />
+  <Preference name="AuthorizedBehaviorType" description="Define with behavior type can be launched." value="exploration" type="string" />
+  <Preference name="AuthorizedBehaviorType" description="Define with behavior type can be launched." value="dance" type="string" />
+  <Preference name="AuthorizedBehaviorType" description="Define with behavior type can be launched." value="story" type="string" />
+</ModulePreference>

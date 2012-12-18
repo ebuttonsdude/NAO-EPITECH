@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+  <behavior>
+	<version>
+		0.953 <!-- the life_data of the light version would automatically be subtract with 0.001 in  the light -->
+	</version>  
+	<type>
+		data
+	</type>
+	<enabled>
+		1
+	</enabled>
+	<starting-condition>
+	    <condition>
+	    	<script_type>
+	    		python
+	    	</script_type>
+                <condition_value>
+                    False
+                </condition_value>
+	    </condition>
+	</starting-condition>
+  </behavior>
